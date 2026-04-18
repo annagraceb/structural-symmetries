@@ -1,0 +1,13 @@
+# LaTeX intermediate files - regenerate from source
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.fls
+*.fdb_latexmk
+*.synctex.gz
