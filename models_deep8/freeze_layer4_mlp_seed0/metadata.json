@@ -1,0 +1,13 @@
+{
+  "seed": 0,
+  "frozen_component": "layer4.mlp",
+  "converged": true,
+  "converge_step": 11000,
+  "final_accuracy": 0.9902,
+  "best_accuracy": 0.9932,
+  "total_steps": 13000,
+  "total_time_seconds": 431.28951120376587,
+  "n_params_total": 402688,
+  "n_params_trainable": 369472,
+  "use_carry_head": false
+}

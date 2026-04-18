@@ -1,0 +1,1296 @@
+{
+  "config": {
+    "k": 8,
+    "n_models": 33,
+    "sites": [
+      "layer1_result_0",
+      "layer3_result_0",
+      "layer3_result_1",
+      "layer3_result_2",
+      "layer3_result_3",
+      "layer3_result_4"
+    ]
+  },
+  "per_site": {
+    "layer1_result_0": {
+      "site": "layer1_result_0",
+      "layer": 1,
+      "position_idx": 12,
+      "k": 8,
+      "models": {
+        "baseline_seed0": {
+          "baseline_acc": 0.996,
+          "shared_drop": 0.1622,
+          "complement_drop": 0.18320000000000003,
+          "joint_drop": 0.8932
+        },
+        "baseline_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.5388,
+          "complement_drop": 0.239,
+          "joint_drop": 0.9022
+        },
+        "baseline_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.5634,
+          "complement_drop": 0.2592,
+          "joint_drop": 0.8926000000000001
+        },
+        "freeze_embed_seed0": {
+          "baseline_acc": 0.995,
+          "shared_drop": 0.3728,
+          "complement_drop": 0.1652,
+          "joint_drop": 0.89
+        },
+        "freeze_embed_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.05059999999999998,
+          "complement_drop": 0.28480000000000005,
+          "joint_drop": 0.823
+        },
+        "freeze_embed_seed2": {
+          "baseline_acc": 0.9956,
+          "shared_drop": 0.3378,
+          "complement_drop": 0.19400000000000006,
+          "joint_drop": 0.8748
+        },
+        "freeze_layer0.attn_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.5898,
+          "complement_drop": 0.36239999999999994,
+          "joint_drop": 0.887
+        },
+        "freeze_layer0.attn_seed1": {
+          "baseline_acc": 0.9946,
+          "shared_drop": 0.5112000000000001,
+          "complement_drop": 0.30080000000000007,
+          "joint_drop": 0.8542000000000001
+        },
+        "freeze_layer0.attn_seed2": {
+          "baseline_acc": 0.9932,
+          "shared_drop": 0.403,
+          "complement_drop": 0.3121999999999999,
+          "joint_drop": 0.8202
+        },
+        "freeze_layer0.mlp_seed0": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.3425999999999999,
+          "complement_drop": 0.28359999999999996,
+          "joint_drop": 0.94
+        },
+        "freeze_layer0.mlp_seed1": {
+          "baseline_acc": 0.9998,
+          "shared_drop": 0.7016,
+          "complement_drop": 0.5388,
+          "joint_drop": 0.9002
+        },
+        "freeze_layer0.mlp_seed2": {
+          "baseline_acc": 0.9968,
+          "shared_drop": 0.657,
+          "complement_drop": 0.551,
+          "joint_drop": 0.9062
+        },
+        "freeze_layer1.attn_seed0": {
+          "baseline_acc": 0.9976,
+          "shared_drop": 0.3572000000000001,
+          "complement_drop": 0.13160000000000005,
+          "joint_drop": 0.89
+        },
+        "freeze_layer1.attn_seed1": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.27460000000000007,
+          "complement_drop": 0.25780000000000003,
+          "joint_drop": 0.8942
+        },
+        "freeze_layer1.attn_seed2": {
+          "baseline_acc": 0.9986,
+          "shared_drop": 0.5394000000000001,
+          "complement_drop": 0.2954,
+          "joint_drop": 0.8886000000000001
+        },
+        "freeze_layer1.mlp_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.5691999999999999,
+          "complement_drop": 0.394,
+          "joint_drop": 0.8994
+        },
+        "freeze_layer1.mlp_seed1": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.2552,
+          "complement_drop": 0.2832,
+          "joint_drop": 0.8916
+        },
+        "freeze_layer1.mlp_seed2": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.6334,
+          "complement_drop": 0.6122,
+          "joint_drop": 0.8944
+        },
+        "freeze_layer2.attn_seed0": {
+          "baseline_acc": 0.9992,
+          "shared_drop": 0.15000000000000002,
+          "complement_drop": 0.10639999999999994,
+          "joint_drop": 0.8936
+        },
+        "freeze_layer2.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.4476,
+          "complement_drop": 0.04620000000000002,
+          "joint_drop": 0.8553999999999999
+        },
+        "freeze_layer2.attn_seed2": {
+          "baseline_acc": 0.9954,
+          "shared_drop": 0.26459999999999995,
+          "complement_drop": 0.08519999999999994,
+          "joint_drop": 0.8722
+        },
+        "freeze_layer2.mlp_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.1906,
+          "complement_drop": 0.1068,
+          "joint_drop": 0.897
+        },
+        "freeze_layer2.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.13339999999999996,
+          "complement_drop": 0.09640000000000004,
+          "joint_drop": 0.895
+        },
+        "freeze_layer2.mlp_seed2": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.268,
+          "complement_drop": 0.1078,
+          "joint_drop": 0.8966
+        },
+        "freeze_layer3.attn_seed0": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.45399999999999996,
+          "complement_drop": 0.2126,
+          "joint_drop": 0.8874
+        },
+        "freeze_layer3.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.3758,
+          "complement_drop": 0.2086,
+          "joint_drop": 0.8956
+        },
+        "freeze_layer3.attn_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.4304,
+          "complement_drop": 0.246,
+          "joint_drop": 0.8966
+        },
+        "freeze_layer3.mlp_seed0": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.24780000000000002,
+          "complement_drop": 0.22899999999999998,
+          "joint_drop": 0.8176
+        },
+        "freeze_layer3.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.07940000000000003,
+          "complement_drop": 0.09899999999999998,
+          "joint_drop": 0.9164
+        },
+        "freeze_layer3.mlp_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.31999999999999995,
+          "complement_drop": 0.14139999999999997,
+          "joint_drop": 0.8878
+        },
+        "freeze_unembed_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.385,
+          "complement_drop": 0.3318,
+          "joint_drop": 0.9026
+        },
+        "freeze_unembed_seed1": {
+          "baseline_acc": 0.9964,
+          "shared_drop": 0.35919999999999996,
+          "complement_drop": 0.2792,
+          "joint_drop": 0.9059999999999999
+        },
+        "freeze_unembed_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.44720000000000004,
+          "complement_drop": 0.32799999999999996,
+          "joint_drop": 0.8686
+        }
+      }
+    },
+    "layer3_result_0": {
+      "site": "layer3_result_0",
+      "layer": 3,
+      "position_idx": 12,
+      "k": 8,
+      "models": {
+        "baseline_seed0": {
+          "baseline_acc": 0.996,
+          "shared_drop": 0.01739999999999997,
+          "complement_drop": 0.4798,
+          "joint_drop": 0.7636000000000001
+        },
+        "baseline_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.34940000000000004,
+          "joint_drop": 0.738
+        },
+        "baseline_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.38759999999999994,
+          "joint_drop": 0.8362
+        },
+        "freeze_embed_seed0": {
+          "baseline_acc": 0.995,
+          "shared_drop": 0.0021999999999999797,
+          "complement_drop": 0.41200000000000003,
+          "joint_drop": 0.8238
+        },
+        "freeze_embed_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.45120000000000005,
+          "joint_drop": 0.6466000000000001
+        },
+        "freeze_embed_seed2": {
+          "baseline_acc": 0.9956,
+          "shared_drop": 0.0008000000000000229,
+          "complement_drop": 0.366,
+          "joint_drop": 0.753
+        },
+        "freeze_layer0.attn_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0030000000000000027,
+          "complement_drop": 0.47640000000000005,
+          "joint_drop": 0.8634
+        },
+        "freeze_layer0.attn_seed1": {
+          "baseline_acc": 0.9946,
+          "shared_drop": 0.009000000000000008,
+          "complement_drop": 0.3854000000000001,
+          "joint_drop": 0.8554
+        },
+        "freeze_layer0.attn_seed2": {
+          "baseline_acc": 0.9932,
+          "shared_drop": 0.030999999999999917,
+          "complement_drop": 0.5267999999999999,
+          "joint_drop": 0.8904
+        },
+        "freeze_layer0.mlp_seed0": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.36839999999999995,
+          "joint_drop": 0.852
+        },
+        "freeze_layer0.mlp_seed1": {
+          "baseline_acc": 0.9998,
+          "shared_drop": 0.010000000000000009,
+          "complement_drop": 0.49640000000000006,
+          "joint_drop": 0.8334
+        },
+        "freeze_layer0.mlp_seed2": {
+          "baseline_acc": 0.9968,
+          "shared_drop": 0.0046000000000000485,
+          "complement_drop": 0.41459999999999997,
+          "joint_drop": 0.88
+        },
+        "freeze_layer1.attn_seed0": {
+          "baseline_acc": 0.9976,
+          "shared_drop": -0.00019999999999997797,
+          "complement_drop": 0.3742000000000001,
+          "joint_drop": 0.7784
+        },
+        "freeze_layer1.attn_seed1": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.005800000000000027,
+          "complement_drop": 0.42300000000000004,
+          "joint_drop": 0.8008
+        },
+        "freeze_layer1.attn_seed2": {
+          "baseline_acc": 0.9986,
+          "shared_drop": 0.0006000000000000449,
+          "complement_drop": 0.26280000000000003,
+          "joint_drop": 0.8496
+        },
+        "freeze_layer1.mlp_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.2972,
+          "joint_drop": 0.8402000000000001
+        },
+        "freeze_layer1.mlp_seed1": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.010199999999999987,
+          "complement_drop": 0.4476,
+          "joint_drop": 0.6861999999999999
+        },
+        "freeze_layer1.mlp_seed2": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.007799999999999918,
+          "complement_drop": 0.4004,
+          "joint_drop": 0.8725999999999999
+        },
+        "freeze_layer2.attn_seed0": {
+          "baseline_acc": 0.9992,
+          "shared_drop": 0.0020000000000000018,
+          "complement_drop": 0.4486,
+          "joint_drop": 0.7756
+        },
+        "freeze_layer2.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.34819999999999995,
+          "joint_drop": 0.795
+        },
+        "freeze_layer2.attn_seed2": {
+          "baseline_acc": 0.9954,
+          "shared_drop": 0.0010000000000000009,
+          "complement_drop": 0.4326,
+          "joint_drop": 0.8976
+        },
+        "freeze_layer2.mlp_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0010000000000000009,
+          "complement_drop": 0.3476,
+          "joint_drop": 0.7834
+        },
+        "freeze_layer2.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.398,
+          "joint_drop": 0.7636000000000001
+        },
+        "freeze_layer2.mlp_seed2": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0006000000000000449,
+          "complement_drop": 0.383,
+          "joint_drop": 0.9258
+        },
+        "freeze_layer3.attn_seed0": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.0011999999999999789,
+          "complement_drop": 0.44999999999999996,
+          "joint_drop": 0.6944
+        },
+        "freeze_layer3.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4748,
+          "joint_drop": 0.7747999999999999
+        },
+        "freeze_layer3.attn_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.28659999999999997,
+          "joint_drop": 0.8146
+        },
+        "freeze_layer3.mlp_seed0": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48,
+          "joint_drop": 0.7948000000000001
+        },
+        "freeze_layer3.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48240000000000005,
+          "joint_drop": 0.8136
+        },
+        "freeze_layer3.mlp_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0021999999999999797,
+          "complement_drop": 0.3378,
+          "joint_drop": 0.862
+        },
+        "freeze_unembed_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.7076,
+          "joint_drop": 0.9026
+        },
+        "freeze_unembed_seed1": {
+          "baseline_acc": 0.9964,
+          "shared_drop": 0.0,
+          "complement_drop": 0.37259999999999993,
+          "joint_drop": 0.705
+        },
+        "freeze_unembed_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4326,
+          "joint_drop": 0.8
+        }
+      }
+    },
+    "layer3_result_1": {
+      "site": "layer3_result_1",
+      "layer": 3,
+      "position_idx": 13,
+      "k": 8,
+      "models": {
+        "baseline_seed0": {
+          "baseline_acc": 0.996,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.38160000000000005,
+          "joint_drop": 0.7352000000000001
+        },
+        "baseline_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4212,
+          "joint_drop": 0.7782
+        },
+        "baseline_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.36519999999999997,
+          "joint_drop": 0.6834
+        },
+        "freeze_embed_seed0": {
+          "baseline_acc": 0.995,
+          "shared_drop": 0.0010000000000000009,
+          "complement_drop": 0.28759999999999997,
+          "joint_drop": 0.8036
+        },
+        "freeze_embed_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4094,
+          "joint_drop": 0.6577999999999999
+        },
+        "freeze_embed_seed2": {
+          "baseline_acc": 0.9956,
+          "shared_drop": 0.0020000000000000018,
+          "complement_drop": 0.3822000000000001,
+          "joint_drop": 0.8062
+        },
+        "freeze_layer0.attn_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0016000000000000458,
+          "complement_drop": 0.4548,
+          "joint_drop": 0.8162
+        },
+        "freeze_layer0.attn_seed1": {
+          "baseline_acc": 0.9946,
+          "shared_drop": 0.0036000000000000476,
+          "complement_drop": 0.7902,
+          "joint_drop": 0.9002
+        },
+        "freeze_layer0.attn_seed2": {
+          "baseline_acc": 0.9932,
+          "shared_drop": 0.006799999999999917,
+          "complement_drop": 0.3692,
+          "joint_drop": 0.8795999999999999
+        },
+        "freeze_layer0.mlp_seed0": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.30199999999999994,
+          "joint_drop": 0.7617999999999999
+        },
+        "freeze_layer0.mlp_seed1": {
+          "baseline_acc": 0.9998,
+          "shared_drop": 0.0,
+          "complement_drop": 0.42400000000000004,
+          "joint_drop": 0.8562000000000001
+        },
+        "freeze_layer0.mlp_seed2": {
+          "baseline_acc": 0.9968,
+          "shared_drop": 0.0008000000000000229,
+          "complement_drop": 0.44720000000000004,
+          "joint_drop": 0.8254
+        },
+        "freeze_layer1.attn_seed0": {
+          "baseline_acc": 0.9976,
+          "shared_drop": 0.0,
+          "complement_drop": 0.31920000000000004,
+          "joint_drop": 0.8156000000000001
+        },
+        "freeze_layer1.attn_seed1": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48120000000000007,
+          "joint_drop": 0.8136
+        },
+        "freeze_layer1.attn_seed2": {
+          "baseline_acc": 0.9986,
+          "shared_drop": 0.0028000000000000247,
+          "complement_drop": 0.37060000000000004,
+          "joint_drop": 0.8698
+        },
+        "freeze_layer1.mlp_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.2904,
+          "joint_drop": 0.8158
+        },
+        "freeze_layer1.mlp_seed1": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.42900000000000005,
+          "joint_drop": 0.7110000000000001
+        },
+        "freeze_layer1.mlp_seed2": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.00039999999999995595,
+          "complement_drop": 0.41379999999999995,
+          "joint_drop": 0.9002
+        },
+        "freeze_layer2.attn_seed0": {
+          "baseline_acc": 0.9992,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3396,
+          "joint_drop": 0.743
+        },
+        "freeze_layer2.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.40359999999999996,
+          "joint_drop": 0.7598
+        },
+        "freeze_layer2.attn_seed2": {
+          "baseline_acc": 0.9954,
+          "shared_drop": 0.0015999999999999348,
+          "complement_drop": 0.38159999999999994,
+          "joint_drop": 0.7687999999999999
+        },
+        "freeze_layer2.mlp_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": -0.00019999999999997797,
+          "complement_drop": 0.41459999999999997,
+          "joint_drop": 0.8544
+        },
+        "freeze_layer2.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.43899999999999995,
+          "joint_drop": 0.8516
+        },
+        "freeze_layer2.mlp_seed2": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4626,
+          "joint_drop": 0.8998
+        },
+        "freeze_layer3.attn_seed0": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.00039999999999995595,
+          "complement_drop": 0.406,
+          "joint_drop": 0.7978000000000001
+        },
+        "freeze_layer3.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4222,
+          "joint_drop": 0.7243999999999999
+        },
+        "freeze_layer3.attn_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.35719999999999996,
+          "joint_drop": 0.8264
+        },
+        "freeze_layer3.mlp_seed0": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4326,
+          "joint_drop": 0.7308
+        },
+        "freeze_layer3.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48519999999999996,
+          "joint_drop": 0.7502
+        },
+        "freeze_layer3.mlp_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.40259999999999996,
+          "joint_drop": 0.8142
+        },
+        "freeze_unembed_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.6952,
+          "joint_drop": 0.8854
+        },
+        "freeze_unembed_seed1": {
+          "baseline_acc": 0.9964,
+          "shared_drop": 0.0,
+          "complement_drop": 0.348,
+          "joint_drop": 0.7125999999999999
+        },
+        "freeze_unembed_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.31299999999999994,
+          "joint_drop": 0.8102
+        }
+      }
+    },
+    "layer3_result_2": {
+      "site": "layer3_result_2",
+      "layer": 3,
+      "position_idx": 14,
+      "k": 8,
+      "models": {
+        "baseline_seed0": {
+          "baseline_acc": 0.996,
+          "shared_drop": 0.0008000000000000229,
+          "complement_drop": 0.39359999999999995,
+          "joint_drop": 0.8152
+        },
+        "baseline_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3952,
+          "joint_drop": 0.7996
+        },
+        "baseline_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3006,
+          "joint_drop": 0.7544
+        },
+        "freeze_embed_seed0": {
+          "baseline_acc": 0.995,
+          "shared_drop": 0.0031999999999999806,
+          "complement_drop": 0.3748,
+          "joint_drop": 0.8056
+        },
+        "freeze_embed_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.42679999999999996,
+          "joint_drop": 0.6970000000000001
+        },
+        "freeze_embed_seed2": {
+          "baseline_acc": 0.9956,
+          "shared_drop": 0.000200000000000089,
+          "complement_drop": 0.3682000000000001,
+          "joint_drop": 0.771
+        },
+        "freeze_layer0.attn_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0050000000000000044,
+          "complement_drop": 0.45520000000000005,
+          "joint_drop": 0.835
+        },
+        "freeze_layer0.attn_seed1": {
+          "baseline_acc": 0.9946,
+          "shared_drop": 0.0030000000000000027,
+          "complement_drop": 0.3842,
+          "joint_drop": 0.8438000000000001
+        },
+        "freeze_layer0.attn_seed2": {
+          "baseline_acc": 0.9932,
+          "shared_drop": 0.0033999999999999586,
+          "complement_drop": 0.3922,
+          "joint_drop": 0.847
+        },
+        "freeze_layer0.mlp_seed0": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3495999999999999,
+          "joint_drop": 0.8048
+        },
+        "freeze_layer0.mlp_seed1": {
+          "baseline_acc": 0.9998,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3418,
+          "joint_drop": 0.7278
+        },
+        "freeze_layer0.mlp_seed2": {
+          "baseline_acc": 0.9968,
+          "shared_drop": 0.006199999999999983,
+          "complement_drop": 0.5438000000000001,
+          "joint_drop": 0.786
+        },
+        "freeze_layer1.attn_seed0": {
+          "baseline_acc": 0.9976,
+          "shared_drop": 0.000200000000000089,
+          "complement_drop": 0.2784000000000001,
+          "joint_drop": 0.7768
+        },
+        "freeze_layer1.attn_seed1": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.0,
+          "complement_drop": 0.46140000000000003,
+          "joint_drop": 0.8064
+        },
+        "freeze_layer1.attn_seed2": {
+          "baseline_acc": 0.9986,
+          "shared_drop": 0.00040000000000006697,
+          "complement_drop": 0.2982,
+          "joint_drop": 0.7676000000000001
+        },
+        "freeze_layer1.mlp_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3278,
+          "joint_drop": 0.7988
+        },
+        "freeze_layer1.mlp_seed1": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.46640000000000004,
+          "joint_drop": 0.7584
+        },
+        "freeze_layer1.mlp_seed2": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.0027999999999999137,
+          "complement_drop": 0.39779999999999993,
+          "joint_drop": 0.7928
+        },
+        "freeze_layer2.attn_seed0": {
+          "baseline_acc": 0.9992,
+          "shared_drop": 0.0,
+          "complement_drop": 0.2902,
+          "joint_drop": 0.765
+        },
+        "freeze_layer2.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.383,
+          "joint_drop": 0.8208
+        },
+        "freeze_layer2.attn_seed2": {
+          "baseline_acc": 0.9954,
+          "shared_drop": -0.0008000000000000229,
+          "complement_drop": 0.3236,
+          "joint_drop": 0.7353999999999999
+        },
+        "freeze_layer2.mlp_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0,
+          "complement_drop": 0.483,
+          "joint_drop": 0.8054
+        },
+        "freeze_layer2.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.37439999999999996,
+          "joint_drop": 0.7964
+        },
+        "freeze_layer2.mlp_seed2": {
+          "baseline_acc": 0.999,
+          "shared_drop": -0.00019999999999997797,
+          "complement_drop": 0.2802,
+          "joint_drop": 0.7624
+        },
+        "freeze_layer3.attn_seed0": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.0020000000000000018,
+          "complement_drop": 0.36619999999999997,
+          "joint_drop": 0.7378
+        },
+        "freeze_layer3.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.40559999999999996,
+          "joint_drop": 0.8346
+        },
+        "freeze_layer3.attn_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.236,
+          "joint_drop": 0.7878000000000001
+        },
+        "freeze_layer3.mlp_seed0": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.00040000000000006697,
+          "complement_drop": 0.41080000000000005,
+          "joint_drop": 0.7562
+        },
+        "freeze_layer3.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48240000000000005,
+          "joint_drop": 0.7494000000000001
+        },
+        "freeze_layer3.mlp_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.17500000000000004,
+          "joint_drop": 0.784
+        },
+        "freeze_unembed_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.609,
+          "joint_drop": 0.8036
+        },
+        "freeze_unembed_seed1": {
+          "baseline_acc": 0.9964,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4775999999999999,
+          "joint_drop": 0.7535999999999999
+        },
+        "freeze_unembed_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3274,
+          "joint_drop": 0.6024
+        }
+      }
+    },
+    "layer3_result_3": {
+      "site": "layer3_result_3",
+      "layer": 3,
+      "position_idx": 15,
+      "k": 8,
+      "models": {
+        "baseline_seed0": {
+          "baseline_acc": 0.996,
+          "shared_drop": 0.0,
+          "complement_drop": 0.374,
+          "joint_drop": 0.8228
+        },
+        "baseline_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.38880000000000003,
+          "joint_drop": 0.6666000000000001
+        },
+        "baseline_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4444,
+          "joint_drop": 0.8674
+        },
+        "freeze_embed_seed0": {
+          "baseline_acc": 0.995,
+          "shared_drop": 0.00539999999999996,
+          "complement_drop": 0.47340000000000004,
+          "joint_drop": 0.7176
+        },
+        "freeze_embed_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48440000000000005,
+          "joint_drop": 0.7170000000000001
+        },
+        "freeze_embed_seed2": {
+          "baseline_acc": 0.9956,
+          "shared_drop": 0.0026000000000000467,
+          "complement_drop": 0.4176000000000001,
+          "joint_drop": 0.7456
+        },
+        "freeze_layer0.attn_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0006000000000000449,
+          "complement_drop": 0.44599999999999995,
+          "joint_drop": 0.8358
+        },
+        "freeze_layer0.attn_seed1": {
+          "baseline_acc": 0.9946,
+          "shared_drop": 0.012199999999999989,
+          "complement_drop": 0.5108,
+          "joint_drop": 0.7962
+        },
+        "freeze_layer0.attn_seed2": {
+          "baseline_acc": 0.9932,
+          "shared_drop": 0.00039999999999995595,
+          "complement_drop": 0.5318,
+          "joint_drop": 0.8712
+        },
+        "freeze_layer0.mlp_seed0": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4393999999999999,
+          "joint_drop": 0.8246
+        },
+        "freeze_layer0.mlp_seed1": {
+          "baseline_acc": 0.9998,
+          "shared_drop": 0.007600000000000051,
+          "complement_drop": 0.40360000000000007,
+          "joint_drop": 0.7504
+        },
+        "freeze_layer0.mlp_seed2": {
+          "baseline_acc": 0.9968,
+          "shared_drop": 0.0,
+          "complement_drop": 0.37740000000000007,
+          "joint_drop": 0.7864
+        },
+        "freeze_layer1.attn_seed0": {
+          "baseline_acc": 0.9976,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3064,
+          "joint_drop": 0.812
+        },
+        "freeze_layer1.attn_seed1": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.45100000000000007,
+          "joint_drop": 0.8028
+        },
+        "freeze_layer1.attn_seed2": {
+          "baseline_acc": 0.9986,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3842000000000001,
+          "joint_drop": 0.8400000000000001
+        },
+        "freeze_layer1.mlp_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4152,
+          "joint_drop": 0.804
+        },
+        "freeze_layer1.mlp_seed1": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.0026000000000000467,
+          "complement_drop": 0.5202,
+          "joint_drop": 0.762
+        },
+        "freeze_layer1.mlp_seed2": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.0,
+          "complement_drop": 0.44279999999999997,
+          "joint_drop": 0.6914
+        },
+        "freeze_layer2.attn_seed0": {
+          "baseline_acc": 0.9992,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.28079999999999994,
+          "joint_drop": 0.766
+        },
+        "freeze_layer2.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.42079999999999995,
+          "joint_drop": 0.7824
+        },
+        "freeze_layer2.attn_seed2": {
+          "baseline_acc": 0.9954,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4154,
+          "joint_drop": 0.7505999999999999
+        },
+        "freeze_layer2.mlp_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.3318,
+          "joint_drop": 0.841
+        },
+        "freeze_layer2.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4274,
+          "joint_drop": 0.806
+        },
+        "freeze_layer2.mlp_seed2": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.52,
+          "joint_drop": 0.802
+        },
+        "freeze_layer3.attn_seed0": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.0,
+          "complement_drop": 0.40859999999999996,
+          "joint_drop": 0.8180000000000001
+        },
+        "freeze_layer3.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.5546,
+          "joint_drop": 0.8664000000000001
+        },
+        "freeze_layer3.attn_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48660000000000003,
+          "joint_drop": 0.8208
+        },
+        "freeze_layer3.mlp_seed0": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.00040000000000006697,
+          "complement_drop": 0.4832000000000001,
+          "joint_drop": 0.849
+        },
+        "freeze_layer3.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.49839999999999995,
+          "joint_drop": 0.7642
+        },
+        "freeze_layer3.mlp_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0013999999999999568,
+          "complement_drop": 0.3174,
+          "joint_drop": 0.774
+        },
+        "freeze_unembed_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.6042000000000001,
+          "joint_drop": 0.9028
+        },
+        "freeze_unembed_seed1": {
+          "baseline_acc": 0.9964,
+          "shared_drop": 0.0,
+          "complement_drop": 0.30079999999999996,
+          "joint_drop": 0.6974
+        },
+        "freeze_unembed_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3114,
+          "joint_drop": 0.8034
+        }
+      }
+    },
+    "layer3_result_4": {
+      "site": "layer3_result_4",
+      "layer": 3,
+      "position_idx": 16,
+      "k": 8,
+      "models": {
+        "baseline_seed0": {
+          "baseline_acc": 0.996,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3446,
+          "joint_drop": 0.8046
+        },
+        "baseline_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.2992,
+          "joint_drop": 0.8036
+        },
+        "baseline_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3266,
+          "joint_drop": 0.7988
+        },
+        "freeze_embed_seed0": {
+          "baseline_acc": 0.995,
+          "shared_drop": 0.0,
+          "complement_drop": 0.40979999999999994,
+          "joint_drop": 0.8894
+        },
+        "freeze_embed_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3428,
+          "joint_drop": 0.7988
+        },
+        "freeze_embed_seed2": {
+          "baseline_acc": 0.9956,
+          "shared_drop": 0.0,
+          "complement_drop": 0.2936000000000001,
+          "joint_drop": 0.8664000000000001
+        },
+        "freeze_layer0.attn_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.017199999999999993,
+          "complement_drop": 0.7106,
+          "joint_drop": 0.8324
+        },
+        "freeze_layer0.attn_seed1": {
+          "baseline_acc": 0.9946,
+          "shared_drop": 0.0,
+          "complement_drop": 0.47220000000000006,
+          "joint_drop": 0.8736
+        },
+        "freeze_layer0.attn_seed2": {
+          "baseline_acc": 0.9932,
+          "shared_drop": 0.0050000000000000044,
+          "complement_drop": 0.4905999999999999,
+          "joint_drop": 0.8638
+        },
+        "freeze_layer0.mlp_seed0": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.0,
+          "complement_drop": 0.25139999999999996,
+          "joint_drop": 0.7565999999999999
+        },
+        "freeze_layer0.mlp_seed1": {
+          "baseline_acc": 0.9998,
+          "shared_drop": 0.00019999999999997797,
+          "complement_drop": 0.35020000000000007,
+          "joint_drop": 0.792
+        },
+        "freeze_layer0.mlp_seed2": {
+          "baseline_acc": 0.9968,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3264,
+          "joint_drop": 0.8544
+        },
+        "freeze_layer1.attn_seed0": {
+          "baseline_acc": 0.9976,
+          "shared_drop": 0.0,
+          "complement_drop": 0.271,
+          "joint_drop": 0.7828
+        },
+        "freeze_layer1.attn_seed1": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.012800000000000034,
+          "complement_drop": 0.4296,
+          "joint_drop": 0.8046
+        },
+        "freeze_layer1.attn_seed2": {
+          "baseline_acc": 0.9986,
+          "shared_drop": 0.0,
+          "complement_drop": 0.404,
+          "joint_drop": 0.8936000000000001
+        },
+        "freeze_layer1.mlp_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.394,
+          "joint_drop": 0.8588
+        },
+        "freeze_layer1.mlp_seed1": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.0,
+          "complement_drop": 0.5164,
+          "joint_drop": 0.7732
+        },
+        "freeze_layer1.mlp_seed2": {
+          "baseline_acc": 0.9974,
+          "shared_drop": 0.0,
+          "complement_drop": 0.2966,
+          "joint_drop": 0.8079999999999999
+        },
+        "freeze_layer2.attn_seed0": {
+          "baseline_acc": 0.9992,
+          "shared_drop": 0.0,
+          "complement_drop": 0.17720000000000002,
+          "joint_drop": 0.7658
+        },
+        "freeze_layer2.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.2086,
+          "joint_drop": 0.7456
+        },
+        "freeze_layer2.attn_seed2": {
+          "baseline_acc": 0.9954,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3902,
+          "joint_drop": 0.8049999999999999
+        },
+        "freeze_layer2.mlp_seed0": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0,
+          "complement_drop": 0.2884,
+          "joint_drop": 0.819
+        },
+        "freeze_layer2.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48419999999999996,
+          "joint_drop": 0.8112
+        },
+        "freeze_layer2.mlp_seed2": {
+          "baseline_acc": 0.999,
+          "shared_drop": 0.0,
+          "complement_drop": 0.33899999999999997,
+          "joint_drop": 0.794
+        },
+        "freeze_layer3.attn_seed0": {
+          "baseline_acc": 0.998,
+          "shared_drop": 0.0,
+          "complement_drop": 0.31720000000000004,
+          "joint_drop": 0.8092
+        },
+        "freeze_layer3.attn_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4726,
+          "joint_drop": 0.8298
+        },
+        "freeze_layer3.attn_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.22699999999999998,
+          "joint_drop": 0.8092
+        },
+        "freeze_layer3.mlp_seed0": {
+          "baseline_acc": 0.9988,
+          "shared_drop": 0.0,
+          "complement_drop": 0.4586,
+          "joint_drop": 0.8576
+        },
+        "freeze_layer3.mlp_seed1": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.48619999999999997,
+          "joint_drop": 0.7968
+        },
+        "freeze_layer3.mlp_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.18720000000000003,
+          "joint_drop": 0.8046
+        },
+        "freeze_unembed_seed0": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.7008,
+          "joint_drop": 0.8088
+        },
+        "freeze_unembed_seed1": {
+          "baseline_acc": 0.9964,
+          "shared_drop": 0.0,
+          "complement_drop": 0.22599999999999998,
+          "joint_drop": 0.7111999999999999
+        },
+        "freeze_unembed_seed2": {
+          "baseline_acc": 1.0,
+          "shared_drop": 0.0,
+          "complement_drop": 0.3034,
+          "joint_drop": 0.6996
+        }
+      }
+    }
+  },
+  "summary": {
+    "layer1_result_0": {
+      "shared": 0.37614545454545456,
+      "complement": 0.2506909090909091,
+      "joint": 0.8857636363636364,
+      "joint_minus_complement": 0.6350727272727273,
+      "redundancy_verdict": "shared carries hidden load"
+    },
+    "layer3_result_0": {
+      "shared": 0.003345454545454544,
+      "complement": 0.41520000000000007,
+      "joint": 0.8080727272727273,
+      "joint_minus_complement": 0.3928727272727272,
+      "redundancy_verdict": "shared carries hidden load"
+    },
+    "layer3_result_1": {
+      "shared": 0.0006484848484848444,
+      "complement": 0.4133878787878788,
+      "joint": 0.7987636363636365,
+      "joint_minus_complement": 0.38537575757575765,
+      "redundancy_verdict": "shared carries hidden load"
+    },
+    "layer3_result_2": {
+      "shared": 0.0008121212121212169,
+      "complement": 0.38122424242424247,
+      "joint": 0.7782666666666667,
+      "joint_minus_complement": 0.3970424242424242,
+      "redundancy_verdict": "shared carries hidden load"
+    },
+    "layer3_result_3": {
+      "shared": 0.0010303030303030311,
+      "complement": 0.4294787878787879,
+      "joint": 0.7926606060606061,
+      "joint_minus_complement": 0.36318181818181816,
+      "redundancy_verdict": "shared carries hidden load"
+    },
+    "layer3_result_4": {
+      "shared": 0.001066666666666667,
+      "complement": 0.36958181818181823,
+      "joint": 0.8097818181818183,
+      "joint_minus_complement": 0.44020000000000004,
+      "redundancy_verdict": "shared carries hidden load"
+    }
+  }
+}

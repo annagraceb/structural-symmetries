@@ -1,0 +1,43 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local scratch / build
+/tmp/
+*.egg-info/
+.venv/
+.env
+.pytest_cache/
+
+# Claude Code local data
+.claude/
+
+# Activations: regenerable from saved model weights via collect_activations*.py
+# (these are multi-GB per zoo; excluded to stay under GitHub repo size limits)
+activations/
+activations_deep/
+activations_deep8/
+activations_modp/
+
+# Aligned activations: regenerable via step9_p1*.py alignment step
+# (~17MB per site, ~15 sites)
+results/aligned_*/
+
+# Rotation matrices (regenerable in same alignment step)
+results/R_*.npy
+results/deep/R_*.npy
+results/deep/aligned_*/
+results/deep8/R_*.npy
+results/deep8/aligned_*/
+results/modp/R_*.npy
+results/modp/aligned_*/
+
+# Build artifact (regenerable via build_pdf.py)
+/paper_build.html
+
+# Run1 and auxiliary training artifacts (large, not part of the P1 story)
+run1_reversed/
+models_auxiliary/
+models_step8_rerun/

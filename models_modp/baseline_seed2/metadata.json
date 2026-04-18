@@ -1,0 +1,11 @@
+{
+  "seed": 2,
+  "frozen_component": null,
+  "converged": true,
+  "converge_step": 1000,
+  "final_accuracy": 1.0,
+  "best_accuracy": 1.0,
+  "total_steps": 2000,
+  "total_time_seconds": 13.906424522399902,
+  "p": 23
+}

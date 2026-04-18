@@ -1,0 +1,50 @@
+Extracting shared directions at each layer...
+  Layer 0...
+    Top eigenvalue: 0.809
+  Layer 1...
+    Top eigenvalue: 0.900
+  Layer 2...
+    Top eigenvalue: 0.899
+  Layer 3...
+    Top eigenvalue: 0.774
+
+Running multi-layer ablation...
+
+  Model: baseline_seed0
+
+  Model: baseline_seed1
+
+  Model: baseline_seed2
+
+  Model: freeze_embed_seed0
+
+  Model: freeze_embed_seed1
+
+  Model: freeze_embed_seed2
+
+  Model: freeze_layer0.attn_seed0
+
+  Model: freeze_layer0.attn_seed1
+
+  Model: freeze_layer0.attn_seed2
+
+  Model: freeze_layer0.mlp_seed0
+
+======================================================================
+MULTI-LAYER ABLATION RESULTS
+======================================================================
+Layers                Shared Drop  Random Drop    Ratio
+-------------------------------------------------------
+none                      0.0000      0.0000    0.00
+L0                        0.0006      0.0121    0.05
+L1                        0.0066      0.0025    2.58
+L2                        0.0072      0.0006   12.48
+L3                        0.0000      0.0001    0.00
+L0+L1                     0.0136      0.0286    0.47
+L1+L2                     0.0332      0.0100    3.33
+L2+L3                     0.0090      0.0010    9.00
+L0+L1+L2                  0.0447      0.0424    1.05
+L1+L2+L3                  0.0372      0.0097    3.82
+L0+L1+L2+L3               0.0474      0.0448    1.06
+
+Saved to results/multilayer_ablation.json

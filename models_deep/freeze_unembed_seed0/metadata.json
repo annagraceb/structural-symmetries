@@ -1,0 +1,13 @@
+{
+  "seed": 0,
+  "frozen_component": "unembed",
+  "converged": true,
+  "converge_step": 8000,
+  "final_accuracy": 0.9966,
+  "best_accuracy": 0.9992,
+  "total_steps": 10000,
+  "total_time_seconds": 255.88195061683655,
+  "n_params_total": 302720,
+  "n_params_trainable": 301824,
+  "use_carry_head": false
+}

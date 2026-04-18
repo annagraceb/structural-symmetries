@@ -1,0 +1,26 @@
+[
+  {
+    "site": "layer1_result_0",
+    "layer": 1,
+    "position_idx": 12,
+    "position_name": "result_0",
+    "cka_mean": 0.7960970373026387,
+    "cka_no_pc": 0.483375444336037
+  },
+  {
+    "site": "layer2_equals",
+    "layer": 2,
+    "position_idx": 11,
+    "position_name": "equals",
+    "cka_mean": 0.7620774544129866,
+    "cka_no_pc": 0.3818729484497428
+  },
+  {
+    "site": "layer2_result_0",
+    "layer": 2,
+    "position_idx": 12,
+    "position_name": "result_0",
+    "cka_mean": 0.7588900031944797,
+    "cka_no_pc": 0.5304586601191904
+  }
+]

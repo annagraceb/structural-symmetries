@@ -1,0 +1,781 @@
+
+======================================================================
+STEP 2: COLLECT ACTIVATIONS
+======================================================================
+Loading eval sets...
+Found 33 converged models
+  [1/33] Collecting activations for baseline_seed0...
+  [2/33] Collecting activations for baseline_seed1...
+  [3/33] Collecting activations for baseline_seed2...
+  [4/33] Collecting activations for freeze_embed_seed0...
+  [5/33] Collecting activations for freeze_embed_seed1...
+  [6/33] Collecting activations for freeze_embed_seed2...
+  [7/33] Collecting activations for freeze_layer0.attn_seed0...
+  [8/33] Collecting activations for freeze_layer0.attn_seed1...
+  [9/33] Collecting activations for freeze_layer0.attn_seed2...
+  [10/33] Collecting activations for freeze_layer0.mlp_seed0...
+  [11/33] Collecting activations for freeze_layer0.mlp_seed1...
+  [12/33] Collecting activations for freeze_layer0.mlp_seed2...
+  [13/33] Collecting activations for freeze_layer1.attn_seed0...
+  [14/33] Collecting activations for freeze_layer1.attn_seed1...
+  [15/33] Collecting activations for freeze_layer1.attn_seed2...
+  [16/33] Collecting activations for freeze_layer1.mlp_seed0...
+  [17/33] Collecting activations for freeze_layer1.mlp_seed1...
+  [18/33] Collecting activations for freeze_layer1.mlp_seed2...
+  [19/33] Collecting activations for freeze_layer2.attn_seed0...
+  [20/33] Collecting activations for freeze_layer2.attn_seed1...
+  [21/33] Collecting activations for freeze_layer2.attn_seed2...
+  [22/33] Collecting activations for freeze_layer2.mlp_seed0...
+  [23/33] Collecting activations for freeze_layer2.mlp_seed1...
+  [24/33] Collecting activations for freeze_layer2.mlp_seed2...
+  [25/33] Collecting activations for freeze_layer3.attn_seed0...
+  [26/33] Collecting activations for freeze_layer3.attn_seed1...
+  [27/33] Collecting activations for freeze_layer3.attn_seed2...
+  [28/33] Collecting activations for freeze_layer3.mlp_seed0...
+  [29/33] Collecting activations for freeze_layer3.mlp_seed1...
+  [30/33] Collecting activations for freeze_layer3.mlp_seed2...
+  [31/33] Collecting activations for freeze_unembed_seed0...
+  [32/33] Collecting activations for freeze_unembed_seed1...
+  [33/33] Collecting activations for freeze_unembed_seed2...
+
+Activation collection complete. Saved to activations/
+
+======================================================================
+STEPS 3-7: ANALYSIS PIPELINE
+======================================================================
+Found 33 converged models
+
+============================================================
+STEP 3: CKA Analysis
+============================================================
+  CKA layer 0...
+  CKA layer 1...
+  CKA layer 2...
+  CKA layer 3...
+
+  CKA Heatmap Summary (top sites):
+    layer3_equals: CKA=0.925 [0.922, 0.928] | no-PC1: 0.294
+    layer1_result_0: CKA=0.796 [0.789, 0.804] | no-PC1: 0.483
+    layer2_equals: CKA=0.762 [0.744, 0.779] | no-PC1: 0.382
+    layer2_result_0: CKA=0.759 [0.750, 0.767] | no-PC1: 0.530
+    layer1_result_4: CKA=0.759 [0.741, 0.776] | no-PC1: 0.454
+    layer3_result_4: CKA=0.718 [0.708, 0.728] | no-PC1: 0.593
+    layer2_result_4: CKA=0.716 [0.699, 0.732] | no-PC1: 0.510
+    layer3_result_3: CKA=0.697 [0.687, 0.707] | no-PC1: 0.578
+    layer3_result_0: CKA=0.696 [0.688, 0.704] | no-PC1: 0.556
+    layer1_result_3: CKA=0.689 [0.668, 0.710] | no-PC1: 0.400
+
+  Decision gate: 22 sites pass criteria, selected top 3
+    layer1_result_0: CKA=0.796, no-PC1=0.483
+    layer2_equals: CKA=0.762, no-PC1=0.382
+    layer2_result_0: CKA=0.759, no-PC1=0.530
+
+============================================================
+STEP 4: Procrustes Alignment
+============================================================
+  Reference model: baseline_seed0
+
+  Aligning at layer1_result_0...
+    Computing random rotation baseline...
+    Residuals: mean=0.5447, std=0.1380, random_baseline=0.4674
+    Baseline residuals: ['0.4674', '0.7913']
+
+  Aligning at layer2_equals...
+    Computing random rotation baseline...
+    Residuals: mean=0.6890, std=0.1156, random_baseline=0.5814
+    Baseline residuals: ['0.5814', '0.8008']
+
+  Aligning at layer2_result_0...
+    Computing random rotation baseline...
+    SVCCA fallback for freeze_embed_seed0 (residual 1.193 > threshold 1.190)
+    Residuals: mean=0.5904, std=0.1628, random_baseline=0.4442
+    Baseline residuals: ['0.4442', '0.7457']
+
+============================================================
+STEP 5: Shared Subspace Extraction
+============================================================
+  Primary extraction site: layer1_result_0
+
+  Shared eigenvalues (top 10): ['0.8996', '0.8394', '0.7823', '0.6985', '0.6690', '0.6279', '0.6158', '0.5831', '0.5270', '0.4927']
+  PCA cosines (shared vs PCA): ['0.3279', '0.3631', '0.2038', '0.0599', '0.5417']
+
+  Validating on natural distribution...
+  Natural set explained ratios: [{'k': 1, 'ratio': 0.041963143570625104}, {'k': 3, 'ratio': 0.12844945173954536}, {'k': 5, 'ratio': 0.21806969669414517}, {'k': 10, 'ratio': 0.45771999657394385}]
+
+  Checking reference invariance...
+
+============================================================
+STEP 6: Interpretation
+============================================================
+
+  direction_0:
+    result_digit_col4: corr=0.9350055709262959
+    carry_col4: corr=-0.5079190155296346, MI=0.1619
+    result_digit_col5: corr=-0.5079190155296346
+    n_carries: corr=-0.28644097059801915, MI=0.0749
+    carry_col3: corr=-0.11259490088142354, MI=0.0705
+
+  direction_1:
+    carry_col4: corr=0.10688881003448913, MI=0.0441
+    result_digit_col5: corr=0.10688881003448913
+    sum_magnitude: corr=0.0814533299574866, MI=0.9385
+    b_digit_col4: corr=0.0755938402846316
+    result_digit_col4: corr=-0.06276114699491397
+
+  direction_2:
+    sum_magnitude: corr=-0.981408155771016, MI=1.4162
+    carry_col4: corr=-0.8040788401796535, MI=0.4809
+    result_digit_col5: corr=-0.8040788401796535
+    a_digit_col4: corr=-0.6819362125362033
+    b_digit_col4: corr=-0.6809393648736728
+
+  direction_3:
+    carry_col3: corr=-0.20356870811631084, MI=0.0585
+    b_digit_col3: corr=-0.17974664882509017
+    n_carries: corr=-0.12810693020547326, MI=0.0382
+    a_digit_col3: corr=-0.12733488063530415
+    result_digit_col2: corr=0.08115643501203886
+
+  direction_4:
+    carry_col3: corr=0.6622007419327417, MI=0.2953
+    n_carries: corr=0.4165122275208094, MI=0.1197
+    a_digit_col3: corr=0.3972711751437117
+    b_digit_col3: corr=0.3743731601152841
+    result_digit_col3: corr=-0.3221339456268128
+
+============================================================
+STEP 7: Ablation
+============================================================
+    Ablating baseline_seed0...
+    Ablating baseline_seed1...
+    Ablating baseline_seed2...
+    Ablating freeze_embed_seed0...
+    Ablating freeze_embed_seed1...
+    Ablating freeze_embed_seed2...
+    Ablating freeze_layer0.attn_seed0...
+    Ablating freeze_layer0.attn_seed1...
+    Ablating freeze_layer0.attn_seed2...
+    Ablating freeze_layer0.mlp_seed0...
+    Ablating freeze_layer0.mlp_seed1...
+    Ablating freeze_layer0.mlp_seed2...
+    Ablating freeze_layer1.attn_seed0...
+    Ablating freeze_layer1.attn_seed1...
+    Ablating freeze_layer1.attn_seed2...
+    Ablating freeze_layer1.mlp_seed0...
+    Ablating freeze_layer1.mlp_seed1...
+    Ablating freeze_layer1.mlp_seed2...
+    Ablating freeze_layer2.attn_seed0...
+    Ablating freeze_layer2.attn_seed1...
+    Ablating freeze_layer2.attn_seed2...
+    Ablating freeze_layer2.mlp_seed0...
+    Ablating freeze_layer2.mlp_seed1...
+    Ablating freeze_layer2.mlp_seed2...
+    Ablating freeze_layer3.attn_seed0...
+    Ablating freeze_layer3.attn_seed1...
+    Ablating freeze_layer3.attn_seed2...
+    Ablating freeze_layer3.mlp_seed0...
+    Ablating freeze_layer3.mlp_seed1...
+    Ablating freeze_layer3.mlp_seed2...
+    Ablating freeze_unembed_seed0...
+    Ablating freeze_unembed_seed1...
+    Ablating freeze_unembed_seed2...
+
+  Ablation summary:
+    ablate_top1: shared_drop=0.0006, random_drop=0.0006, p=0.775075 ns
+    ablate_top3: shared_drop=0.0025, random_drop=0.0022, p=0.132849 ns
+    ablate_top5: shared_drop=0.0024, random_drop=0.0064, p=0.001226 ***
+    ablate_top10: shared_drop=0.0116, random_drop=0.0279, p=0.000088 ***
+
+============================================================
+PIPELINE COMPLETE (Steps 3-7)
+============================================================
+
+Steps 2-7 completed in 425s (7.1 min)
+
+======================================================================
+STEP 8: AUXILIARY LOSS TRAINING
+======================================================================
+Loaded shared directions: (10, 64)
+Loaded bottom eigenvectors: (10, 64)
+Loaded reference activations: (2000, 64)
+Target site: layer 1, position 12
+
+============================================================
+PHASE 1: Alpha Sweep
+============================================================
+
+  Training A_alpha0.1_seed0...
+  Step   1000 | loss 1.4397 | aux 0.0000 | acc 0.0004 | 18s
+  Step   2000 | loss 0.0078 | aux 0.0000 | acc 0.9802 | 35s
+  Step   3000 | loss 0.0005 | aux 0.0000 | acc 0.9990 | 53s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0029 | aux 0.0000 | acc 0.9994 | 70s
+  Step   5000 | loss 0.0041 | aux 0.0000 | acc 0.9976 | 88s
+
+  Training A_alpha0.1_seed1...
+  Step   1000 | loss 0.4458 | aux 0.0000 | acc 0.2664 | 18s
+  Step   2000 | loss 0.0108 | aux 0.0000 | acc 0.9810 | 35s
+  Step   3000 | loss 0.0152 | aux 0.0000 | acc 0.9904 | 53s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0025 | aux 0.0000 | acc 0.9866 | 71s
+  Step   5000 | loss 0.0036 | aux 0.0000 | acc 0.9972 | 88s
+
+  Training B_alpha0.1_seed0...
+  Step   1000 | loss 1.2171 | aux 0.1064 | acc 0.0014 | 18s
+  Step   2000 | loss 0.4983 | aux 0.0504 | acc 0.0714 | 37s
+  Step   3000 | loss 0.1118 | aux 0.0235 | acc 0.7932 | 55s
+  Step   4000 | loss 0.0603 | aux 0.0057 | acc 0.8684 | 73s
+  Step   5000 | loss 0.0397 | aux 0.0079 | acc 0.8854 | 91s
+  Step   6000 | loss 0.0137 | aux 0.0035 | acc 0.8866 | 109s
+  Step   7000 | loss 0.0129 | aux 0.0020 | acc 0.9800 | 128s
+  Step   8000 | loss 0.0720 | aux 0.0281 | acc 0.8792 | 146s
+  Step   9000 | loss 0.0037 | aux 0.0012 | acc 0.9974 | 164s
+  >>> Converged at step 9000
+  Step  10000 | loss 0.0061 | aux 0.0007 | acc 0.9904 | 182s
+  Step  11000 | loss 0.0014 | aux 0.0002 | acc 0.9594 | 200s
+
+  Training B_alpha0.1_seed1...
+  Step   1000 | loss 0.6441 | aux 0.1718 | acc 0.0654 | 18s
+  Step   2000 | loss 0.4630 | aux 0.0223 | acc 0.0802 | 36s
+  Step   3000 | loss 0.0179 | aux 0.0083 | acc 0.9602 | 54s
+  Step   4000 | loss 0.0186 | aux 0.0034 | acc 0.9806 | 72s
+  Step   5000 | loss 0.0030 | aux 0.0031 | acc 0.9970 | 91s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0034 | aux 0.0018 | acc 0.9992 | 108s
+  Step   7000 | loss 0.0013 | aux 0.0029 | acc 0.9912 | 127s
+
+  Training C1_alpha0.1_seed0...
+  Step   1000 | loss 1.6537 | aux -0.9308 | acc 0.0000 | 26s
+  Step   2000 | loss 0.8296 | aux -0.9813 | acc 0.0106 | 51s
+  Step   3000 | loss 0.0328 | aux -0.9887 | acc 0.9324 | 76s
+  Step   4000 | loss 0.0290 | aux -0.9919 | acc 0.9062 | 102s
+  Step   5000 | loss 0.0104 | aux -0.9835 | acc 0.9804 | 127s
+  Step   6000 | loss 0.0023 | aux -0.9901 | acc 0.9912 | 152s
+  >>> Converged at step 6000
+  Step   7000 | loss 0.0012 | aux -0.9936 | acc 0.9990 | 177s
+  Step   8000 | loss 0.0000 | aux -0.9984 | acc 1.0000 | 202s
+
+  Training C1_alpha0.1_seed1...
+  Step   1000 | loss 1.3707 | aux -0.9520 | acc 0.0000 | 25s
+  Step   2000 | loss 0.3763 | aux -0.9673 | acc 0.4006 | 50s
+  Step   3000 | loss 0.0119 | aux -0.9822 | acc 0.9798 | 75s
+  Step   4000 | loss 0.0298 | aux -0.9875 | acc 0.9748 | 101s
+  Step   5000 | loss 0.0010 | aux -0.9914 | acc 0.9968 | 126s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.1281 | aux -0.9829 | acc 0.8558 | 151s
+  Step   7000 | loss 0.0068 | aux -0.9892 | acc 0.9960 | 177s
+
+  Training C1_alpha0.01_seed0...
+  Step   1000 | loss 1.2296 | aux -0.8819 | acc 0.0020 | 26s
+  Step   2000 | loss 0.0162 | aux -0.9302 | acc 0.9836 | 51s
+  Step   3000 | loss 0.0043 | aux -0.9475 | acc 0.9982 | 76s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0000 | aux -0.9802 | acc 1.0000 | 101s
+  Step   5000 | loss 0.0000 | aux -0.9933 | acc 1.0000 | 126s
+
+  Training C1_alpha0.01_seed1...
+  Step   1000 | loss 1.0652 | aux -0.8716 | acc 0.0080 | 25s
+  Step   2000 | loss 0.0410 | aux -0.9102 | acc 0.9272 | 50s
+  Step   3000 | loss 0.0509 | aux -0.9353 | acc 0.9544 | 75s
+  Step   4000 | loss 0.0064 | aux -0.9493 | acc 0.9918 | 101s
+  >>> Converged at step 4000
+  Step   5000 | loss 0.0034 | aux -0.9694 | acc 0.9974 | 126s
+  Step   6000 | loss 0.0000 | aux -0.9853 | acc 1.0000 | 151s
+
+  Training C1_alpha0.001_seed0...
+  Step   1000 | loss 1.5596 | aux -0.8854 | acc 0.0000 | 25s
+  Step   2000 | loss 0.0202 | aux -0.8222 | acc 0.9732 | 51s
+  Step   3000 | loss 0.0010 | aux -0.8421 | acc 0.9940 | 76s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0026 | aux -0.8275 | acc 0.9982 | 102s
+  Step   5000 | loss 0.0000 | aux -0.8805 | acc 1.0000 | 127s
+
+  Training C1_alpha0.001_seed1...
+  Step   1000 | loss 0.2374 | aux -0.8338 | acc 0.5430 | 26s
+  Step   2000 | loss 0.0164 | aux -0.8851 | acc 0.9244 | 51s
+  Step   3000 | loss 0.0050 | aux -0.8959 | acc 0.9636 | 76s
+  Step   4000 | loss 0.0038 | aux -0.9185 | acc 0.9952 | 101s
+  >>> Converged at step 4000
+  Step   5000 | loss 0.0014 | aux -0.9276 | acc 0.9966 | 127s
+  Step   6000 | loss 0.0009 | aux -0.9296 | acc 0.9970 | 152s
+
+  Training C2_alpha0.1_seed0...
+  Step   1000 | loss 1.5814 | aux 0.0440 | acc 0.0000 | 18s
+  Step   2000 | loss 0.0660 | aux 0.0492 | acc 0.8880 | 36s
+  Step   3000 | loss 0.0047 | aux 0.0548 | acc 0.9926 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0040 | aux 0.0516 | acc 0.9972 | 73s
+  Step   5000 | loss 0.0046 | aux 0.0391 | acc 0.9980 | 91s
+
+  Training C2_alpha0.1_seed1...
+  Step   1000 | loss 0.4898 | aux 0.0298 | acc 0.1070 | 18s
+  Step   2000 | loss 0.0131 | aux 0.0410 | acc 0.9884 | 36s
+  Step   3000 | loss 0.0062 | aux 0.0384 | acc 0.9906 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0026 | aux 0.0238 | acc 0.9984 | 73s
+  Step   5000 | loss 0.0012 | aux 0.0235 | acc 0.9950 | 91s
+
+  Training C2_alpha0.01_seed0...
+  Step   1000 | loss 1.5690 | aux 0.2011 | acc 0.0004 | 18s
+  Step   2000 | loss 0.0216 | aux 0.1519 | acc 0.9426 | 37s
+  Step   3000 | loss 0.0013 | aux 0.2394 | acc 0.9972 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0025 | aux 0.1892 | acc 0.9934 | 74s
+  Step   5000 | loss 0.0005 | aux 0.3391 | acc 0.9974 | 92s
+
+  Training C2_alpha0.01_seed1...
+  Step   1000 | loss 0.9138 | aux 0.1022 | acc 0.0220 | 18s
+  Step   2000 | loss 0.0126 | aux 0.2081 | acc 0.8680 | 37s
+  Step   3000 | loss 0.0061 | aux 0.2719 | acc 0.9780 | 55s
+  Step   4000 | loss 0.0002 | aux 0.1892 | acc 0.9738 | 73s
+  Step   5000 | loss 0.0052 | aux 0.1480 | acc 0.9904 | 91s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0085 | aux 0.1485 | acc 0.9984 | 110s
+  Step   7000 | loss 0.0700 | aux 0.0734 | acc 0.9990 | 128s
+
+  Training C2_alpha0.001_seed0...
+  Step   1000 | loss 1.5705 | aux 0.3374 | acc 0.0000 | 18s
+  Step   2000 | loss 0.0188 | aux 0.2033 | acc 0.9624 | 36s
+  Step   3000 | loss 0.0008 | aux 0.5499 | acc 0.9984 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0000 | aux 0.3238 | acc 1.0000 | 73s
+  Step   5000 | loss 0.0000 | aux 0.7730 | acc 1.0000 | 91s
+
+  Training C2_alpha0.001_seed1...
+  Step   1000 | loss 0.9878 | aux 0.2227 | acc 0.0136 | 19s
+  Step   2000 | loss 0.0012 | aux 0.7866 | acc 0.9920 | 37s
+  >>> Converged at step 2000
+  Step   3000 | loss 0.0009 | aux 0.6545 | acc 0.9994 | 55s
+  Step   4000 | loss 0.0123 | aux 0.5546 | acc 0.9938 | 73s
+
+  Training D_alpha0.1_seed0...
+  Step   1000 | loss 1.5738 | aux 0.0158 | acc 0.0000 | 18s
+  Step   2000 | loss 0.0186 | aux 0.0258 | acc 0.9692 | 37s
+  Step   3000 | loss 0.0036 | aux 0.0193 | acc 0.9954 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0009 | aux 0.0128 | acc 0.9988 | 73s
+  Step   5000 | loss 0.0013 | aux 0.0145 | acc 0.9944 | 92s
+
+  Training D_alpha0.1_seed1...
+  Step   1000 | loss 0.2452 | aux 0.0163 | acc 0.5386 | 18s
+  Step   2000 | loss 0.0972 | aux 0.0169 | acc 0.9212 | 37s
+  Step   3000 | loss 0.0153 | aux 0.0120 | acc 0.9586 | 55s
+  Step   4000 | loss 0.0062 | aux 0.0104 | acc 0.9926 | 73s
+  >>> Converged at step 4000
+  Step   5000 | loss 0.0050 | aux 0.0084 | acc 0.9790 | 91s
+  Step   6000 | loss 0.0133 | aux 0.0086 | acc 0.9928 | 109s
+
+  Training D_alpha0.01_seed0...
+  Step   1000 | loss 1.5114 | aux 0.0626 | acc 0.0002 | 18s
+  Step   2000 | loss 0.0144 | aux 0.0679 | acc 0.9636 | 37s
+  Step   3000 | loss 0.0000 | aux 0.0447 | acc 1.0000 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0046 | aux 0.0883 | acc 0.9986 | 73s
+  Step   5000 | loss 0.0009 | aux 0.0752 | acc 0.9974 | 91s
+
+  Training D_alpha0.01_seed1...
+  Step   1000 | loss 0.2011 | aux 0.0455 | acc 0.5848 | 19s
+  Step   2000 | loss 0.0174 | aux 0.0632 | acc 0.9562 | 37s
+  Step   3000 | loss 0.0307 | aux 0.0763 | acc 0.9678 | 55s
+  Step   4000 | loss 0.0107 | aux 0.0593 | acc 0.9814 | 74s
+  Step   5000 | loss 0.0138 | aux 0.0754 | acc 0.9604 | 92s
+  Step   6000 | loss 0.0067 | aux 0.0699 | acc 0.9992 | 111s
+  >>> Converged at step 6000
+  Step   7000 | loss 0.0010 | aux 0.0543 | acc 0.9998 | 129s
+  Step   8000 | loss 0.0000 | aux 0.0256 | acc 1.0000 | 147s
+
+  Training D_alpha0.001_seed0...
+  Step   1000 | loss 1.5692 | aux 0.1071 | acc 0.0008 | 18s
+  Step   2000 | loss 0.0102 | aux 0.1507 | acc 0.9686 | 36s
+  Step   3000 | loss 0.0008 | aux 0.2576 | acc 0.9968 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0060 | aux 0.2628 | acc 0.9978 | 73s
+  Step   5000 | loss 0.0014 | aux 0.2934 | acc 0.9952 | 91s
+
+  Training D_alpha0.001_seed1...
+  Step   1000 | loss 0.4039 | aux 0.0869 | acc 0.4146 | 18s
+  Step   2000 | loss 0.0165 | aux 0.1510 | acc 0.7780 | 36s
+  Step   3000 | loss 0.0037 | aux 0.1901 | acc 0.9800 | 54s
+  Step   4000 | loss 0.0043 | aux 0.2448 | acc 0.9758 | 73s
+  Step   5000 | loss 0.0011 | aux 0.2943 | acc 0.9938 | 91s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0002 | aux 0.2741 | acc 0.9992 | 109s
+  Step   7000 | loss 0.0010 | aux 0.2940 | acc 0.9986 | 128s
+
+  Training D_prime_alpha0.1_seed0...
+  Step   1000 | loss 1.5868 | aux 0.0471 | acc 0.0000 | 18s
+  Step   2000 | loss 1.1774 | aux 0.0246 | acc 0.0022 | 36s
+  Step   3000 | loss 0.5008 | aux 0.0162 | acc 0.0742 | 55s
+  Step   4000 | loss 0.0188 | aux 0.0030 | acc 0.9628 | 73s
+  Step   5000 | loss 0.0155 | aux 0.0284 | acc 0.9824 | 92s
+  Step   6000 | loss 0.0042 | aux 0.0320 | acc 0.9936 | 110s
+  >>> Converged at step 6000
+  Step   7000 | loss 0.0027 | aux 0.0084 | acc 0.9964 | 128s
+  Step   8000 | loss 0.0030 | aux 0.0124 | acc 0.9972 | 146s
+
+  Training D_prime_alpha0.1_seed1...
+  Step   1000 | loss 1.6434 | aux 0.1124 | acc 0.0000 | 18s
+  Step   2000 | loss 1.2835 | aux 0.2382 | acc 0.0002 | 36s
+  Step   3000 | loss 0.3131 | aux 0.6272 | acc 0.4476 | 55s
+  Step   4000 | loss 0.1018 | aux 0.0874 | acc 0.7598 | 73s
+  Step   5000 | loss 0.0674 | aux 0.1527 | acc 0.8272 | 91s
+  Step   6000 | loss 0.0809 | aux 0.0541 | acc 0.8750 | 109s
+  Step   7000 | loss 0.0048 | aux 0.3194 | acc 0.9848 | 127s
+  Step   8000 | loss 0.0074 | aux 0.0524 | acc 0.9886 | 146s
+  Step   9000 | loss 0.0031 | aux 0.0994 | acc 0.9934 | 164s
+  >>> Converged at step 9000
+  Step  10000 | loss 0.0055 | aux 0.0413 | acc 0.9980 | 182s
+  Step  11000 | loss 0.0004 | aux 0.0543 | acc 0.9986 | 200s
+
+  Training D_prime_alpha0.01_seed0...
+  Step   1000 | loss 1.5636 | aux 0.4561 | acc 0.0000 | 18s
+  Step   2000 | loss 0.8628 | aux 1.2079 | acc 0.0072 | 37s
+  Step   3000 | loss 0.4718 | aux 0.6429 | acc 0.0708 | 55s
+  Step   4000 | loss 0.0090 | aux 0.5945 | acc 0.9714 | 73s
+  Step   5000 | loss 0.0066 | aux 0.5676 | acc 0.9860 | 91s
+  Step   6000 | loss 0.0266 | aux 0.3243 | acc 0.9748 | 110s
+  Step   7000 | loss 0.0031 | aux 0.5683 | acc 0.9608 | 128s
+  Step   8000 | loss 0.0003 | aux 0.8015 | acc 0.9954 | 146s
+  >>> Converged at step 8000
+  Step   9000 | loss 0.0285 | aux 0.6719 | acc 0.9298 | 164s
+  Step  10000 | loss 0.0000 | aux 0.3356 | acc 1.0000 | 182s
+
+  Training D_prime_alpha0.01_seed1...
+  Step   1000 | loss 1.2958 | aux 4.0311 | acc 0.0004 | 18s
+  Step   2000 | loss 0.4615 | aux 1.8697 | acc 0.0890 | 36s
+  Step   3000 | loss 0.0259 | aux 0.7142 | acc 0.8652 | 55s
+  Step   4000 | loss 0.0332 | aux 0.4039 | acc 0.9568 | 73s
+  Step   5000 | loss 0.0181 | aux 0.4922 | acc 0.9786 | 91s
+  Step   6000 | loss 0.0039 | aux 0.2521 | acc 0.9872 | 109s
+  Step   7000 | loss 0.0039 | aux 0.8249 | acc 0.9938 | 127s
+  >>> Converged at step 7000
+  Step   8000 | loss 0.0029 | aux 0.1763 | acc 0.9562 | 146s
+  Step   9000 | loss 0.0013 | aux 0.1100 | acc 0.9966 | 164s
+
+  Training D_prime_alpha0.001_seed0...
+  Step   1000 | loss 1.5793 | aux 2.4949 | acc 0.0000 | 18s
+  Step   2000 | loss 1.0847 | aux 9.2888 | acc 0.0022 | 37s
+  Step   3000 | loss 0.0475 | aux 13.8954 | acc 0.9474 | 55s
+  Step   4000 | loss 0.1092 | aux 8.7665 | acc 0.7526 | 73s
+  Step   5000 | loss 0.0112 | aux 10.8681 | acc 0.9766 | 91s
+  Step   6000 | loss 0.0098 | aux 5.9868 | acc 0.9874 | 109s
+  Step   7000 | loss 0.0001 | aux 5.6885 | acc 1.0000 | 128s
+  >>> Converged at step 7000
+  Step   8000 | loss 0.0001 | aux 3.1553 | acc 1.0000 | 146s
+  Step   9000 | loss 0.0032 | aux 2.7723 | acc 0.9984 | 164s
+
+  Training D_prime_alpha0.001_seed1...
+  Step   1000 | loss 1.2979 | aux 11.5737 | acc 0.0008 | 18s
+  Step   2000 | loss 0.8287 | aux 12.7904 | acc 0.0068 | 37s
+  Step   3000 | loss 0.0247 | aux 6.3057 | acc 0.8768 | 55s
+  Step   4000 | loss 0.0094 | aux 2.8565 | acc 0.9768 | 73s
+  Step   5000 | loss 0.0149 | aux 2.1617 | acc 0.9762 | 91s
+  Step   6000 | loss 0.0013 | aux 2.1726 | acc 0.9958 | 109s
+  >>> Converged at step 6000
+  Step   7000 | loss 0.0150 | aux 3.4653 | acc 0.9672 | 127s
+  Step   8000 | loss 0.0004 | aux 0.6859 | acc 0.9982 | 145s
+  Best alpha for C1: 0.01
+  Best alpha for C2: 0.001
+  Best alpha for D: 0.1
+  Best alpha for D_prime: 0.001
+
+============================================================
+PHASE 2: Full Evaluation
+============================================================
+
+  Training A_eval_seed0 (alpha=0.1)...
+  Step   1000 | loss 0.0677 | aux 0.0000 | acc 0.9118 | 18s
+  Step   2000 | loss 0.0082 | aux 0.0000 | acc 0.9778 | 36s
+  Step   3000 | loss 0.0020 | aux 0.0000 | acc 0.9944 | 53s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 71s
+  Step   5000 | loss 0.0018 | aux 0.0000 | acc 0.9970 | 89s
+
+  Training A_eval_seed1 (alpha=0.1)...
+  Step   1000 | loss 1.1822 | aux 0.0000 | acc 0.0024 | 18s
+  Step   2000 | loss 0.0303 | aux 0.0000 | acc 0.9180 | 35s
+  Step   3000 | loss 0.0053 | aux 0.0000 | acc 0.9918 | 53s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0010 | aux 0.0000 | acc 0.9950 | 71s
+  Step   5000 | loss 0.0025 | aux 0.0000 | acc 0.9972 | 89s
+
+  Training A_eval_seed2 (alpha=0.1)...
+  Step   1000 | loss 1.2907 | aux 0.0000 | acc 0.0012 | 18s
+  Step   2000 | loss 0.0737 | aux 0.0000 | acc 0.8360 | 35s
+  Step   3000 | loss 0.0195 | aux 0.0000 | acc 0.9570 | 53s
+  Step   4000 | loss 0.0045 | aux 0.0000 | acc 0.9884 | 70s
+  Step   5000 | loss 0.0003 | aux 0.0000 | acc 0.9996 | 88s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0002 | aux 0.0000 | acc 1.0000 | 106s
+  Step   7000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 123s
+
+  Training A_eval_seed3 (alpha=0.1)...
+  Step   1000 | loss 1.5756 | aux 0.0000 | acc 0.0000 | 17s
+  Step   2000 | loss 0.0472 | aux 0.0000 | acc 0.9206 | 35s
+  Step   3000 | loss 0.0027 | aux 0.0000 | acc 0.9832 | 52s
+  Step   4000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 70s
+  >>> Converged at step 4000
+  Step   5000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 88s
+  Step   6000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 106s
+
+  Training A_eval_seed4 (alpha=0.1)...
+  Step   1000 | loss 0.4248 | aux 0.0000 | acc 0.1986 | 18s
+  Step   2000 | loss 0.0548 | aux 0.0000 | acc 0.8428 | 36s
+  Step   3000 | loss 0.0114 | aux 0.0000 | acc 0.9548 | 53s
+  Step   4000 | loss 0.0197 | aux 0.0000 | acc 0.9670 | 71s
+  Step   5000 | loss 0.0054 | aux 0.0000 | acc 0.9912 | 89s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0069 | aux 0.0000 | acc 0.9952 | 107s
+  Step   7000 | loss 0.0001 | aux 0.0000 | acc 0.9998 | 124s
+
+  Training B_eval_seed0 (alpha=0.1)...
+  Step   1000 | loss 0.5635 | aux 0.1551 | acc 0.0660 | 18s
+  Step   2000 | loss 0.0507 | aux 0.0203 | acc 0.8882 | 36s
+  Step   3000 | loss 0.0175 | aux 0.0041 | acc 0.9912 | 54s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0107 | aux 0.0012 | acc 0.9902 | 72s
+  Step   5000 | loss 0.0060 | aux 0.0006 | acc 0.9936 | 91s
+
+  Training B_eval_seed1 (alpha=0.1)...
+  Step   1000 | loss 0.6420 | aux 0.2304 | acc 0.0480 | 18s
+  Step   2000 | loss 0.4449 | aux 0.1457 | acc 0.0692 | 36s
+  Step   3000 | loss 0.4948 | aux 0.0583 | acc 0.0924 | 54s
+  Step   4000 | loss 0.0734 | aux 0.0157 | acc 0.8922 | 72s
+  Step   5000 | loss 0.0016 | aux 0.0057 | acc 0.9902 | 90s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0075 | aux 0.0027 | acc 0.9966 | 109s
+  Step   7000 | loss 0.0025 | aux 0.0013 | acc 0.9986 | 127s
+
+  Training B_eval_seed2 (alpha=0.1)...
+  Step   1000 | loss 0.9582 | aux 0.2045 | acc 0.0114 | 18s
+  Step   2000 | loss 0.4642 | aux 0.1226 | acc 0.0638 | 36s
+  Step   3000 | loss 0.0500 | aux 0.0604 | acc 0.9634 | 54s
+  Step   4000 | loss 0.0146 | aux 0.0065 | acc 0.9372 | 73s
+  Step   5000 | loss 0.0042 | aux 0.0010 | acc 0.9972 | 91s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0029 | aux 0.0003 | acc 0.9954 | 109s
+  Step   7000 | loss 0.0040 | aux 0.0001 | acc 0.9928 | 127s
+
+  Training B_eval_seed3 (alpha=0.1)...
+  Step   1000 | loss 1.0188 | aux 0.2099 | acc 0.0060 | 18s
+  Step   2000 | loss 0.4843 | aux 0.0726 | acc 0.0860 | 36s
+  Step   3000 | loss 0.4231 | aux 0.0287 | acc 0.1018 | 54s
+  Step   4000 | loss 0.0089 | aux 0.0051 | acc 0.9836 | 72s
+  Step   5000 | loss 0.0024 | aux 0.0014 | acc 0.9786 | 91s
+  Step   6000 | loss 0.0231 | aux 0.0008 | acc 0.9934 | 109s
+  >>> Converged at step 6000
+  Step   7000 | loss 0.0238 | aux 0.0002 | acc 0.9848 | 127s
+  Step   8000 | loss 0.0029 | aux 0.0008 | acc 0.9842 | 145s
+
+  Training B_eval_seed4 (alpha=0.1)...
+  Step   1000 | loss 0.5936 | aux 0.1848 | acc 0.0670 | 18s
+  Step   2000 | loss 0.4727 | aux 0.0790 | acc 0.1114 | 36s
+  Step   3000 | loss 0.0464 | aux 0.0113 | acc 0.9384 | 54s
+  Step   4000 | loss 0.0085 | aux 0.0026 | acc 0.9934 | 72s
+  >>> Converged at step 4000
+  Step   5000 | loss 0.0071 | aux 0.0006 | acc 0.9914 | 91s
+  Step   6000 | loss 0.0037 | aux 0.0011 | acc 0.9980 | 109s
+
+  Training C1_eval_seed0 (alpha=0.01)...
+  Step   1000 | loss 0.0677 | aux 0.0000 | acc 0.9118 | 18s
+  Step   2000 | loss 0.0082 | aux 0.0000 | acc 0.9778 | 36s
+  Step   3000 | loss 0.0020 | aux 0.0000 | acc 0.9944 | 53s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 71s
+  Step   5000 | loss 0.0018 | aux 0.0000 | acc 0.9970 | 89s
+
+  Training C1_eval_seed1 (alpha=0.01)...
+  Step   1000 | loss 1.1822 | aux 0.0000 | acc 0.0024 | 18s
+  Step   2000 | loss 0.0303 | aux 0.0000 | acc 0.9180 | 36s
+  Step   3000 | loss 0.0053 | aux 0.0000 | acc 0.9918 | 54s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0010 | aux 0.0000 | acc 0.9950 | 71s
+  Step   5000 | loss 0.0025 | aux 0.0000 | acc 0.9972 | 89s
+
+  Training C1_eval_seed2 (alpha=0.01)...
+  Step   1000 | loss 1.2907 | aux 0.0000 | acc 0.0012 | 18s
+  Step   2000 | loss 0.0737 | aux 0.0000 | acc 0.8360 | 35s
+  Step   3000 | loss 0.0195 | aux 0.0000 | acc 0.9570 | 53s
+  Step   4000 | loss 0.0045 | aux 0.0000 | acc 0.9884 | 71s
+  Step   5000 | loss 0.0003 | aux 0.0000 | acc 0.9996 | 88s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0002 | aux 0.0000 | acc 1.0000 | 106s
+  Step   7000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 123s
+
+  Training C1_eval_seed3 (alpha=0.01)...
+  Step   1000 | loss 1.5756 | aux 0.0000 | acc 0.0000 | 18s
+  Step   2000 | loss 0.0472 | aux 0.0000 | acc 0.9206 | 36s
+  Step   3000 | loss 0.0027 | aux 0.0000 | acc 0.9832 | 53s
+  Step   4000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 71s
+  >>> Converged at step 4000
+  Step   5000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 89s
+  Step   6000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 106s
+
+  Training C1_eval_seed4 (alpha=0.01)...
+  Step   1000 | loss 0.4248 | aux 0.0000 | acc 0.1986 | 18s
+  Step   2000 | loss 0.0548 | aux 0.0000 | acc 0.8428 | 36s
+  Step   3000 | loss 0.0114 | aux 0.0000 | acc 0.9548 | 53s
+  Step   4000 | loss 0.0197 | aux 0.0000 | acc 0.9670 | 71s
+  Step   5000 | loss 0.0054 | aux 0.0000 | acc 0.9912 | 89s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0069 | aux 0.0000 | acc 0.9952 | 107s
+  Step   7000 | loss 0.0001 | aux 0.0000 | acc 0.9998 | 124s
+
+  Training C2_eval_seed0 (alpha=0.001)...
+  Step   1000 | loss 0.8481 | aux 0.1333 | acc 0.0150 | 18s
+  Step   2000 | loss 0.0114 | aux 0.2492 | acc 0.9756 | 37s
+  Step   3000 | loss 0.0175 | aux 0.2824 | acc 0.9836 | 55s
+  Step   4000 | loss 0.0033 | aux 0.4796 | acc 0.9982 | 73s
+  >>> Converged at step 4000
+  Step   5000 | loss 0.0006 | aux 0.4723 | acc 0.9998 | 91s
+  Step   6000 | loss 0.0005 | aux 0.7319 | acc 0.9862 | 109s
+
+  Training C2_eval_seed1 (alpha=0.001)...
+  Step   1000 | loss 0.8844 | aux 0.1148 | acc 0.0074 | 18s
+  Step   2000 | loss 0.0337 | aux 0.2998 | acc 0.9430 | 36s
+  Step   3000 | loss 0.0026 | aux 0.4103 | acc 0.9932 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0146 | aux 0.5908 | acc 0.9862 | 73s
+  Step   5000 | loss 0.0002 | aux 0.3267 | acc 0.9950 | 91s
+
+  Training C2_eval_seed2 (alpha=0.001)...
+  Step   1000 | loss 1.2197 | aux 0.2668 | acc 0.0006 | 18s
+  Step   2000 | loss 0.0411 | aux 0.1608 | acc 0.9040 | 37s
+  Step   3000 | loss 0.0039 | aux 0.5559 | acc 0.9950 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0014 | aux 0.5494 | acc 0.9998 | 73s
+  Step   5000 | loss 0.0008 | aux 0.7606 | acc 0.9998 | 91s
+
+  Training C2_eval_seed3 (alpha=0.001)...
+  Step   1000 | loss 1.6004 | aux 0.2881 | acc 0.0000 | 18s
+  Step   2000 | loss 0.0811 | aux 0.2017 | acc 0.8608 | 36s
+  Step   3000 | loss 0.0078 | aux 0.2775 | acc 0.9978 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0006 | aux 0.1976 | acc 0.9928 | 73s
+  Step   5000 | loss 0.0016 | aux 0.1754 | acc 0.9914 | 91s
+
+  Training C2_eval_seed4 (alpha=0.001)...
+  Step   1000 | loss 0.3992 | aux 0.1802 | acc 0.2852 | 18s
+  Step   2000 | loss 0.0417 | aux 0.2581 | acc 0.9566 | 37s
+  Step   3000 | loss 0.0155 | aux 0.2336 | acc 0.9660 | 55s
+  Step   4000 | loss 0.0057 | aux 0.3388 | acc 0.9862 | 73s
+  Step   5000 | loss 0.0017 | aux 0.3693 | acc 0.9740 | 91s
+  Step   6000 | loss 0.0128 | aux 0.4835 | acc 0.9962 | 109s
+  >>> Converged at step 6000
+  Step   7000 | loss 0.0024 | aux 0.5837 | acc 0.9976 | 127s
+  Step   8000 | loss 0.0017 | aux 0.9698 | acc 0.9954 | 145s
+
+  Training D_eval_seed0 (alpha=0.1)...
+  Step   1000 | loss 0.1034 | aux 0.0181 | acc 0.8066 | 18s
+  Step   2000 | loss 0.0037 | aux 0.0223 | acc 0.9694 | 36s
+  Step   3000 | loss 0.0004 | aux 0.0179 | acc 0.9996 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0009 | aux 0.0067 | acc 0.9898 | 73s
+  Step   5000 | loss 0.0001 | aux 0.0146 | acc 1.0000 | 91s
+
+  Training D_eval_seed1 (alpha=0.1)...
+  Step   1000 | loss 1.2437 | aux 0.0243 | acc 0.0006 | 18s
+  Step   2000 | loss 0.0483 | aux 0.0230 | acc 0.9512 | 37s
+  Step   3000 | loss 0.0065 | aux 0.0182 | acc 0.9932 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0019 | aux 0.0131 | acc 0.9872 | 73s
+  Step   5000 | loss 0.0020 | aux 0.0145 | acc 0.9898 | 91s
+
+  Training D_eval_seed2 (alpha=0.1)...
+  Step   1000 | loss 1.2211 | aux 0.0187 | acc 0.0010 | 18s
+  Step   2000 | loss 0.0345 | aux 0.0193 | acc 0.9132 | 36s
+  Step   3000 | loss 0.0161 | aux 0.0180 | acc 0.9720 | 54s
+  Step   4000 | loss 0.0006 | aux 0.0187 | acc 0.9824 | 72s
+  Step   5000 | loss 0.0001 | aux 0.0157 | acc 0.9992 | 90s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0000 | aux 0.0033 | acc 1.0000 | 108s
+  Step   7000 | loss 0.0041 | aux 0.0176 | acc 0.9762 | 126s
+
+  Training D_eval_seed3 (alpha=0.1)...
+  Step   1000 | loss 1.6035 | aux 0.0199 | acc 0.0002 | 18s
+  Step   2000 | loss 0.1230 | aux 0.0199 | acc 0.6922 | 36s
+  Step   3000 | loss 0.0023 | aux 0.0173 | acc 0.9880 | 55s
+  Step   4000 | loss 0.0019 | aux 0.0133 | acc 0.9860 | 73s
+  Step   5000 | loss 0.0173 | aux 0.0126 | acc 0.9236 | 91s
+  Step   6000 | loss 0.0022 | aux 0.0131 | acc 0.9568 | 109s
+  Step   7000 | loss 0.0004 | aux 0.0114 | acc 0.9840 | 127s
+  Step   8000 | loss 0.0039 | aux 0.0109 | acc 0.9926 | 145s
+  >>> Converged at step 8000
+  Step   9000 | loss 0.0011 | aux 0.0110 | acc 1.0000 | 164s
+  Step  10000 | loss 0.0001 | aux 0.0116 | acc 1.0000 | 182s
+
+  Training D_eval_seed4 (alpha=0.1)...
+  Step   1000 | loss 0.5389 | aux 0.0174 | acc 0.0694 | 18s
+  Step   2000 | loss 0.0298 | aux 0.0173 | acc 0.9536 | 36s
+  Step   3000 | loss 0.0207 | aux 0.0152 | acc 0.9860 | 54s
+  Step   4000 | loss 0.0087 | aux 0.0141 | acc 0.9690 | 72s
+  Step   5000 | loss 0.0015 | aux 0.0128 | acc 0.9962 | 90s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0016 | aux 0.0116 | acc 0.9998 | 109s
+  Step   7000 | loss 0.0004 | aux 0.0118 | acc 0.9958 | 127s
+
+  Training D_prime_eval_seed0 (alpha=0.001)...
+  Step   1000 | loss 1.3164 | aux 10.9060 | acc 0.0016 | 18s
+  Step   2000 | loss 0.8251 | aux 36.9003 | acc 0.0048 | 36s
+  Step   3000 | loss 0.0908 | aux 19.3563 | acc 0.8054 | 54s
+  Step   4000 | loss 0.0725 | aux 20.2734 | acc 0.8234 | 72s
+  Step   5000 | loss 0.0022 | aux 12.5130 | acc 0.9708 | 90s
+  Step   6000 | loss 0.0104 | aux 18.4404 | acc 0.9850 | 109s
+  Step   7000 | loss 0.0000 | aux 2.5692 | acc 1.0000 | 127s
+  >>> Converged at step 7000
+  Step   8000 | loss 0.0000 | aux 0.9438 | acc 1.0000 | 145s
+  Step   9000 | loss 0.0000 | aux 6.2572 | acc 1.0000 | 163s
+
+  Training D_prime_eval_seed1 (alpha=0.001)...
+  Step   1000 | loss 1.2670 | aux 2.9044 | acc 0.0002 | 18s
+  Step   2000 | loss 0.0837 | aux 10.4595 | acc 0.8370 | 36s
+  Step   3000 | loss 0.0128 | aux 3.6069 | acc 0.9558 | 54s
+  Step   4000 | loss 0.0084 | aux 4.2262 | acc 0.9668 | 73s
+  Step   5000 | loss 0.0025 | aux 1.7227 | acc 0.9986 | 91s
+  >>> Converged at step 5000
+  Step   6000 | loss 0.0007 | aux 1.2682 | acc 0.9990 | 109s
+  Step   7000 | loss 0.0005 | aux 3.9221 | acc 0.9816 | 127s
+
+  Training D_prime_eval_seed2 (alpha=0.001)...
+  Step   1000 | loss 1.5663 | aux 3.0777 | acc 0.0000 | 18s
+  Step   2000 | loss 0.0765 | aux 10.7307 | acc 0.9138 | 37s
+  Step   3000 | loss 0.0080 | aux 11.1494 | acc 0.9908 | 55s
+  >>> Converged at step 3000
+  Step   4000 | loss 0.0031 | aux 13.9967 | acc 0.9948 | 73s
+  Step   5000 | loss 0.0011 | aux 7.2004 | acc 0.9956 | 91s
+
+  Training D_prime_eval_seed3 (alpha=0.001)...
+  Step   1000 | loss 1.2524 | aux 9.9685 | acc 0.0004 | 18s
+  Step   2000 | loss 0.4664 | aux 30.7855 | acc 0.1290 | 36s
+  Step   3000 | loss 0.0294 | aux 19.5818 | acc 0.9690 | 54s
+  Step   4000 | loss 0.0002 | aux 25.4177 | acc 1.0000 | 72s
+  >>> Converged at step 4000
+  Step   5000 | loss 0.0019 | aux 18.6689 | acc 0.9976 | 90s
+  Step   6000 | loss 0.0002 | aux 17.7339 | acc 0.9986 | 108s
+
+  Training D_prime_eval_seed4 (alpha=0.001)...
+  Step   1000 | loss 1.4589 | aux 9.7448 | acc 0.0000 | 18s
+  Step   2000 | loss 0.0578 | aux 28.7521 | acc 0.8742 | 37s
+  Step   3000 | loss 0.0268 | aux 17.3784 | acc 0.9674 | 55s
+  Step   4000 | loss 0.0117 | aux 44.4560 | acc 0.9620 | 73s
+  Step   5000 | loss 0.0749 | aux 39.2403 | acc 0.8654 | 91s
+  Step   6000 | loss 0.0042 | aux 41.8102 | acc 0.9952 | 110s
+  >>> Converged at step 6000
+  Step   7000 | loss 0.0017 | aux 18.5031 | acc 0.9990 | 128s
+  Step   8000 | loss 0.0006 | aux 9.5222 | acc 0.9984 | 146s
+
+============================================================
+STEP 8 RESULTS
+============================================================
+  A: steps_to_99=4000±894 (5/5 converged)
+  B: steps_to_99=4600±1020 (5/5 converged)
+  C1: steps_to_99=4000±894 (5/5 converged)
+  C2: steps_to_99=3800±1166 (5/5 converged)
+  D: steps_to_99=4800±1833 (5/5 converged)
+  D_prime: steps_to_99=5000±1414 (5/5 converged)
+
+  Decision:
+  C2 (3800) < D (4800): Shared directions provide value beyond regularization!
+  C2 (3800) < D' (5000): Shared directions better than bottom eigenvectors!
+
+Full pipeline (Steps 2-8) completed in 7532s (125.5 min)

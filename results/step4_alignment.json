@@ -1,0 +1,605 @@
+{
+  "layer1_result_0": {
+    "reference": "baseline_seed0",
+    "models": {
+      "baseline_seed1": {
+        "procrustes_residual": 0.46741458773612976,
+        "svcca_correlation": 0.8172549412638684,
+        "alignment_method": "procrustes",
+        "frozen_component": null
+      },
+      "baseline_seed2": {
+        "procrustes_residual": 0.791335940361023,
+        "svcca_correlation": 0.9029832849967648,
+        "alignment_method": "procrustes",
+        "frozen_component": null
+      },
+      "freeze_embed_seed0": {
+        "procrustes_residual": 1.0857709646224976,
+        "svcca_correlation": 0.6684021510223221,
+        "alignment_method": "procrustes",
+        "frozen_component": "embed"
+      },
+      "freeze_embed_seed1": {
+        "procrustes_residual": 0.650363564491272,
+        "svcca_correlation": 0.87304251252041,
+        "alignment_method": "procrustes",
+        "frozen_component": "embed"
+      },
+      "freeze_embed_seed2": {
+        "procrustes_residual": 0.7052428722381592,
+        "svcca_correlation": 0.8945578979021859,
+        "alignment_method": "procrustes",
+        "frozen_component": "embed"
+      },
+      "freeze_layer0.attn_seed0": {
+        "procrustes_residual": 0.6871395111083984,
+        "svcca_correlation": 0.6790521159438331,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.attn_seed1": {
+        "procrustes_residual": 0.6304084658622742,
+        "svcca_correlation": 0.6403120495303545,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.attn_seed2": {
+        "procrustes_residual": 0.6013733148574829,
+        "svcca_correlation": 0.7839929693721143,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.mlp_seed0": {
+        "procrustes_residual": 0.5116366744041443,
+        "svcca_correlation": 0.8140533931124918,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer0.mlp_seed1": {
+        "procrustes_residual": 0.6115455031394958,
+        "svcca_correlation": 0.6957176115342095,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer0.mlp_seed2": {
+        "procrustes_residual": 0.5788139700889587,
+        "svcca_correlation": 0.8234400779245922,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer1.attn_seed0": {
+        "procrustes_residual": 0.4561915099620819,
+        "svcca_correlation": 0.856986224099038,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.attn_seed1": {
+        "procrustes_residual": 0.44483131170272827,
+        "svcca_correlation": 0.944092017189784,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.attn_seed2": {
+        "procrustes_residual": 0.46622568368911743,
+        "svcca_correlation": 0.865635486758665,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.mlp_seed0": {
+        "procrustes_residual": 0.5722872018814087,
+        "svcca_correlation": 0.8129278319262485,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer1.mlp_seed1": {
+        "procrustes_residual": 0.4883773624897003,
+        "svcca_correlation": 0.7984312935587932,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer1.mlp_seed2": {
+        "procrustes_residual": 0.6501339077949524,
+        "svcca_correlation": 0.9212414493733416,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer2.attn_seed0": {
+        "procrustes_residual": 0.46270671486854553,
+        "svcca_correlation": 0.8814665725383368,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.attn_seed1": {
+        "procrustes_residual": 0.4727456867694855,
+        "svcca_correlation": 0.894797624365283,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.attn_seed2": {
+        "procrustes_residual": 0.5403764247894287,
+        "svcca_correlation": 0.880686961416299,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.mlp_seed0": {
+        "procrustes_residual": 0.44497954845428467,
+        "svcca_correlation": 0.8222250933471614,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer2.mlp_seed1": {
+        "procrustes_residual": 0.4771178364753723,
+        "svcca_correlation": 0.7846750030745472,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer2.mlp_seed2": {
+        "procrustes_residual": 0.5117149949073792,
+        "svcca_correlation": 0.8052894760032752,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer3.attn_seed0": {
+        "procrustes_residual": 0.41879650950431824,
+        "svcca_correlation": 0.9089134364873331,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.attn_seed1": {
+        "procrustes_residual": 0.376199871301651,
+        "svcca_correlation": 0.8181145061131351,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.attn_seed2": {
+        "procrustes_residual": 0.3858772814273834,
+        "svcca_correlation": 0.8049212788167805,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.mlp_seed0": {
+        "procrustes_residual": 0.39273762702941895,
+        "svcca_correlation": 0.9531419986383018,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_layer3.mlp_seed1": {
+        "procrustes_residual": 0.5333031415939331,
+        "svcca_correlation": 0.8390992351881149,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_layer3.mlp_seed2": {
+        "procrustes_residual": 0.5616335868835449,
+        "svcca_correlation": 0.6698697907584829,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_unembed_seed0": {
+        "procrustes_residual": 0.4608877897262573,
+        "svcca_correlation": 0.9338765746046329,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      },
+      "freeze_unembed_seed1": {
+        "procrustes_residual": 0.5407533049583435,
+        "svcca_correlation": 0.7863950891709444,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      },
+      "freeze_unembed_seed2": {
+        "procrustes_residual": 0.4500090181827545,
+        "svcca_correlation": 0.9222717433440696,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      }
+    },
+    "random_baseline_residual": 0.4674145245046047,
+    "baseline_mean_residual": 0.6293752640485764,
+    "svcca_trigger_threshold": 1.2587505280971527,
+    "n_svcca_fallback": 0
+  },
+  "layer2_equals": {
+    "reference": "baseline_seed0",
+    "models": {
+      "baseline_seed1": {
+        "procrustes_residual": 0.5813829898834229,
+        "svcca_correlation": 0.6543017314117755,
+        "alignment_method": "procrustes",
+        "frozen_component": null
+      },
+      "baseline_seed2": {
+        "procrustes_residual": 0.8008134365081787,
+        "svcca_correlation": 0.7057569895379523,
+        "alignment_method": "procrustes",
+        "frozen_component": null
+      },
+      "freeze_embed_seed0": {
+        "procrustes_residual": 0.7847985625267029,
+        "svcca_correlation": 0.6928396258002263,
+        "alignment_method": "procrustes",
+        "frozen_component": "embed"
+      },
+      "freeze_embed_seed1": {
+        "procrustes_residual": 0.7616450786590576,
+        "svcca_correlation": 0.6539163851883556,
+        "alignment_method": "procrustes",
+        "frozen_component": "embed"
+      },
+      "freeze_embed_seed2": {
+        "procrustes_residual": 0.7189979553222656,
+        "svcca_correlation": 0.7618994158409208,
+        "alignment_method": "procrustes",
+        "frozen_component": "embed"
+      },
+      "freeze_layer0.attn_seed0": {
+        "procrustes_residual": 0.588619589805603,
+        "svcca_correlation": 0.7981785042995398,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.attn_seed1": {
+        "procrustes_residual": 0.9216992855072021,
+        "svcca_correlation": 0.6585746100275928,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.attn_seed2": {
+        "procrustes_residual": 0.6727482080459595,
+        "svcca_correlation": 0.5827035889707288,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.mlp_seed0": {
+        "procrustes_residual": 0.7178043127059937,
+        "svcca_correlation": 0.6168635000865186,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer0.mlp_seed1": {
+        "procrustes_residual": 0.5757121443748474,
+        "svcca_correlation": 0.5828660583914025,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer0.mlp_seed2": {
+        "procrustes_residual": 0.6530587077140808,
+        "svcca_correlation": 0.6746411475343664,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer1.attn_seed0": {
+        "procrustes_residual": 0.6228635907173157,
+        "svcca_correlation": 0.6890192404086999,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.attn_seed1": {
+        "procrustes_residual": 0.8045933246612549,
+        "svcca_correlation": 0.4504921879441703,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.attn_seed2": {
+        "procrustes_residual": 0.6440494060516357,
+        "svcca_correlation": 0.6567479569219626,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.mlp_seed0": {
+        "procrustes_residual": 0.8603973388671875,
+        "svcca_correlation": 0.6778276656819875,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer1.mlp_seed1": {
+        "procrustes_residual": 0.7039864659309387,
+        "svcca_correlation": 0.6593556582578616,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer1.mlp_seed2": {
+        "procrustes_residual": 0.6540480256080627,
+        "svcca_correlation": 0.7070172666752667,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer2.attn_seed0": {
+        "procrustes_residual": 0.6504505276679993,
+        "svcca_correlation": 0.673076298459639,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.attn_seed1": {
+        "procrustes_residual": 0.4915139079093933,
+        "svcca_correlation": 0.7265257388716887,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.attn_seed2": {
+        "procrustes_residual": 0.7123735547065735,
+        "svcca_correlation": 0.587907532063136,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.mlp_seed0": {
+        "procrustes_residual": 0.6497523188591003,
+        "svcca_correlation": 0.5785128443956391,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer2.mlp_seed1": {
+        "procrustes_residual": 0.5659505128860474,
+        "svcca_correlation": 0.6294124972832285,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer2.mlp_seed2": {
+        "procrustes_residual": 0.8998642563819885,
+        "svcca_correlation": 0.5845174849676302,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer3.attn_seed0": {
+        "procrustes_residual": 0.6749970316886902,
+        "svcca_correlation": 0.5821230511370478,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.attn_seed1": {
+        "procrustes_residual": 0.49999240040779114,
+        "svcca_correlation": 0.6400349319078216,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.attn_seed2": {
+        "procrustes_residual": 0.6127663850784302,
+        "svcca_correlation": 0.6553951168641522,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.mlp_seed0": {
+        "procrustes_residual": 0.8623112440109253,
+        "svcca_correlation": 0.8791907009688954,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_layer3.mlp_seed1": {
+        "procrustes_residual": 0.9161999821662903,
+        "svcca_correlation": 0.6312363490464028,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_layer3.mlp_seed2": {
+        "procrustes_residual": 0.658338189125061,
+        "svcca_correlation": 0.6743451315996134,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_unembed_seed0": {
+        "procrustes_residual": 0.6433668732643127,
+        "svcca_correlation": 0.4596375286296478,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      },
+      "freeze_unembed_seed1": {
+        "procrustes_residual": 0.6015713810920715,
+        "svcca_correlation": 0.3935532512783825,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      },
+      "freeze_unembed_seed2": {
+        "procrustes_residual": 0.5408825874328613,
+        "svcca_correlation": 0.6303572350527018,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      }
+    },
+    "random_baseline_residual": 0.5813828421486003,
+    "baseline_mean_residual": 0.6910982131958008,
+    "svcca_trigger_threshold": 1.3821964263916016,
+    "n_svcca_fallback": 0
+  },
+  "layer2_result_0": {
+    "reference": "baseline_seed0",
+    "models": {
+      "baseline_seed1": {
+        "procrustes_residual": 0.444195032119751,
+        "svcca_correlation": 0.882932771560435,
+        "alignment_method": "procrustes",
+        "frozen_component": null
+      },
+      "baseline_seed2": {
+        "procrustes_residual": 0.7456721663475037,
+        "svcca_correlation": 0.9080995825271264,
+        "alignment_method": "procrustes",
+        "frozen_component": null
+      },
+      "freeze_embed_seed0": {
+        "procrustes_residual": 1.1928822994232178,
+        "svcca_correlation": 0.7128978124849299,
+        "alignment_method": "svcca_fallback",
+        "frozen_component": "embed"
+      },
+      "freeze_embed_seed1": {
+        "procrustes_residual": 0.609190821647644,
+        "svcca_correlation": 0.8474057966264703,
+        "alignment_method": "procrustes",
+        "frozen_component": "embed"
+      },
+      "freeze_embed_seed2": {
+        "procrustes_residual": 0.8838970065116882,
+        "svcca_correlation": 0.7497837968867737,
+        "alignment_method": "procrustes",
+        "frozen_component": "embed"
+      },
+      "freeze_layer0.attn_seed0": {
+        "procrustes_residual": 0.7569313049316406,
+        "svcca_correlation": 0.7352531443495882,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.attn_seed1": {
+        "procrustes_residual": 0.699670672416687,
+        "svcca_correlation": 0.77580787038334,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.attn_seed2": {
+        "procrustes_residual": 0.6690335273742676,
+        "svcca_correlation": 0.7507664685119202,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.attn"
+      },
+      "freeze_layer0.mlp_seed0": {
+        "procrustes_residual": 0.6082062125205994,
+        "svcca_correlation": 0.814960403834504,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer0.mlp_seed1": {
+        "procrustes_residual": 0.599435567855835,
+        "svcca_correlation": 0.8803617239429661,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer0.mlp_seed2": {
+        "procrustes_residual": 0.5675356984138489,
+        "svcca_correlation": 0.7301128219181141,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer0.mlp"
+      },
+      "freeze_layer1.attn_seed0": {
+        "procrustes_residual": 0.4172106385231018,
+        "svcca_correlation": 0.8750839982337179,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.attn_seed1": {
+        "procrustes_residual": 0.4949454367160797,
+        "svcca_correlation": 0.8568564084028321,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.attn_seed2": {
+        "procrustes_residual": 0.5117090940475464,
+        "svcca_correlation": 0.8104733061734422,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.attn"
+      },
+      "freeze_layer1.mlp_seed0": {
+        "procrustes_residual": 0.53476482629776,
+        "svcca_correlation": 0.7941939065125478,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer1.mlp_seed1": {
+        "procrustes_residual": 0.5692039132118225,
+        "svcca_correlation": 0.79386127343934,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer1.mlp_seed2": {
+        "procrustes_residual": 0.5683844685554504,
+        "svcca_correlation": 0.9483946524736192,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer1.mlp"
+      },
+      "freeze_layer2.attn_seed0": {
+        "procrustes_residual": 0.4592713415622711,
+        "svcca_correlation": 0.8807450493724817,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.attn_seed1": {
+        "procrustes_residual": 0.44509997963905334,
+        "svcca_correlation": 0.8105596382909869,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.attn_seed2": {
+        "procrustes_residual": 0.5521820783615112,
+        "svcca_correlation": 0.8534696409874105,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.attn"
+      },
+      "freeze_layer2.mlp_seed0": {
+        "procrustes_residual": 0.5089202523231506,
+        "svcca_correlation": 0.870162726011257,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer2.mlp_seed1": {
+        "procrustes_residual": 0.6092886924743652,
+        "svcca_correlation": 0.6779242551828373,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer2.mlp_seed2": {
+        "procrustes_residual": 0.4948338568210602,
+        "svcca_correlation": 0.8463921944517192,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer2.mlp"
+      },
+      "freeze_layer3.attn_seed0": {
+        "procrustes_residual": 0.4015202820301056,
+        "svcca_correlation": 0.9076029831763203,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.attn_seed1": {
+        "procrustes_residual": 0.4763040542602539,
+        "svcca_correlation": 0.842575127881091,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.attn_seed2": {
+        "procrustes_residual": 0.40623530745506287,
+        "svcca_correlation": 0.9450275333274545,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.attn"
+      },
+      "freeze_layer3.mlp_seed0": {
+        "procrustes_residual": 0.7324866056442261,
+        "svcca_correlation": 0.783656670683276,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_layer3.mlp_seed1": {
+        "procrustes_residual": 0.8379560112953186,
+        "svcca_correlation": 0.8142605645986224,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_layer3.mlp_seed2": {
+        "procrustes_residual": 0.532863974571228,
+        "svcca_correlation": 0.7536261703292124,
+        "alignment_method": "procrustes",
+        "frozen_component": "layer3.mlp"
+      },
+      "freeze_unembed_seed0": {
+        "procrustes_residual": 0.5389447808265686,
+        "svcca_correlation": 0.7134648941957998,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      },
+      "freeze_unembed_seed1": {
+        "procrustes_residual": 0.6076717972755432,
+        "svcca_correlation": 0.6991814109427025,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      },
+      "freeze_unembed_seed2": {
+        "procrustes_residual": 0.41497230529785156,
+        "svcca_correlation": 0.8542291198013212,
+        "alignment_method": "procrustes",
+        "frozen_component": "unembed"
+      }
+    },
+    "random_baseline_residual": 0.444195049516842,
+    "baseline_mean_residual": 0.5949335992336273,
+    "svcca_trigger_threshold": 1.1898671984672546,
+    "n_svcca_fallback": 1
+  }
+}

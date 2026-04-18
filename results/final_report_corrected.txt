@@ -1,0 +1,186 @@
+
+######################################################################
+# SOLUTION SYMMETRY EXPLORATION — RESULTS REPORT
+######################################################################
+======================================================================
+STEP 1: MODEL ZOO
+======================================================================
+
+  Converged: 33 models
+    baseline_seed0: acc=0.9960 step=4000 (103s)
+    baseline_seed1: acc=1.0000 step=4000 (105s)
+    baseline_seed2: acc=1.0000 step=12000 (243s)
+    freeze_embed_seed0: acc=0.9950 step=7000 (152s)
+    freeze_embed_seed1: acc=1.0000 step=4000 (102s)
+    freeze_embed_seed2: acc=0.9956 step=6000 (135s)
+    freeze_layer0.attn_seed0: acc=0.9990 step=9000 (188s)
+    freeze_layer0.attn_seed1: acc=0.9946 step=5000 (120s)
+    freeze_layer0.attn_seed2: acc=0.9932 step=5000 (120s)
+    freeze_layer0.mlp_seed0: acc=0.9974 step=4000 (102s)
+    freeze_layer0.mlp_seed1: acc=0.9998 step=3000 (85s)
+    freeze_layer0.mlp_seed2: acc=0.9968 step=5000 (118s)
+    freeze_layer1.attn_seed0: acc=0.9976 step=4000 (101s)
+    freeze_layer1.attn_seed1: acc=0.9988 step=4000 (102s)
+    freeze_layer1.attn_seed2: acc=0.9986 step=7000 (152s)
+    freeze_layer1.mlp_seed0: acc=1.0000 step=5000 (118s)
+    freeze_layer1.mlp_seed1: acc=0.9980 step=4000 (102s)
+    freeze_layer1.mlp_seed2: acc=0.9974 step=4000 (101s)
+    freeze_layer2.attn_seed0: acc=0.9992 step=4000 (101s)
+    freeze_layer2.attn_seed1: acc=1.0000 step=4000 (102s)
+    freeze_layer2.attn_seed2: acc=0.9954 step=6000 (136s)
+    freeze_layer2.mlp_seed0: acc=0.9990 step=4000 (101s)
+    freeze_layer2.mlp_seed1: acc=1.0000 step=3000 (84s)
+    freeze_layer2.mlp_seed2: acc=0.9990 step=4000 (101s)
+    freeze_layer3.attn_seed0: acc=0.9980 step=6000 (136s)
+    freeze_layer3.attn_seed1: acc=1.0000 step=3000 (85s)
+    freeze_layer3.attn_seed2: acc=1.0000 step=9000 (186s)
+    freeze_layer3.mlp_seed0: acc=0.9988 step=5000 (118s)
+    freeze_layer3.mlp_seed1: acc=1.0000 step=4000 (101s)
+    freeze_layer3.mlp_seed2: acc=1.0000 step=4000 (102s)
+    freeze_unembed_seed0: acc=1.0000 step=5000 (119s)
+    freeze_unembed_seed1: acc=0.9964 step=4000 (102s)
+    freeze_unembed_seed2: acc=1.0000 step=7000 (153s)
+
+  Distinct freeze configs converged: 10
+  Decision gate: PASS
+
+======================================================================
+STEP 3: CKA ANALYSIS
+======================================================================
+
+  Top CKA sites:
+    layer3_equals: CKA=0.925 [0.922, 0.928] | no-PC1=0.294
+    layer1_result_0: CKA=0.796 [0.789, 0.804] | no-PC1=0.483
+    layer2_equals: CKA=0.762 [0.744, 0.779] | no-PC1=0.382
+    layer2_result_0: CKA=0.759 [0.750, 0.767] | no-PC1=0.530
+    layer1_result_4: CKA=0.759 [0.741, 0.776] | no-PC1=0.454
+    layer3_result_4: CKA=0.718 [0.708, 0.728] | no-PC1=0.593
+    layer2_result_4: CKA=0.716 [0.699, 0.732] | no-PC1=0.510
+    layer3_result_3: CKA=0.697 [0.687, 0.707] | no-PC1=0.578
+    layer3_result_0: CKA=0.696 [0.688, 0.704] | no-PC1=0.556
+    layer1_result_3: CKA=0.689 [0.668, 0.710] | no-PC1=0.400
+
+  Three-group comparison:
+    baseline_vs_baseline: mean=0.746 ± 0.179 (n=72)
+    freeze_vs_freeze: mean=0.575 ± 0.286 (n=9720)
+    freeze_vs_baseline: mean=0.656 ± 0.251 (n=2160)
+
+  Within-config vs across-config CKA:
+    Within:  0.691 ± 0.250
+    Across:  0.615 ± 0.283
+
+  Selected extraction sites: 3
+    layer1_result_0: CKA=0.796
+    layer2_equals: CKA=0.762
+    layer2_result_0: CKA=0.759
+
+======================================================================
+STEP 4: PROCRUSTES ALIGNMENT
+======================================================================
+
+  Site: layer1_result_0
+    Reference: baseline_seed0
+    Random baseline residual: 0.4674
+    Baseline mean residual: 0.6293752640485764
+    SVCCA fallbacks: 0
+    Residuals: mean=0.5447, std=0.1380, range=[0.3762, 1.0858]
+    WARNING: Mean residual (0.5447) > random baseline (0.4674). Procrustes alignment is not improving over random rotation. Direction-level analysis is unreliable.
+
+  Site: layer2_equals
+    Reference: baseline_seed0
+    Random baseline residual: 0.5814
+    Baseline mean residual: 0.6910982131958008
+    SVCCA fallbacks: 0
+    Residuals: mean=0.6890, std=0.1156, range=[0.4915, 0.9217]
+    WARNING: Mean residual (0.6890) > random baseline (0.5814). Procrustes alignment is not improving over random rotation. Direction-level analysis is unreliable.
+
+  Site: layer2_result_0
+    Reference: baseline_seed0
+    Random baseline residual: 0.4442
+    Baseline mean residual: 0.5949335992336273
+    SVCCA fallbacks: 1
+    Residuals: mean=0.5904, std=0.1628, range=[0.4015, 1.1929]
+    WARNING: Mean residual (0.5904) > random baseline (0.4442). Procrustes alignment is not improving over random rotation. Direction-level analysis is unreliable.
+
+======================================================================
+STEP 5: SHARED SUBSPACE
+======================================================================
+
+  Extraction site: layer1_result_0
+  Shared eigenvalues (top 5): ['0.8996', '0.8394', '0.7823', '0.6985', '0.6690']
+  PCA cosines (shared vs PCA, top 5): ['0.3099', '0.2890', '0.0958', '0.0164', '0.1926']
+
+  Natural distribution validation:
+    Top-1 dirs: 0.037 variance explained
+    Top-3 dirs: 0.074 variance explained
+    Top-5 dirs: 0.083 variance explained
+    Top-10 dirs: 0.097 variance explained
+
+  Reference invariance:
+    Second reference: baseline_seed1
+    Cross-reference cosines: ['0.273', '0.028', '0.039', '0.135', '0.087']
+
+======================================================================
+STEP 6: INTERPRETATION
+======================================================================
+
+  direction_0:
+    result_digit_col4: corr=0.935
+    carry_col4: corr=-0.508, MI=0.1619
+    result_digit_col5: corr=-0.508
+    n_carries: corr=-0.286, MI=0.0749
+    carry_col3: corr=-0.113, MI=0.0705
+
+  direction_1:
+    carry_col4: corr=0.107, MI=0.0441
+    result_digit_col5: corr=0.107
+    sum_magnitude: corr=0.081, MI=0.9385
+    b_digit_col4: corr=0.076
+    result_digit_col4: corr=-0.063
+
+  direction_2:
+    sum_magnitude: corr=-0.981, MI=1.4162
+    carry_col4: corr=-0.804, MI=0.4809
+    result_digit_col5: corr=-0.804
+    a_digit_col4: corr=-0.682
+    b_digit_col4: corr=-0.681
+
+  direction_3:
+    carry_col3: corr=-0.204, MI=0.0585
+    b_digit_col3: corr=-0.180
+    n_carries: corr=-0.128, MI=0.0382
+    a_digit_col3: corr=-0.127
+    result_digit_col2: corr=0.081
+
+  direction_4:
+    carry_col3: corr=0.662, MI=0.2953
+    n_carries: corr=0.417, MI=0.1197
+    a_digit_col3: corr=0.397
+    b_digit_col3: corr=0.374
+    result_digit_col3: corr=-0.322
+
+======================================================================
+STEP 7: ABLATION
+======================================================================
+
+  Ablation results:
+    ablate_top1: shared_drop=0.0006, random_drop=0.0006, p=0.775075 ns (shared > random)
+    ablate_top3: shared_drop=0.0025, random_drop=0.0022, p=0.132849 ns (shared > random)
+    ablate_top5: shared_drop=0.0024, random_drop=0.0064, p=0.001226 ** (shared < random)
+    ablate_top10: shared_drop=0.0116, random_drop=0.0279, p=0.000088 *** (shared < random)
+
+======================================================================
+STEP 8: AUXILIARY LOSS
+======================================================================
+
+  Condition results (steps to 99% accuracy):
+    A: 4000±894 steps (5/5 converged, alpha=0.1)
+    B: 4600±1020 steps (5/5 converged, alpha=0.1)
+    C1: 4000±894 steps (5/5 converged, alpha=0.01)
+    C2: 3800±1166 steps (5/5 converged, alpha=0.001)
+    D: 4800±1833 steps (5/5 converged, alpha=0.1)
+    D_prime: 5000±1414 steps (5/5 converged, alpha=0.001)
+
+######################################################################
+# END OF REPORT
+######################################################################

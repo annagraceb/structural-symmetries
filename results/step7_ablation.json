@@ -1,0 +1,1189 @@
+{
+  "models": {
+    "baseline_seed0": {
+      "baseline_acc": 0.996,
+      "ablate_top1": {
+        "accuracy": 0.9962,
+        "accuracy_drop": -0.00019999999999997797,
+        "random_mean_acc": 0.9933,
+        "random_std_acc": 0.004178277156915261,
+        "random_mean_drop": 0.0027000000000000357,
+        "shared_activation_var": 0.7464019060134888
+      },
+      "ablate_top3": {
+        "accuracy": 0.9728,
+        "accuracy_drop": 0.0232,
+        "random_mean_acc": 0.9913399999999999,
+        "random_std_acc": 0.006665163163794268,
+        "random_mean_drop": 0.0046600000000001085,
+        "shared_activation_var": 0.5940726399421692
+      },
+      "ablate_top5": {
+        "accuracy": 0.9924,
+        "accuracy_drop": 0.0036000000000000476,
+        "random_mean_acc": 0.9593400000000001,
+        "random_std_acc": 0.039790858246587235,
+        "random_mean_drop": 0.036659999999999915,
+        "shared_activation_var": 0.39536750316619873
+      },
+      "ablate_top10": {
+        "accuracy": 0.977,
+        "accuracy_drop": 0.019000000000000017,
+        "random_mean_acc": 0.95314,
+        "random_std_acc": 0.0506908315181355,
+        "random_mean_drop": 0.04286000000000001,
+        "shared_activation_var": 0.2224261313676834
+      }
+    },
+    "baseline_seed1": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.5550497174263
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.3559751808643341
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.24239328503608704
+      },
+      "ablate_top10": {
+        "accuracy": 0.9996,
+        "accuracy_drop": 0.00039999999999995595,
+        "random_mean_acc": 0.99616,
+        "random_std_acc": 0.004735229667080578,
+        "random_mean_drop": 0.0038399999999999546,
+        "shared_activation_var": 0.1340716928243637
+      }
+    },
+    "baseline_seed2": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9994799999999999,
+        "random_std_acc": 0.0013059862173851495,
+        "random_mean_drop": 0.000520000000000076,
+        "shared_activation_var": 2.136305570602417
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9990600000000001,
+        "random_std_acc": 0.0017065755183993407,
+        "random_mean_drop": 0.0009399999999999409,
+        "shared_activation_var": 1.5958776473999023
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9986,
+        "random_std_acc": 0.0030607188698081947,
+        "random_mean_drop": 0.0013999999999999568,
+        "shared_activation_var": 1.0118920803070068
+      },
+      "ablate_top10": {
+        "accuracy": 0.9966,
+        "accuracy_drop": 0.0033999999999999586,
+        "random_mean_acc": 0.9731799999999999,
+        "random_std_acc": 0.04238098158372456,
+        "random_mean_drop": 0.026820000000000066,
+        "shared_activation_var": 0.5623397827148438
+      }
+    },
+    "freeze_embed_seed0": {
+      "baseline_acc": 0.995,
+      "ablate_top1": {
+        "accuracy": 0.9934,
+        "accuracy_drop": 0.0016000000000000458,
+        "random_mean_acc": 0.9948599999999999,
+        "random_std_acc": 0.00035832945734337173,
+        "random_mean_drop": 0.00014000000000014,
+        "shared_activation_var": 2.452101945877075
+      },
+      "ablate_top3": {
+        "accuracy": 0.9908,
+        "accuracy_drop": 0.0041999999999999815,
+        "random_mean_acc": 0.9915999999999998,
+        "random_std_acc": 0.006084077580044477,
+        "random_mean_drop": 0.0034000000000001807,
+        "shared_activation_var": 1.5434564352035522
+      },
+      "ablate_top5": {
+        "accuracy": 0.9906,
+        "accuracy_drop": 0.0043999999999999595,
+        "random_mean_acc": 0.99002,
+        "random_std_acc": 0.006102097999868561,
+        "random_mean_drop": 0.0049799999999999844,
+        "shared_activation_var": 1.020079255104065
+      },
+      "ablate_top10": {
+        "accuracy": 0.9766,
+        "accuracy_drop": 0.018399999999999972,
+        "random_mean_acc": 0.9799800000000001,
+        "random_std_acc": 0.012277931421864197,
+        "random_mean_drop": 0.015019999999999922,
+        "shared_activation_var": 0.5483461618423462
+      }
+    },
+    "freeze_embed_seed1": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.49975231289863586
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.3421975076198578
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.266743004322052
+      },
+      "ablate_top10": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9978,
+        "random_std_acc": 0.006080789422435209,
+        "random_mean_drop": 0.0021999999999999797,
+        "shared_activation_var": 0.18714718520641327
+      }
+    },
+    "freeze_embed_seed2": {
+      "baseline_acc": 0.9956,
+      "ablate_top1": {
+        "accuracy": 0.9958,
+        "accuracy_drop": -0.00019999999999997797,
+        "random_mean_acc": 0.99494,
+        "random_std_acc": 0.000996192752432985,
+        "random_mean_drop": 0.0006599999999999939,
+        "shared_activation_var": 0.3717974126338959
+      },
+      "ablate_top3": {
+        "accuracy": 0.9942,
+        "accuracy_drop": 0.0014000000000000679,
+        "random_mean_acc": 0.9936599999999999,
+        "random_std_acc": 0.0022521989254948183,
+        "random_mean_drop": 0.0019400000000001638,
+        "shared_activation_var": 0.7361233830451965
+      },
+      "ablate_top5": {
+        "accuracy": 0.9942,
+        "accuracy_drop": 0.0014000000000000679,
+        "random_mean_acc": 0.9923399999999999,
+        "random_std_acc": 0.0023341807984815473,
+        "random_mean_drop": 0.0032600000000001517,
+        "shared_activation_var": 0.5841529369354248
+      },
+      "ablate_top10": {
+        "accuracy": 0.9912,
+        "accuracy_drop": 0.0044000000000000705,
+        "random_mean_acc": 0.9735800000000001,
+        "random_std_acc": 0.028052158562221208,
+        "random_mean_drop": 0.02201999999999993,
+        "shared_activation_var": 0.5035830736160278
+      }
+    },
+    "freeze_layer0.attn_seed0": {
+      "baseline_acc": 0.999,
+      "ablate_top1": {
+        "accuracy": 0.999,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99752,
+        "random_std_acc": 0.00418014353820536,
+        "random_mean_drop": 0.0014800000000000368,
+        "shared_activation_var": 0.5513443946838379
+      },
+      "ablate_top3": {
+        "accuracy": 0.999,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9876999999999999,
+        "random_std_acc": 0.01998384347416682,
+        "random_mean_drop": 0.011300000000000088,
+        "shared_activation_var": 0.48501458764076233
+      },
+      "ablate_top5": {
+        "accuracy": 0.9948,
+        "accuracy_drop": 0.0041999999999999815,
+        "random_mean_acc": 0.98234,
+        "random_std_acc": 0.02748047306725269,
+        "random_mean_drop": 0.016660000000000008,
+        "shared_activation_var": 0.4262523055076599
+      },
+      "ablate_top10": {
+        "accuracy": 0.9532,
+        "accuracy_drop": 0.04579999999999995,
+        "random_mean_acc": 0.9506599999999998,
+        "random_std_acc": 0.05506200504885379,
+        "random_mean_drop": 0.04834000000000016,
+        "shared_activation_var": 0.3696809411048889
+      }
+    },
+    "freeze_layer0.attn_seed1": {
+      "baseline_acc": 0.9946,
+      "ablate_top1": {
+        "accuracy": 0.9946,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99312,
+        "random_std_acc": 0.003154932645873776,
+        "random_mean_drop": 0.0014800000000000368,
+        "shared_activation_var": 0.31718161702156067
+      },
+      "ablate_top3": {
+        "accuracy": 0.9942,
+        "accuracy_drop": 0.00040000000000006697,
+        "random_mean_acc": 0.9907,
+        "random_std_acc": 0.00608358446970207,
+        "random_mean_drop": 0.0039000000000000146,
+        "shared_activation_var": 0.23575150966644287
+      },
+      "ablate_top5": {
+        "accuracy": 0.994,
+        "accuracy_drop": 0.0006000000000000449,
+        "random_mean_acc": 0.98364,
+        "random_std_acc": 0.012460112359043967,
+        "random_mean_drop": 0.01096000000000008,
+        "shared_activation_var": 0.1761813908815384
+      },
+      "ablate_top10": {
+        "accuracy": 0.9616,
+        "accuracy_drop": 0.03300000000000003,
+        "random_mean_acc": 0.94116,
+        "random_std_acc": 0.053396838857745134,
+        "random_mean_drop": 0.05344000000000004,
+        "shared_activation_var": 0.16096627712249756
+      }
+    },
+    "freeze_layer0.attn_seed2": {
+      "baseline_acc": 0.9932,
+      "ablate_top1": {
+        "accuracy": 0.9924,
+        "accuracy_drop": 0.0008000000000000229,
+        "random_mean_acc": 0.99262,
+        "random_std_acc": 0.0011813551540497892,
+        "random_mean_drop": 0.0005800000000000249,
+        "shared_activation_var": 0.780021071434021
+      },
+      "ablate_top3": {
+        "accuracy": 0.991,
+        "accuracy_drop": 0.0021999999999999797,
+        "random_mean_acc": 0.9901,
+        "random_std_acc": 0.003404996328926065,
+        "random_mean_drop": 0.0030999999999999917,
+        "shared_activation_var": 0.5319142937660217
+      },
+      "ablate_top5": {
+        "accuracy": 0.9914,
+        "accuracy_drop": 0.0018000000000000238,
+        "random_mean_acc": 0.9886999999999999,
+        "random_std_acc": 0.00337194306001746,
+        "random_mean_drop": 0.0045000000000000595,
+        "shared_activation_var": 0.4098626971244812
+      },
+      "ablate_top10": {
+        "accuracy": 0.9826,
+        "accuracy_drop": 0.010599999999999943,
+        "random_mean_acc": 0.9616599999999998,
+        "random_std_acc": 0.024207940845929057,
+        "random_mean_drop": 0.031540000000000123,
+        "shared_activation_var": 0.2701281011104584
+      }
+    },
+    "freeze_layer0.mlp_seed0": {
+      "baseline_acc": 0.9974,
+      "ablate_top1": {
+        "accuracy": 0.9974,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9974000000000001,
+        "random_std_acc": 1.1102230246251565e-16,
+        "random_mean_drop": -1.1102230246251565e-16,
+        "shared_activation_var": 0.5981909036636353
+      },
+      "ablate_top3": {
+        "accuracy": 0.9974,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9973600000000001,
+        "random_std_acc": 0.00011999999999998679,
+        "random_mean_drop": 3.999999999981796e-05,
+        "shared_activation_var": 0.5638473629951477
+      },
+      "ablate_top5": {
+        "accuracy": 0.9974,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9965800000000001,
+        "random_std_acc": 0.0021604629133590834,
+        "random_mean_drop": 0.0008199999999998209,
+        "shared_activation_var": 0.40270766615867615
+      },
+      "ablate_top10": {
+        "accuracy": 0.9976,
+        "accuracy_drop": -0.000200000000000089,
+        "random_mean_acc": 0.9948199999999998,
+        "random_std_acc": 0.004618614510867936,
+        "random_mean_drop": 0.0025800000000001377,
+        "shared_activation_var": 0.27379316091537476
+      }
+    },
+    "freeze_layer0.mlp_seed1": {
+      "baseline_acc": 0.9998,
+      "ablate_top1": {
+        "accuracy": 0.9998,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9985200000000001,
+        "random_std_acc": 0.0028484381685408076,
+        "random_mean_drop": 0.0012799999999999478,
+        "shared_activation_var": 0.05606028810143471
+      },
+      "ablate_top3": {
+        "accuracy": 0.9998,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99696,
+        "random_std_acc": 0.005745815868960664,
+        "random_mean_drop": 0.0028400000000000647,
+        "shared_activation_var": 0.2466609925031662
+      },
+      "ablate_top5": {
+        "accuracy": 0.9998,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.96968,
+        "random_std_acc": 0.04557378193654768,
+        "random_mean_drop": 0.030120000000000036,
+        "shared_activation_var": 0.1888810247182846
+      },
+      "ablate_top10": {
+        "accuracy": 0.9958,
+        "accuracy_drop": 0.0040000000000000036,
+        "random_mean_acc": 0.9081199999999999,
+        "random_std_acc": 0.07933550025051836,
+        "random_mean_drop": 0.0916800000000001,
+        "shared_activation_var": 0.13116899132728577
+      }
+    },
+    "freeze_layer0.mlp_seed2": {
+      "baseline_acc": 0.9968,
+      "ablate_top1": {
+        "accuracy": 0.9958,
+        "accuracy_drop": 0.0010000000000000009,
+        "random_mean_acc": 0.9960199999999999,
+        "random_std_acc": 0.0010486181383134632,
+        "random_mean_drop": 0.0007800000000001139,
+        "shared_activation_var": 0.6406455039978027
+      },
+      "ablate_top3": {
+        "accuracy": 0.9796,
+        "accuracy_drop": 0.017199999999999993,
+        "random_mean_acc": 0.99038,
+        "random_std_acc": 0.0067120488675217515,
+        "random_mean_drop": 0.006419999999999981,
+        "shared_activation_var": 0.3139088451862335
+      },
+      "ablate_top5": {
+        "accuracy": 0.988,
+        "accuracy_drop": 0.00880000000000003,
+        "random_mean_acc": 0.9780200000000001,
+        "random_std_acc": 0.023322169710384998,
+        "random_mean_drop": 0.018779999999999908,
+        "shared_activation_var": 0.2047528773546219
+      },
+      "ablate_top10": {
+        "accuracy": 0.9578,
+        "accuracy_drop": 0.039000000000000035,
+        "random_mean_acc": 0.88928,
+        "random_std_acc": 0.10115675755973992,
+        "random_mean_drop": 0.10752000000000006,
+        "shared_activation_var": 0.11889847368001938
+      }
+    },
+    "freeze_layer1.attn_seed0": {
+      "baseline_acc": 0.9976,
+      "ablate_top1": {
+        "accuracy": 0.9976,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9976200000000001,
+        "random_std_acc": 0.0001077032961427009,
+        "random_mean_drop": -2.0000000000020002e-05,
+        "shared_activation_var": 0.28972870111465454
+      },
+      "ablate_top3": {
+        "accuracy": 0.9976,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9976200000000001,
+        "random_std_acc": 0.00031559467676119254,
+        "random_mean_drop": -2.0000000000020002e-05,
+        "shared_activation_var": 0.1527385115623474
+      },
+      "ablate_top5": {
+        "accuracy": 0.998,
+        "accuracy_drop": -0.00039999999999995595,
+        "random_mean_acc": 0.9937400000000001,
+        "random_std_acc": 0.01095519967869141,
+        "random_mean_drop": 0.0038599999999999746,
+        "shared_activation_var": 0.20509395003318787
+      },
+      "ablate_top10": {
+        "accuracy": 0.9976,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9870400000000001,
+        "random_std_acc": 0.02886254320048738,
+        "random_mean_drop": 0.010559999999999903,
+        "shared_activation_var": 0.1813811957836151
+      }
+    },
+    "freeze_layer1.attn_seed1": {
+      "baseline_acc": 0.9988,
+      "ablate_top1": {
+        "accuracy": 0.9986,
+        "accuracy_drop": 0.00019999999999997797,
+        "random_mean_acc": 0.9987999999999999,
+        "random_std_acc": 1.1102230246251565e-16,
+        "random_mean_drop": 1.1102230246251565e-16,
+        "shared_activation_var": 0.9184170961380005
+      },
+      "ablate_top3": {
+        "accuracy": 0.9988,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99874,
+        "random_std_acc": 0.00018000000000001348,
+        "random_mean_drop": 6.0000000000060005e-05,
+        "shared_activation_var": 0.5790959000587463
+      },
+      "ablate_top5": {
+        "accuracy": 0.9988,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99856,
+        "random_std_acc": 0.0004715930449020797,
+        "random_mean_drop": 0.00024000000000001798,
+        "shared_activation_var": 0.36738550662994385
+      },
+      "ablate_top10": {
+        "accuracy": 0.998,
+        "accuracy_drop": 0.0008000000000000229,
+        "random_mean_acc": 0.98544,
+        "random_std_acc": 0.03054999836333875,
+        "random_mean_drop": 0.013360000000000039,
+        "shared_activation_var": 0.19676904380321503
+      }
+    },
+    "freeze_layer1.attn_seed2": {
+      "baseline_acc": 0.9986,
+      "ablate_top1": {
+        "accuracy": 0.9986,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99818,
+        "random_std_acc": 0.0008121576201698991,
+        "random_mean_drop": 0.00042000000000008697,
+        "shared_activation_var": 0.3127441704273224
+      },
+      "ablate_top3": {
+        "accuracy": 0.9984,
+        "accuracy_drop": 0.000200000000000089,
+        "random_mean_acc": 0.9933799999999999,
+        "random_std_acc": 0.009292771384253455,
+        "random_mean_drop": 0.0052200000000001134,
+        "shared_activation_var": 0.27814212441444397
+      },
+      "ablate_top5": {
+        "accuracy": 0.9906,
+        "accuracy_drop": 0.008000000000000007,
+        "random_mean_acc": 0.99164,
+        "random_std_acc": 0.01021598747062662,
+        "random_mean_drop": 0.006960000000000077,
+        "shared_activation_var": 0.20793747901916504
+      },
+      "ablate_top10": {
+        "accuracy": 0.9974,
+        "accuracy_drop": 0.0012000000000000899,
+        "random_mean_acc": 0.93826,
+        "random_std_acc": 0.0651601135665063,
+        "random_mean_drop": 0.06034000000000006,
+        "shared_activation_var": 0.2452254742383957
+      }
+    },
+    "freeze_layer1.mlp_seed0": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.6548795104026794
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99962,
+        "random_std_acc": 0.0009053176238205038,
+        "random_mean_drop": 0.00038000000000004697,
+        "shared_activation_var": 0.3515675961971283
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99522,
+        "random_std_acc": 0.00775600412583695,
+        "random_mean_drop": 0.0047800000000000065,
+        "shared_activation_var": 0.2941264808177948
+      },
+      "ablate_top10": {
+        "accuracy": 0.9928,
+        "accuracy_drop": 0.007199999999999984,
+        "random_mean_acc": 0.9655800000000001,
+        "random_std_acc": 0.037115759456058564,
+        "random_mean_drop": 0.034419999999999895,
+        "shared_activation_var": 0.22638022899627686
+      }
+    },
+    "freeze_layer1.mlp_seed1": {
+      "baseline_acc": 0.998,
+      "ablate_top1": {
+        "accuracy": 0.9974,
+        "accuracy_drop": 0.0006000000000000449,
+        "random_mean_acc": 0.99712,
+        "random_std_acc": 0.0024919069003476032,
+        "random_mean_drop": 0.0008799999999999919,
+        "shared_activation_var": 0.3833751082420349
+      },
+      "ablate_top3": {
+        "accuracy": 0.9784,
+        "accuracy_drop": 0.01959999999999995,
+        "random_mean_acc": 0.9900800000000001,
+        "random_std_acc": 0.009323175424714478,
+        "random_mean_drop": 0.007919999999999927,
+        "shared_activation_var": 0.3829176127910614
+      },
+      "ablate_top5": {
+        "accuracy": 0.97,
+        "accuracy_drop": 0.028000000000000025,
+        "random_mean_acc": 0.9841599999999999,
+        "random_std_acc": 0.011400982413809773,
+        "random_mean_drop": 0.013840000000000074,
+        "shared_activation_var": 0.278292715549469
+      },
+      "ablate_top10": {
+        "accuracy": 0.9024,
+        "accuracy_drop": 0.09560000000000002,
+        "random_mean_acc": 0.93334,
+        "random_std_acc": 0.041692594066572525,
+        "random_mean_drop": 0.06466000000000005,
+        "shared_activation_var": 0.16468313336372375
+      }
+    },
+    "freeze_layer1.mlp_seed2": {
+      "baseline_acc": 0.9974,
+      "ablate_top1": {
+        "accuracy": 0.9906,
+        "accuracy_drop": 0.006799999999999917,
+        "random_mean_acc": 0.99054,
+        "random_std_acc": 0.01868540606997878,
+        "random_mean_drop": 0.006859999999999977,
+        "shared_activation_var": 0.23470039665699005
+      },
+      "ablate_top3": {
+        "accuracy": 0.9906,
+        "accuracy_drop": 0.006799999999999917,
+        "random_mean_acc": 0.9869600000000001,
+        "random_std_acc": 0.022734959863610942,
+        "random_mean_drop": 0.010439999999999894,
+        "shared_activation_var": 0.21385382115840912
+      },
+      "ablate_top5": {
+        "accuracy": 0.9892,
+        "accuracy_drop": 0.008199999999999985,
+        "random_mean_acc": 0.9755800000000001,
+        "random_std_acc": 0.0397485546907054,
+        "random_mean_drop": 0.02181999999999984,
+        "shared_activation_var": 0.13418647646903992
+      },
+      "ablate_top10": {
+        "accuracy": 0.9644,
+        "accuracy_drop": 0.03299999999999992,
+        "random_mean_acc": 0.8761800000000001,
+        "random_std_acc": 0.13112188070646333,
+        "random_mean_drop": 0.12121999999999988,
+        "shared_activation_var": 0.08686625957489014
+      }
+    },
+    "freeze_layer2.attn_seed0": {
+      "baseline_acc": 0.9992,
+      "ablate_top1": {
+        "accuracy": 0.999,
+        "accuracy_drop": 0.00019999999999997797,
+        "random_mean_acc": 0.99916,
+        "random_std_acc": 7.99999999999912e-05,
+        "random_mean_drop": 3.999999999992898e-05,
+        "shared_activation_var": 0.18556465208530426
+      },
+      "ablate_top3": {
+        "accuracy": 0.9992,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9986600000000001,
+        "random_std_acc": 0.0011901260437449494,
+        "random_mean_drop": 0.0005399999999998739,
+        "shared_activation_var": 0.18520653247833252
+      },
+      "ablate_top5": {
+        "accuracy": 0.9992,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9829799999999999,
+        "random_std_acc": 0.024548474494355047,
+        "random_mean_drop": 0.016220000000000123,
+        "shared_activation_var": 0.25587254762649536
+      },
+      "ablate_top10": {
+        "accuracy": 0.991,
+        "accuracy_drop": 0.008199999999999985,
+        "random_mean_acc": 0.97712,
+        "random_std_acc": 0.03386020673297786,
+        "random_mean_drop": 0.02207999999999999,
+        "shared_activation_var": 0.25231608748435974
+      }
+    },
+    "freeze_layer2.attn_seed1": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.4630436897277832
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.3933514356613159
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99992,
+        "random_std_acc": 0.0002400000000000069,
+        "random_mean_drop": 7.999999999996898e-05,
+        "shared_activation_var": 0.27142828702926636
+      },
+      "ablate_top10": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99642,
+        "random_std_acc": 0.006378369697657874,
+        "random_mean_drop": 0.0035800000000000276,
+        "shared_activation_var": 0.15923479199409485
+      }
+    },
+    "freeze_layer2.attn_seed2": {
+      "baseline_acc": 0.9954,
+      "ablate_top1": {
+        "accuracy": 0.9938,
+        "accuracy_drop": 0.0015999999999999348,
+        "random_mean_acc": 0.9953399999999999,
+        "random_std_acc": 0.00012806248474864286,
+        "random_mean_drop": 6.0000000000060005e-05,
+        "shared_activation_var": 0.9839109778404236
+      },
+      "ablate_top3": {
+        "accuracy": 0.9932,
+        "accuracy_drop": 0.0021999999999999797,
+        "random_mean_acc": 0.9941799999999998,
+        "random_std_acc": 0.0019150979087242457,
+        "random_mean_drop": 0.0012200000000001099,
+        "shared_activation_var": 0.8422276377677917
+      },
+      "ablate_top5": {
+        "accuracy": 0.992,
+        "accuracy_drop": 0.0033999999999999586,
+        "random_mean_acc": 0.9940200000000001,
+        "random_std_acc": 0.00260069221554569,
+        "random_mean_drop": 0.0013799999999998258,
+        "shared_activation_var": 0.5410681962966919
+      },
+      "ablate_top10": {
+        "accuracy": 0.9848,
+        "accuracy_drop": 0.010599999999999943,
+        "random_mean_acc": 0.96982,
+        "random_std_acc": 0.0434113763891448,
+        "random_mean_drop": 0.025579999999999936,
+        "shared_activation_var": 0.2989964783191681
+      }
+    },
+    "freeze_layer2.mlp_seed0": {
+      "baseline_acc": 0.999,
+      "ablate_top1": {
+        "accuracy": 0.999,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9989800000000001,
+        "random_std_acc": 5.9999999999993395e-05,
+        "random_mean_drop": 1.999999999990898e-05,
+        "shared_activation_var": 0.18832257390022278
+      },
+      "ablate_top3": {
+        "accuracy": 0.999,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9982200000000001,
+        "random_std_acc": 0.0013695254652616102,
+        "random_mean_drop": 0.0007799999999998919,
+        "shared_activation_var": 0.16649074852466583
+      },
+      "ablate_top5": {
+        "accuracy": 0.999,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99824,
+        "random_std_acc": 0.0014527215837867942,
+        "random_mean_drop": 0.0007599999999999829,
+        "shared_activation_var": 0.1381540596485138
+      },
+      "ablate_top10": {
+        "accuracy": 0.9982,
+        "accuracy_drop": 0.0008000000000000229,
+        "random_mean_acc": 0.99648,
+        "random_std_acc": 0.005064543414761104,
+        "random_mean_drop": 0.0025199999999999667,
+        "shared_activation_var": 0.18148650228977203
+      }
+    },
+    "freeze_layer2.mlp_seed1": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.32971933484077454
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.2107791155576706
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.21850769221782684
+      },
+      "ablate_top10": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99924,
+        "random_std_acc": 0.0014388884598884018,
+        "random_mean_drop": 0.0007599999999999829,
+        "shared_activation_var": 0.20432348549365997
+      }
+    },
+    "freeze_layer2.mlp_seed2": {
+      "baseline_acc": 0.999,
+      "ablate_top1": {
+        "accuracy": 0.9982,
+        "accuracy_drop": 0.0008000000000000229,
+        "random_mean_acc": 0.9989399999999999,
+        "random_std_acc": 0.00012806248474864286,
+        "random_mean_drop": 6.0000000000060005e-05,
+        "shared_activation_var": 0.7336504459381104
+      },
+      "ablate_top3": {
+        "accuracy": 0.999,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9983600000000001,
+        "random_std_acc": 0.000833306666239992,
+        "random_mean_drop": 0.0006399999999998629,
+        "shared_activation_var": 0.5181270241737366
+      },
+      "ablate_top5": {
+        "accuracy": 0.9988,
+        "accuracy_drop": 0.00019999999999997797,
+        "random_mean_acc": 0.9982800000000001,
+        "random_std_acc": 0.000607947366142837,
+        "random_mean_drop": 0.0007199999999999429,
+        "shared_activation_var": 0.36014583706855774
+      },
+      "ablate_top10": {
+        "accuracy": 0.9986,
+        "accuracy_drop": 0.00039999999999995595,
+        "random_mean_acc": 0.9953800000000002,
+        "random_std_acc": 0.004711220648621767,
+        "random_mean_drop": 0.0036199999999998456,
+        "shared_activation_var": 0.22047710418701172
+      }
+    },
+    "freeze_layer3.attn_seed0": {
+      "baseline_acc": 0.998,
+      "ablate_top1": {
+        "accuracy": 0.998,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9980199999999998,
+        "random_std_acc": 5.999999999999339e-05,
+        "random_mean_drop": -1.9999999999797957e-05,
+        "shared_activation_var": 0.7476947903633118
+      },
+      "ablate_top3": {
+        "accuracy": 0.9972,
+        "accuracy_drop": 0.0008000000000000229,
+        "random_mean_acc": 0.9944599999999999,
+        "random_std_acc": 0.005337452575901717,
+        "random_mean_drop": 0.0035400000000000986,
+        "shared_activation_var": 0.5736752152442932
+      },
+      "ablate_top5": {
+        "accuracy": 0.9976,
+        "accuracy_drop": 0.00039999999999995595,
+        "random_mean_acc": 0.9920199999999999,
+        "random_std_acc": 0.012099404944045808,
+        "random_mean_drop": 0.005980000000000096,
+        "shared_activation_var": 0.3643699586391449
+      },
+      "ablate_top10": {
+        "accuracy": 0.9974,
+        "accuracy_drop": 0.0006000000000000449,
+        "random_mean_acc": 0.96874,
+        "random_std_acc": 0.04079167071841993,
+        "random_mean_drop": 0.029259999999999953,
+        "shared_activation_var": 0.1973329335451126
+      }
+    },
+    "freeze_layer3.attn_seed1": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.036802880465984344
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.22198732197284698
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.23263302445411682
+      },
+      "ablate_top10": {
+        "accuracy": 0.975,
+        "accuracy_drop": 0.025000000000000022,
+        "random_mean_acc": 0.99276,
+        "random_std_acc": 0.015126876743068928,
+        "random_mean_drop": 0.007240000000000024,
+        "shared_activation_var": 0.2348969429731369
+      }
+    },
+    "freeze_layer3.attn_seed2": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99986,
+        "random_std_acc": 0.00041999999999998706,
+        "random_mean_drop": 0.000140000000000029,
+        "shared_activation_var": 0.4705796241760254
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9997,
+        "random_std_acc": 0.0009000000000000008,
+        "random_mean_drop": 0.00029999999999996696,
+        "shared_activation_var": 0.5989251136779785
+      },
+      "ablate_top5": {
+        "accuracy": 0.9998,
+        "accuracy_drop": 0.00019999999999997797,
+        "random_mean_acc": 0.99964,
+        "random_std_acc": 0.0008475848040166918,
+        "random_mean_drop": 0.00036000000000002697,
+        "shared_activation_var": 0.3930131793022156
+      },
+      "ablate_top10": {
+        "accuracy": 0.9962,
+        "accuracy_drop": 0.0038000000000000256,
+        "random_mean_acc": 0.9898999999999999,
+        "random_std_acc": 0.024320731896881713,
+        "random_mean_drop": 0.010100000000000109,
+        "shared_activation_var": 0.2491169422864914
+      }
+    },
+    "freeze_layer3.mlp_seed0": {
+      "baseline_acc": 0.9988,
+      "ablate_top1": {
+        "accuracy": 0.9984,
+        "accuracy_drop": 0.00040000000000006697,
+        "random_mean_acc": 0.9987999999999999,
+        "random_std_acc": 1.1102230246251565e-16,
+        "random_mean_drop": 1.1102230246251565e-16,
+        "shared_activation_var": 0.7927002310752869
+      },
+      "ablate_top3": {
+        "accuracy": 0.9984,
+        "accuracy_drop": 0.00040000000000006697,
+        "random_mean_acc": 0.99856,
+        "random_std_acc": 0.0002939387691339898,
+        "random_mean_drop": 0.00024000000000001798,
+        "shared_activation_var": 0.7153136134147644
+      },
+      "ablate_top5": {
+        "accuracy": 0.9984,
+        "accuracy_drop": 0.00040000000000006697,
+        "random_mean_acc": 0.9979400000000002,
+        "random_std_acc": 0.001356613430568957,
+        "random_mean_drop": 0.0008599999999998609,
+        "shared_activation_var": 0.4867469370365143
+      },
+      "ablate_top10": {
+        "accuracy": 0.996,
+        "accuracy_drop": 0.0028000000000000247,
+        "random_mean_acc": 0.99428,
+        "random_std_acc": 0.010473280288429235,
+        "random_mean_drop": 0.0045199999999999685,
+        "shared_activation_var": 0.2739540934562683
+      }
+    },
+    "freeze_layer3.mlp_seed1": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.2346249371767044
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9999600000000001,
+        "random_std_acc": 7.99999999999912e-05,
+        "random_mean_drop": 3.999999999992898e-05,
+        "shared_activation_var": 0.22044555842876434
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9999800000000001,
+        "random_std_acc": 5.9999999999993395e-05,
+        "random_mean_drop": 1.999999999990898e-05,
+        "shared_activation_var": 0.2147480547428131
+      },
+      "ablate_top10": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9992599999999999,
+        "random_std_acc": 0.0010509043724335856,
+        "random_mean_drop": 0.0007400000000000739,
+        "shared_activation_var": 0.304402619600296
+      }
+    },
+    "freeze_layer3.mlp_seed2": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.543871283531189
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9999600000000001,
+        "random_std_acc": 7.99999999999912e-05,
+        "random_mean_drop": 3.999999999992898e-05,
+        "shared_activation_var": 0.34009039402008057
+      },
+      "ablate_top5": {
+        "accuracy": 0.9998,
+        "accuracy_drop": 0.00019999999999997797,
+        "random_mean_acc": 0.99964,
+        "random_std_acc": 0.0008979977728257479,
+        "random_mean_drop": 0.00036000000000002697,
+        "shared_activation_var": 0.2481912076473236
+      },
+      "ablate_top10": {
+        "accuracy": 0.999,
+        "accuracy_drop": 0.0010000000000000009,
+        "random_mean_acc": 0.99746,
+        "random_std_acc": 0.0031267235247140128,
+        "random_mean_drop": 0.0025399999999999867,
+        "shared_activation_var": 0.15809205174446106
+      }
+    },
+    "freeze_unembed_seed0": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 1.0,
+        "random_std_acc": 0.0,
+        "random_mean_drop": 0.0,
+        "shared_activation_var": 0.0892927348613739
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9988999999999999,
+        "random_std_acc": 0.0021151832071950767,
+        "random_mean_drop": 0.001100000000000101,
+        "shared_activation_var": 0.15192383527755737
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9982600000000001,
+        "random_std_acc": 0.004691311117374345,
+        "random_mean_drop": 0.0017399999999998528,
+        "shared_activation_var": 0.18473923206329346
+      },
+      "ablate_top10": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9859600000000001,
+        "random_std_acc": 0.019538638642443845,
+        "random_mean_drop": 0.014039999999999941,
+        "shared_activation_var": 0.15658560395240784
+      }
+    },
+    "freeze_unembed_seed1": {
+      "baseline_acc": 0.9964,
+      "ablate_top1": {
+        "accuracy": 0.991,
+        "accuracy_drop": 0.00539999999999996,
+        "random_mean_acc": 0.99576,
+        "random_std_acc": 0.0006681317235395769,
+        "random_mean_drop": 0.0006399999999999739,
+        "shared_activation_var": 0.4272047281265259
+      },
+      "ablate_top3": {
+        "accuracy": 0.9938,
+        "accuracy_drop": 0.0025999999999999357,
+        "random_mean_acc": 0.9951999999999999,
+        "random_std_acc": 0.0007099295739719478,
+        "random_mean_drop": 0.0012000000000000899,
+        "shared_activation_var": 0.2856427729129791
+      },
+      "ablate_top5": {
+        "accuracy": 0.9922,
+        "accuracy_drop": 0.0041999999999999815,
+        "random_mean_acc": 0.99328,
+        "random_std_acc": 0.003419005703417294,
+        "random_mean_drop": 0.0031199999999999006,
+        "shared_activation_var": 0.1847803145647049
+      },
+      "ablate_top10": {
+        "accuracy": 0.982,
+        "accuracy_drop": 0.014399999999999968,
+        "random_mean_acc": 0.9642800000000001,
+        "random_std_acc": 0.05488476655685071,
+        "random_mean_drop": 0.032119999999999815,
+        "shared_activation_var": 0.10280363261699677
+      }
+    },
+    "freeze_unembed_seed2": {
+      "baseline_acc": 1.0,
+      "ablate_top1": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9999800000000001,
+        "random_std_acc": 5.9999999999993395e-05,
+        "random_mean_drop": 1.999999999990898e-05,
+        "shared_activation_var": 0.2491336464881897
+      },
+      "ablate_top3": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.9993000000000001,
+        "random_std_acc": 0.002100000000000002,
+        "random_mean_drop": 0.0006999999999999229,
+        "shared_activation_var": 0.5020484328269958
+      },
+      "ablate_top5": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99928,
+        "random_std_acc": 0.0020301724064719323,
+        "random_mean_drop": 0.0007200000000000539,
+        "shared_activation_var": 0.3257409930229187
+      },
+      "ablate_top10": {
+        "accuracy": 1.0,
+        "accuracy_drop": 0.0,
+        "random_mean_acc": 0.99042,
+        "random_std_acc": 0.01348197314935763,
+        "random_mean_drop": 0.009580000000000033,
+        "shared_activation_var": 0.21463456749916077
+      }
+    }
+  },
+  "summary": {
+    "ablate_top1": {
+      "mean_shared_drop": 0.0005757575757575763,
+      "mean_random_drop": 0.0005672727272727462,
+      "wilcoxon_stat": 140.0,
+      "wilcoxon_pval": 0.7750746272808426,
+      "significant": "False"
+    },
+    "ablate_top3": {
+      "mean_shared_drop": 0.002460606060606062,
+      "mean_random_drop": 0.0022084848484848537,
+      "wilcoxon_stat": 137.0,
+      "wilcoxon_pval": 0.13284867469946796,
+      "significant": "False"
+    },
+    "ablate_top5": {
+      "mean_shared_drop": 0.002351515151515155,
+      "mean_random_drop": 0.006423030303030287,
+      "wilcoxon_stat": 68.0,
+      "wilcoxon_pval": 0.001225992073984563,
+      "significant": "True"
+    },
+    "ablate_top10": {
+      "mean_shared_drop": 0.011612121212121209,
+      "mean_random_drop": 0.027899999999999998,
+      "wilcoxon_stat": 61.0,
+      "wilcoxon_pval": 8.779265843067968e-05,
+      "significant": "True"
+    }
+  }
+}

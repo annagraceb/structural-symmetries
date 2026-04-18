@@ -1,0 +1,454 @@
+============================================================
+Creating evaluation sets...
+============================================================
+Created eval sets in eval_sets/
+  convergence_eval: 5000 problems
+  stratified_2000: 2000 problems
+  natural_2000: 2000 problems
+
+Loaded convergence eval set: 5000 problems
+
+Total configs to train: 33
+============================================================
+
+33 models remaining to train
+============================================================
+
+[1/33] Training baseline seed=0
+----------------------------------------
+  Params: 798,720 total, 798,720 trainable
+  Step    500 | loss 0.0008 | acc 1.0000 | 12s
+  >>> Converged at step 500 (1.0000)
+  Step   1000 | loss 0.0001 | acc 1.0000 | 24s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 36s
+  Result: CONVERGED | acc=1.0000 | 35.9s
+
+[2/33] Training baseline seed=1
+----------------------------------------
+  Params: 798,720 total, 798,720 trainable
+  Step    500 | loss 0.0162 | acc 0.9796 | 12s
+  Step   1000 | loss 0.0002 | acc 1.0000 | 24s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 36s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 48s
+  Result: CONVERGED | acc=1.0000 | 47.9s
+
+[3/33] Training baseline seed=2
+----------------------------------------
+  Params: 798,720 total, 798,720 trainable
+  Step    500 | loss 0.0881 | acc 0.9774 | 12s
+  Step   1000 | loss 0.0002 | acc 1.0000 | 24s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 36s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 48s
+  Result: CONVERGED | acc=1.0000 | 48.2s
+
+[4/33] Training freeze_embed seed=0
+----------------------------------------
+  Froze embed (2 param tensors)
+  Params: 798,720 total, 794,880 trainable
+  Step    500 | loss 0.0008 | acc 1.0000 | 12s
+  >>> Converged at step 500 (1.0000)
+  Step   1000 | loss 0.0002 | acc 1.0000 | 23s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 35s
+  Result: CONVERGED | acc=1.0000 | 35.3s
+
+[5/33] Training freeze_embed seed=1
+----------------------------------------
+  Froze embed (2 param tensors)
+  Params: 798,720 total, 794,880 trainable
+  Step    500 | loss 0.0014 | acc 1.0000 | 12s
+  >>> Converged at step 500 (1.0000)
+  Step   1000 | loss 0.0102 | acc 0.9918 | 24s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 36s
+  Result: CONVERGED | acc=1.0000 | 36.3s
+
+[6/33] Training freeze_embed seed=2
+----------------------------------------
+  Froze embed (2 param tensors)
+  Params: 798,720 total, 794,880 trainable
+  Step    500 | loss 0.0008 | acc 1.0000 | 12s
+  >>> Converged at step 500 (1.0000)
+  Step   1000 | loss 0.0002 | acc 1.0000 | 24s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Result: CONVERGED | acc=1.0000 | 36.5s
+
+[7/33] Training freeze_layer0.attn seed=0
+----------------------------------------
+  Froze layer0.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 1.6553 | acc 0.0000 | 12s
+  Step   1000 | loss 1.5367 | acc 0.0000 | 24s
+  Step   1500 | loss 1.5511 | acc 0.0000 | 36s
+  Step   2000 | loss 1.1260 | acc 0.0018 | 48s
+  Step   2500 | loss 0.7738 | acc 0.0134 | 60s
+  Step   3000 | loss 0.3991 | acc 0.0986 | 72s
+  Step   3500 | loss 0.0695 | acc 0.8370 | 84s
+  Step   4000 | loss 0.0001 | acc 1.0000 | 96s
+  >>> Converged at step 4000 (1.0000)
+  Step   4500 | loss 0.0000 | acc 1.0000 | 108s
+  Step   5000 | loss 0.0000 | acc 1.0000 | 120s
+  Result: CONVERGED | acc=1.0000 | 119.8s
+
+[8/33] Training freeze_layer0.attn seed=1
+----------------------------------------
+  Froze layer0.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 1.7371 | acc 0.0000 | 12s
+  Step   1000 | loss 1.1543 | acc 0.0006 | 24s
+  Step   1500 | loss 1.1537 | acc 0.0008 | 36s
+  Step   2000 | loss 1.2673 | acc 0.0006 | 48s
+  Step   2500 | loss 1.1528 | acc 0.0010 | 60s
+  Step   3000 | loss 0.8894 | acc 0.0094 | 72s
+  Step   3500 | loss 0.7704 | acc 0.0118 | 84s
+  Step   4000 | loss 0.5328 | acc 0.0736 | 96s
+  Step   4500 | loss 0.0002 | acc 1.0000 | 108s
+  >>> Converged at step 4500 (1.0000)
+  Step   5000 | loss 0.0001 | acc 1.0000 | 120s
+  Step   5500 | loss 0.0000 | acc 1.0000 | 132s
+  Result: CONVERGED | acc=1.0000 | 131.9s
+
+[9/33] Training freeze_layer0.attn seed=2
+----------------------------------------
+  Froze layer0.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 1.5618 | acc 0.0002 | 12s
+  Step   1000 | loss 1.5035 | acc 0.0002 | 24s
+  Step   1500 | loss 0.8075 | acc 0.0088 | 36s
+  Step   2000 | loss 0.7704 | acc 0.0088 | 48s
+  Step   2500 | loss 0.7691 | acc 0.0104 | 60s
+  Step   3000 | loss 0.7684 | acc 0.0104 | 73s
+  Step   3500 | loss 0.7680 | acc 0.0090 | 85s
+  Step   4000 | loss 0.7690 | acc 0.0086 | 97s
+  Step   4500 | loss 0.7679 | acc 0.0108 | 109s
+  Step   5000 | loss 0.7679 | acc 0.0110 | 121s
+  Step   5500 | loss 0.7680 | acc 0.0094 | 133s
+  Step   6000 | loss 0.7679 | acc 0.0074 | 145s
+  Step   6500 | loss 0.7680 | acc 0.0090 | 157s
+  Step   7000 | loss 0.7677 | acc 0.0088 | 169s
+  Step   7500 | loss 0.7683 | acc 0.0092 | 181s
+  Step   8000 | loss 0.7677 | acc 0.0098 | 193s
+  Step   8500 | loss 0.7859 | acc 0.0178 | 205s
+  Step   9000 | loss 0.0270 | acc 0.9764 | 217s
+  Step   9500 | loss 0.0003 | acc 1.0000 | 229s
+  >>> Converged at step 9500 (1.0000)
+  Step  10000 | loss 0.0001 | acc 1.0000 | 241s
+  Step  10500 | loss 0.0008 | acc 1.0000 | 253s
+  Result: CONVERGED | acc=1.0000 | 252.8s
+
+[10/33] Training freeze_layer0.mlp seed=0
+----------------------------------------
+  Froze layer0.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.6634 | acc 0.0362 | 12s
+  Step   1000 | loss 0.4150 | acc 0.1112 | 24s
+  Step   1500 | loss 0.0233 | acc 0.8528 | 36s
+  Step   2000 | loss 0.0054 | acc 0.9820 | 48s
+  Step   2500 | loss 0.0003 | acc 0.9828 | 60s
+  Step   3000 | loss 0.0016 | acc 0.9728 | 71s
+  Step   3500 | loss 0.0000 | acc 1.0000 | 83s
+  >>> Converged at step 3500 (1.0000)
+  Step   4000 | loss 0.0000 | acc 1.0000 | 95s
+  Step   4500 | loss 0.0000 | acc 1.0000 | 107s
+  Result: CONVERGED | acc=1.0000 | 107.1s
+
+[11/33] Training freeze_layer0.mlp seed=1
+----------------------------------------
+  Froze layer0.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 1.5364 | acc 0.0000 | 12s
+  Step   1000 | loss 0.7872 | acc 0.0104 | 24s
+  Step   1500 | loss 0.4482 | acc 0.0866 | 36s
+  Step   2000 | loss 0.0302 | acc 0.9064 | 48s
+  Step   2500 | loss 0.0102 | acc 0.9902 | 60s
+  >>> Converged at step 2500 (0.9902)
+  Step   3000 | loss 0.0000 | acc 1.0000 | 72s
+  Step   3500 | loss 0.0000 | acc 1.0000 | 84s
+  Result: CONVERGED | acc=1.0000 | 83.6s
+
+[12/33] Training freeze_layer0.mlp seed=2
+----------------------------------------
+  Froze layer0.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.0049 | acc 0.9884 | 12s
+  Step   1000 | loss 0.0008 | acc 0.9916 | 23s
+  >>> Converged at step 1000 (0.9916)
+  Step   1500 | loss 0.0000 | acc 1.0000 | 35s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 47s
+  Result: CONVERGED | acc=1.0000 | 47.1s
+
+[13/33] Training freeze_layer1.attn seed=0
+----------------------------------------
+  Froze layer1.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.0036 | acc 0.9758 | 12s
+  Step   1000 | loss 0.0001 | acc 1.0000 | 24s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 36s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 48s
+  Result: CONVERGED | acc=1.0000 | 48.5s
+
+[14/33] Training freeze_layer1.attn seed=1
+----------------------------------------
+  Froze layer1.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.0344 | acc 0.9516 | 12s
+  Step   1000 | loss 0.0005 | acc 0.9794 | 25s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  >>> Converged at step 1500 (1.0000)
+  Step   2000 | loss 0.0000 | acc 1.0000 | 49s
+  Step   2500 | loss 0.0000 | acc 1.0000 | 61s
+  Result: CONVERGED | acc=1.0000 | 61.4s
+
+[15/33] Training freeze_layer1.attn seed=2
+----------------------------------------
+  Froze layer1.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.0223 | acc 0.9908 | 12s
+  >>> Converged at step 500 (0.9908)
+  Step   1000 | loss 0.0002 | acc 1.0000 | 25s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Result: CONVERGED | acc=1.0000 | 36.8s
+
+[16/33] Training freeze_layer1.mlp seed=0
+----------------------------------------
+  Froze layer1.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.0252 | acc 0.9326 | 12s
+  Step   1000 | loss 0.0002 | acc 1.0000 | 24s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 49s
+  Result: CONVERGED | acc=1.0000 | 48.8s
+
+[17/33] Training freeze_layer1.mlp seed=1
+----------------------------------------
+  Froze layer1.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.0011 | acc 1.0000 | 12s
+  >>> Converged at step 500 (1.0000)
+  Step   1000 | loss 0.0002 | acc 1.0000 | 24s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 36s
+  Result: CONVERGED | acc=1.0000 | 36.5s
+
+[18/33] Training freeze_layer1.mlp seed=2
+----------------------------------------
+  Froze layer1.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.0141 | acc 0.9732 | 12s
+  Step   1000 | loss 0.0002 | acc 1.0000 | 24s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 49s
+  Result: CONVERGED | acc=1.0000 | 49.0s
+
+[19/33] Training freeze_layer2.attn seed=0
+----------------------------------------
+  Froze layer2.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.0008 | acc 1.0000 | 12s
+  >>> Converged at step 500 (1.0000)
+  Step   1000 | loss 0.0001 | acc 1.0000 | 25s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Result: CONVERGED | acc=1.0000 | 36.9s
+
+[20/33] Training freeze_layer2.attn seed=1
+----------------------------------------
+  Froze layer2.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.0011 | acc 1.0000 | 12s
+  >>> Converged at step 500 (1.0000)
+  Step   1000 | loss 0.0002 | acc 1.0000 | 25s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Result: CONVERGED | acc=1.0000 | 37.1s
+
+[21/33] Training freeze_layer2.attn seed=2
+----------------------------------------
+  Froze layer2.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.4722 | acc 0.1974 | 12s
+  Step   1000 | loss 0.0163 | acc 0.9912 | 25s
+  >>> Converged at step 1000 (0.9912)
+  Step   1500 | loss 0.0003 | acc 1.0000 | 37s
+  Step   2000 | loss 0.0001 | acc 1.0000 | 49s
+  Result: CONVERGED | acc=1.0000 | 49.3s
+
+[22/33] Training freeze_layer2.mlp seed=0
+----------------------------------------
+  Froze layer2.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.0020 | acc 0.9998 | 12s
+  >>> Converged at step 500 (0.9998)
+  Step   1000 | loss 0.0002 | acc 1.0000 | 25s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Result: CONVERGED | acc=1.0000 | 36.8s
+
+[23/33] Training freeze_layer2.mlp seed=1
+----------------------------------------
+  Froze layer2.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.1138 | acc 0.9494 | 12s
+  Step   1000 | loss 0.0002 | acc 1.0000 | 24s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 49s
+  Result: CONVERGED | acc=1.0000 | 49.2s
+
+[24/33] Training freeze_layer2.mlp seed=2
+----------------------------------------
+  Froze layer2.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.9376 | acc 0.0054 | 12s
+  Step   1000 | loss 0.7693 | acc 0.0106 | 25s
+  Step   1500 | loss 0.0058 | acc 0.9974 | 37s
+  >>> Converged at step 1500 (0.9974)
+  Step   2000 | loss 0.0001 | acc 1.0000 | 49s
+  Step   2500 | loss 0.0000 | acc 1.0000 | 62s
+  Result: CONVERGED | acc=1.0000 | 61.6s
+
+[25/33] Training freeze_layer3.attn seed=0
+----------------------------------------
+  Froze layer3.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.0050 | acc 0.9692 | 13s
+  Step   1000 | loss 0.0001 | acc 1.0000 | 25s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 50s
+  Result: CONVERGED | acc=1.0000 | 49.8s
+
+[26/33] Training freeze_layer3.attn seed=1
+----------------------------------------
+  Froze layer3.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.0010 | acc 1.0000 | 12s
+  >>> Converged at step 500 (1.0000)
+  Step   1000 | loss 0.0002 | acc 1.0000 | 25s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Result: CONVERGED | acc=1.0000 | 37.4s
+
+[27/33] Training freeze_layer3.attn seed=2
+----------------------------------------
+  Froze layer3.attn (6 param tensors)
+  Params: 798,720 total, 732,416 trainable
+  Step    500 | loss 0.5192 | acc 0.1888 | 12s
+  Step   1000 | loss 0.0071 | acc 0.9976 | 25s
+  >>> Converged at step 1000 (0.9976)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 49s
+  Result: CONVERGED | acc=1.0000 | 49.4s
+
+[28/33] Training freeze_layer3.mlp seed=0
+----------------------------------------
+  Froze layer3.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.0021 | acc 0.9914 | 12s
+  >>> Converged at step 500 (0.9914)
+  Step   1000 | loss 0.0045 | acc 0.9970 | 25s
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Result: CONVERGED | acc=1.0000 | 37.1s
+
+[29/33] Training freeze_layer3.mlp seed=1
+----------------------------------------
+  Froze layer3.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 0.0131 | acc 0.9896 | 12s
+  Step   1000 | loss 0.0001 | acc 1.0000 | 25s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.0001 | acc 1.0000 | 37s
+  Step   2000 | loss 0.0000 | acc 1.0000 | 49s
+  Result: CONVERGED | acc=1.0000 | 49.2s
+
+[30/33] Training freeze_layer3.mlp seed=2
+----------------------------------------
+  Froze layer3.mlp (6 param tensors)
+  Params: 798,720 total, 666,752 trainable
+  Step    500 | loss 1.2862 | acc 0.0006 | 12s
+  Step   1000 | loss 0.0156 | acc 0.9618 | 25s
+  Step   1500 | loss 0.0004 | acc 0.9958 | 37s
+  >>> Converged at step 1500 (0.9958)
+  Step   2000 | loss 0.0000 | acc 1.0000 | 49s
+  Step   2500 | loss 0.0000 | acc 1.0000 | 62s
+  Result: CONVERGED | acc=1.0000 | 61.8s
+
+[31/33] Training freeze_unembed seed=0
+----------------------------------------
+  Froze unembed (3 param tensors)
+  Params: 798,720 total, 796,928 trainable
+  Step    500 | loss 0.5665 | acc 0.9828 | 13s
+  Step   1000 | loss 0.5616 | acc 1.0000 | 25s
+  >>> Converged at step 1000 (1.0000)
+  Step   1500 | loss 0.5617 | acc 1.0000 | 38s
+  Step   2000 | loss 0.5613 | acc 1.0000 | 50s
+  Result: CONVERGED | acc=1.0000 | 50.4s
+
+[32/33] Training freeze_unembed seed=1
+----------------------------------------
+  Froze unembed (3 param tensors)
+  Params: 798,720 total, 796,928 trainable
+  Step    500 | loss 1.1978 | acc 0.0122 | 13s
+  Step   1000 | loss 0.6202 | acc 0.9874 | 25s
+  Step   1500 | loss 0.6200 | acc 0.9836 | 38s
+  Step   2000 | loss 0.6135 | acc 1.0000 | 51s
+  >>> Converged at step 2000 (1.0000)
+  Step   2500 | loss 0.6092 | acc 1.0000 | 63s
+  Step   3000 | loss 0.6105 | acc 1.0000 | 76s
+  Result: CONVERGED | acc=1.0000 | 75.8s
+
+[33/33] Training freeze_unembed seed=2
+----------------------------------------
+  Froze unembed (3 param tensors)
+  Params: 798,720 total, 796,928 trainable
+  Step    500 | loss 1.7588 | acc 0.0004 | 13s
+  Step   1000 | loss 0.9159 | acc 0.3474 | 25s
+  Step   1500 | loss 0.6078 | acc 0.9516 | 38s
+  Step   2000 | loss 0.5832 | acc 0.9986 | 51s
+  >>> Converged at step 2000 (0.9986)
+  Step   2500 | loss 0.5829 | acc 1.0000 | 63s
+  Step   3000 | loss 0.5851 | acc 1.0000 | 76s
+  Result: CONVERGED | acc=1.0000 | 75.8s
+
+============================================================
+Zoo training complete in 2025s (33.8 min)
+
+============================================================
+MODEL ZOO SUMMARY
+============================================================
+
+Converged (33):
+  baseline seed=0: acc=1.0000 at step 500 (36s)
+  baseline seed=1: acc=1.0000 at step 1000 (48s)
+  baseline seed=2: acc=1.0000 at step 1000 (48s)
+  freeze_embed seed=0: acc=1.0000 at step 500 (35s)
+  freeze_embed seed=1: acc=1.0000 at step 500 (36s)
+  freeze_embed seed=2: acc=1.0000 at step 500 (37s)
+  freeze_layer0.attn seed=0: acc=1.0000 at step 4000 (120s)
+  freeze_layer0.attn seed=1: acc=1.0000 at step 4500 (132s)
+  freeze_layer0.attn seed=2: acc=1.0000 at step 9500 (253s)
+  freeze_layer0.mlp seed=0: acc=1.0000 at step 3500 (107s)
+  freeze_layer0.mlp seed=1: acc=1.0000 at step 2500 (84s)
+  freeze_layer0.mlp seed=2: acc=1.0000 at step 1000 (47s)
+  freeze_layer1.attn seed=0: acc=1.0000 at step 1000 (48s)
+  freeze_layer1.attn seed=1: acc=1.0000 at step 1500 (61s)
+  freeze_layer1.attn seed=2: acc=1.0000 at step 500 (37s)
+  freeze_layer1.mlp seed=0: acc=1.0000 at step 1000 (49s)
+  freeze_layer1.mlp seed=1: acc=1.0000 at step 500 (36s)
+  freeze_layer1.mlp seed=2: acc=1.0000 at step 1000 (49s)
+  freeze_layer2.attn seed=0: acc=1.0000 at step 500 (37s)
+  freeze_layer2.attn seed=1: acc=1.0000 at step 500 (37s)
+  freeze_layer2.attn seed=2: acc=1.0000 at step 1000 (49s)
+  freeze_layer2.mlp seed=0: acc=1.0000 at step 500 (37s)
+  freeze_layer2.mlp seed=1: acc=1.0000 at step 1000 (49s)
+  freeze_layer2.mlp seed=2: acc=1.0000 at step 1500 (62s)
+  freeze_layer3.attn seed=0: acc=1.0000 at step 1000 (50s)
+  freeze_layer3.attn seed=1: acc=1.0000 at step 500 (37s)
+  freeze_layer3.attn seed=2: acc=1.0000 at step 1000 (49s)
+  freeze_layer3.mlp seed=0: acc=1.0000 at step 500 (37s)
+  freeze_layer3.mlp seed=1: acc=1.0000 at step 1000 (49s)
+  freeze_layer3.mlp seed=2: acc=1.0000 at step 1500 (62s)
+  freeze_unembed seed=0: acc=1.0000 at step 1000 (50s)
+  freeze_unembed seed=1: acc=1.0000 at step 2000 (76s)
+  freeze_unembed seed=2: acc=1.0000 at step 2000 (76s)
+
+Decision gate: 10 distinct freeze configs converged
+  >>> PASS: Sufficient diversity to proceed to Step 2

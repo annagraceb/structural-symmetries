@@ -1,0 +1,1496 @@
+Loaded shared directions: (10, 128)
+Loaded bottom eigenvectors: (10, 128)
+Loaded reference activations: (2000, 128)
+Target site: layer 3, position 11
+
+============================================================
+PHASE 1: Alpha Sweep
+============================================================
+
+  Training A_alpha0.1_seed0...
+  Step    500 | loss 0.0007 | aux 0.0000 | acc 1.0000 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 25s
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 37s
+
+  Training A_alpha0.1_seed1...
+  Step    500 | loss 0.0011 | aux 0.0000 | acc 1.0000 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0002 | aux 0.0000 | acc 1.0000 | 25s
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+
+  Training B_alpha0.1_seed0...
+  Step    500 | loss 0.0023 | aux 0.0005 | acc 0.9980 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux 0.0001 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 39s
+
+  Training B_alpha0.1_seed1...
+  Step    500 | loss 0.0095 | aux 0.0021 | acc 1.0000 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0002 | aux 0.0001 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 39s
+
+  Training C1_alpha0.1_seed0...
+  Step    500 | loss 0.0004 | aux -0.9967 | acc 1.0000 | 20s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux -0.9982 | acc 1.0000 | 40s
+  Step   1500 | loss 0.0001 | aux -0.9982 | acc 1.0000 | 59s
+
+  Training C1_alpha0.1_seed1...
+  Step    500 | loss 0.0005 | aux -0.9973 | acc 1.0000 | 20s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux -0.9985 | acc 1.0000 | 40s
+  Step   1500 | loss 0.0001 | aux -0.9988 | acc 1.0000 | 60s
+
+  Training C1_alpha0.01_seed0...
+  Step    500 | loss 0.0006 | aux -0.9693 | acc 1.0000 | 20s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux -0.9932 | acc 1.0000 | 40s
+  Step   1500 | loss 0.0001 | aux -0.9948 | acc 1.0000 | 60s
+
+  Training C1_alpha0.01_seed1...
+  Step    500 | loss 0.3844 | aux -0.9546 | acc 0.1600 | 20s
+  Step   1000 | loss 0.0001 | aux -0.9926 | acc 1.0000 | 40s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux -0.9948 | acc 1.0000 | 59s
+  Step   2000 | loss 0.0000 | aux -0.9957 | acc 1.0000 | 79s
+
+  Training C1_alpha0.001_seed0...
+  Step    500 | loss 0.0019 | aux -0.8687 | acc 0.9858 | 20s
+  Step   1000 | loss 0.0001 | aux -0.9548 | acc 1.0000 | 40s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux -0.9761 | acc 1.0000 | 59s
+  Step   2000 | loss 0.0000 | aux -0.9851 | acc 1.0000 | 79s
+
+  Training C1_alpha0.001_seed1...
+  Step    500 | loss 0.0073 | aux -0.8649 | acc 0.9892 | 20s
+  Step   1000 | loss 0.0003 | aux -0.8972 | acc 1.0000 | 40s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux -0.9723 | acc 1.0000 | 60s
+  Step   2000 | loss 0.0000 | aux -0.9818 | acc 1.0000 | 80s
+
+  Training C2_alpha0.1_seed0...
+  Step    500 | loss 0.0225 | aux 0.0960 | acc 0.9902 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0127 | aux 0.1052 | acc 0.9566 | 26s
+  Step   1500 | loss 0.0018 | aux 0.0656 | acc 0.9818 | 40s
+
+  Training C2_alpha0.1_seed1...
+  Step    500 | loss 0.0089 | aux 0.0617 | acc 0.9694 | 13s
+  Step   1000 | loss 0.0002 | aux 0.0126 | acc 1.0000 | 26s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0015 | acc 1.0000 | 39s
+  Step   2000 | loss 0.0000 | aux 0.0007 | acc 1.0000 | 53s
+
+  Training C2_alpha0.01_seed0...
+  Step    500 | loss 0.0007 | aux 0.2446 | acc 1.0000 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux 0.0185 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0107 | acc 1.0000 | 40s
+
+  Training C2_alpha0.01_seed1...
+  Step    500 | loss 0.0156 | aux 0.2849 | acc 0.9778 | 13s
+  Step   1000 | loss 0.0002 | aux 0.0627 | acc 1.0000 | 26s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0174 | acc 1.0000 | 40s
+  Step   2000 | loss 0.0000 | aux 0.0085 | acc 1.0000 | 53s
+
+  Training C2_alpha0.001_seed0...
+  Step    500 | loss 0.0008 | aux 0.9758 | acc 1.0000 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux 0.2427 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.1085 | acc 1.0000 | 40s
+
+  Training C2_alpha0.001_seed1...
+  Step    500 | loss 0.0008 | aux 0.9044 | acc 1.0000 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0002 | aux 0.1458 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0627 | acc 1.0000 | 39s
+
+  Training D_alpha0.1_seed0...
+  Step    500 | loss 0.0008 | aux 0.0027 | acc 1.0000 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux 0.0004 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0032 | acc 1.0000 | 39s
+
+  Training D_alpha0.1_seed1...
+  Step    500 | loss 0.0327 | aux 0.0600 | acc 0.9972 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux 0.0005 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0002 | acc 1.0000 | 40s
+
+  Training D_alpha0.01_seed0...
+  Step    500 | loss 0.0007 | aux 0.0337 | acc 1.0000 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0001 | aux 0.0051 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0021 | acc 1.0000 | 39s
+
+  Training D_alpha0.01_seed1...
+  Step    500 | loss 0.0266 | aux 0.2253 | acc 0.9862 | 13s
+  Step   1000 | loss 0.0004 | aux 0.1203 | acc 0.9996 | 27s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0073 | acc 1.0000 | 40s
+  Step   2000 | loss 0.0000 | aux 0.0033 | acc 1.0000 | 53s
+
+  Training D_alpha0.001_seed0...
+  Step    500 | loss 0.0326 | aux 0.8535 | acc 0.9538 | 13s
+  Step   1000 | loss 0.0032 | aux 0.7237 | acc 0.9898 | 26s
+  Step   1500 | loss 0.0148 | aux 0.6649 | acc 0.9650 | 40s
+  Step   2000 | loss 0.0001 | aux 0.1311 | acc 1.0000 | 53s
+  >>> Converged at step 2000
+  Step   2500 | loss 0.0000 | aux 0.0484 | acc 1.0000 | 66s
+  Step   3000 | loss 0.0000 | aux 0.0251 | acc 1.0000 | 79s
+
+  Training D_alpha0.001_seed1...
+  Step    500 | loss 0.0042 | aux 1.3024 | acc 0.9988 | 13s
+  >>> Converged at step 500
+  Step   1000 | loss 0.0002 | aux 0.1099 | acc 1.0000 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0397 | acc 1.0000 | 39s
+
+  Training D_prime_alpha0.1_seed0...
+  Step    500 | loss 1.9207 | aux 0.0001 | acc 0.0000 | 13s
+  Step   1000 | loss 1.9210 | aux 0.0000 | acc 0.0000 | 26s
+  Step   1500 | loss 1.9194 | aux 0.0000 | acc 0.0000 | 40s
+  Step   2000 | loss 1.9203 | aux 0.0000 | acc 0.0000 | 53s
+  Step   2500 | loss 1.8979 | aux 0.0001 | acc 0.0000 | 66s
+  Step   3000 | loss 1.8888 | aux 0.0001 | acc 0.0000 | 79s
+  Step   3500 | loss 1.6168 | aux 0.0000 | acc 0.0000 | 92s
+  Step   4000 | loss 1.5497 | aux 0.0000 | acc 0.0000 | 105s
+  Step   4500 | loss 1.5392 | aux 0.0000 | acc 0.0000 | 118s
+  Step   5000 | loss 1.5362 | aux 0.0000 | acc 0.0002 | 131s
+  Step   5500 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 145s
+  Step   6000 | loss 1.5361 | aux 0.0000 | acc 0.0000 | 158s
+  Step   6500 | loss 1.5358 | aux 0.0001 | acc 0.0000 | 171s
+  Step   7000 | loss 1.5372 | aux 0.0000 | acc 0.0000 | 184s
+  Step   7500 | loss 1.5354 | aux 0.0000 | acc 0.0002 | 197s
+  Step   8000 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 211s
+  Step   8500 | loss 1.5353 | aux 0.0000 | acc 0.0000 | 224s
+  Step   9000 | loss 1.5362 | aux 0.0000 | acc 0.0000 | 237s
+  Step   9500 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 250s
+  Step  10000 | loss 1.5354 | aux 0.0000 | acc 0.0002 | 263s
+  Step  10500 | loss 1.4846 | aux 0.0001 | acc 0.0002 | 276s
+  Step  11000 | loss 1.2876 | aux 0.0002 | acc 0.0006 | 290s
+  Step  11500 | loss 1.2334 | aux 0.0000 | acc 0.0010 | 303s
+  Step  12000 | loss 1.1533 | aux 0.0001 | acc 0.0006 | 316s
+  Step  12500 | loss 1.1515 | aux 0.0001 | acc 0.0010 | 329s
+  Step  13000 | loss 1.1556 | aux 0.0002 | acc 0.0006 | 342s
+  Step  13500 | loss 1.1518 | aux 0.0001 | acc 0.0006 | 355s
+  Step  14000 | loss 1.1508 | aux 0.0001 | acc 0.0014 | 369s
+  Step  14500 | loss 1.1631 | aux 0.0003 | acc 0.0014 | 382s
+  Step  15000 | loss 1.1516 | aux 0.0001 | acc 0.0006 | 395s
+  Step  15500 | loss 1.1543 | aux 0.0001 | acc 0.0008 | 408s
+  Step  16000 | loss 1.1519 | aux 0.0001 | acc 0.0010 | 421s
+  Step  16500 | loss 1.1511 | aux 0.0001 | acc 0.0006 | 435s
+  Step  17000 | loss 1.1521 | aux 0.0000 | acc 0.0014 | 448s
+  Step  17500 | loss 1.1586 | aux 0.0001 | acc 0.0006 | 461s
+  Step  18000 | loss 1.1529 | aux 0.0001 | acc 0.0006 | 474s
+  Step  18500 | loss 1.1517 | aux 0.0000 | acc 0.0006 | 487s
+  Step  19000 | loss 1.1513 | aux 0.0000 | acc 0.0008 | 500s
+  Step  19500 | loss 1.1669 | aux 0.0001 | acc 0.0006 | 514s
+  Step  20000 | loss 1.1514 | aux 0.0001 | acc 0.0010 | 527s
+  Step  20500 | loss 1.1510 | aux 0.0000 | acc 0.0016 | 540s
+  Step  21000 | loss 1.1517 | aux 0.0000 | acc 0.0010 | 553s
+  Step  21500 | loss 1.1514 | aux 0.0000 | acc 0.0006 | 566s
+  Step  22000 | loss 1.1520 | aux 0.0000 | acc 0.0008 | 580s
+  Step  22500 | loss 1.1513 | aux 0.0000 | acc 0.0010 | 593s
+  Step  23000 | loss 1.1515 | aux 0.0000 | acc 0.0006 | 606s
+  Step  23500 | loss 1.1515 | aux 0.0000 | acc 0.0014 | 619s
+  Step  24000 | loss 1.1753 | aux 0.0000 | acc 0.0014 | 632s
+  Step  24500 | loss 1.1520 | aux 0.0001 | acc 0.0006 | 646s
+  Step  25000 | loss 1.1511 | aux 0.0001 | acc 0.0010 | 659s
+  Step  25500 | loss 1.1520 | aux 0.0001 | acc 0.0008 | 672s
+  Step  26000 | loss 1.1510 | aux 0.0001 | acc 0.0006 | 685s
+  Step  26500 | loss 1.1518 | aux 0.0001 | acc 0.0014 | 698s
+  Step  27000 | loss 1.1515 | aux 0.0001 | acc 0.0008 | 711s
+  Step  27500 | loss 1.1515 | aux 0.0000 | acc 0.0008 | 724s
+  Step  28000 | loss 1.1518 | aux 0.0000 | acc 0.0010 | 737s
+  Step  28500 | loss 1.1515 | aux 0.0000 | acc 0.0008 | 751s
+  Step  29000 | loss 1.1516 | aux 0.0000 | acc 0.0014 | 764s
+  Step  29500 | loss 1.1512 | aux 0.0000 | acc 0.0008 | 777s
+  Step  30000 | loss 1.1512 | aux 0.0000 | acc 0.0006 | 790s
+  Step  30500 | loss 1.1583 | aux 0.0003 | acc 0.0014 | 803s
+  Step  31000 | loss 1.1519 | aux 0.0001 | acc 0.0006 | 816s
+  Step  31500 | loss 1.1517 | aux 0.0000 | acc 0.0006 | 829s
+  Step  32000 | loss 1.1517 | aux 0.0000 | acc 0.0006 | 842s
+  Step  32500 | loss 1.1517 | aux 0.0000 | acc 0.0008 | 855s
+  Step  33000 | loss 1.1518 | aux 0.0000 | acc 0.0006 | 869s
+  Step  33500 | loss 1.1513 | aux 0.0000 | acc 0.0014 | 882s
+  Step  34000 | loss 1.1511 | aux 0.0000 | acc 0.0008 | 895s
+  Step  34500 | loss 1.1508 | aux 0.0000 | acc 0.0006 | 908s
+  Step  35000 | loss 1.1516 | aux 0.0000 | acc 0.0014 | 922s
+  Step  35500 | loss 1.1517 | aux 0.0000 | acc 0.0006 | 935s
+  Step  36000 | loss 1.1512 | aux 0.0000 | acc 0.0010 | 948s
+  Step  36500 | loss 1.1514 | aux 0.0000 | acc 0.0010 | 961s
+  Step  37000 | loss 1.1514 | aux 0.0000 | acc 0.0006 | 974s
+  Step  37500 | loss 1.1511 | aux 0.0000 | acc 0.0006 | 987s
+  Step  38000 | loss 1.1515 | aux 0.0004 | acc 0.0008 | 1000s
+  Step  38500 | loss 1.1514 | aux 0.0000 | acc 0.0006 | 1013s
+  Step  39000 | loss 1.1514 | aux 0.0000 | acc 0.0008 | 1026s
+  Step  39500 | loss 1.1511 | aux 0.0000 | acc 0.0006 | 1039s
+  Step  40000 | loss 1.1515 | aux 0.0000 | acc 0.0014 | 1052s
+  Step  40500 | loss 1.1515 | aux 0.0000 | acc 0.0010 | 1065s
+  Step  41000 | loss 1.1516 | aux 0.0000 | acc 0.0006 | 1078s
+  Step  41500 | loss 1.1512 | aux 0.0000 | acc 0.0010 | 1090s
+  Step  42000 | loss 1.1510 | aux 0.0000 | acc 0.0014 | 1104s
+  Step  42500 | loss 1.1514 | aux 0.0000 | acc 0.0014 | 1117s
+  Step  43000 | loss 1.1516 | aux 0.0000 | acc 0.0006 | 1130s
+  Step  43500 | loss 1.1512 | aux 0.0000 | acc 0.0008 | 1143s
+  Step  44000 | loss 1.1518 | aux 0.0000 | acc 0.0010 | 1156s
+  Step  44500 | loss 1.1515 | aux 0.0000 | acc 0.0010 | 1168s
+  Step  45000 | loss 1.1515 | aux 0.0000 | acc 0.0014 | 1181s
+  Step  45500 | loss 1.1514 | aux 0.0000 | acc 0.0006 | 1194s
+  Step  46000 | loss 1.1515 | aux 0.0000 | acc 0.0006 | 1207s
+  Step  46500 | loss 1.1512 | aux 0.0000 | acc 0.0008 | 1220s
+  Step  47000 | loss 1.1515 | aux 0.0000 | acc 0.0006 | 1233s
+  Step  47500 | loss 1.1514 | aux 0.0001 | acc 0.0008 | 1246s
+  Step  48000 | loss 1.1515 | aux 0.0000 | acc 0.0014 | 1259s
+  Step  48500 | loss 1.1516 | aux 0.0000 | acc 0.0006 | 1272s
+  Step  49000 | loss 1.1512 | aux 0.0000 | acc 0.0014 | 1285s
+  Step  49500 | loss 1.1514 | aux 0.0000 | acc 0.0010 | 1298s
+  Step  50000 | loss 1.1515 | aux 0.0000 | acc 0.0014 | 1311s
+
+  Training D_prime_alpha0.1_seed1...
+  Step    500 | loss 1.9200 | aux 0.0000 | acc 0.0000 | 13s
+  Step   1000 | loss 1.9186 | aux 0.0000 | acc 0.0000 | 26s
+  Step   1500 | loss 1.9210 | aux 0.0000 | acc 0.0000 | 39s
+  Step   2000 | loss 1.9189 | aux 0.0000 | acc 0.0000 | 52s
+  Step   2500 | loss 1.9209 | aux 0.0000 | acc 0.0000 | 65s
+  Step   3000 | loss 1.9186 | aux 0.0000 | acc 0.0000 | 78s
+  Step   3500 | loss 1.9186 | aux 0.0000 | acc 0.0000 | 91s
+  Step   4000 | loss 1.9189 | aux 0.0000 | acc 0.0000 | 103s
+  Step   4500 | loss 1.9189 | aux 0.0000 | acc 0.0000 | 116s
+  Step   5000 | loss 1.9188 | aux 0.0000 | acc 0.0000 | 129s
+  Step   5500 | loss 1.9191 | aux 0.0000 | acc 0.0000 | 142s
+  Step   6000 | loss 1.9191 | aux 0.0000 | acc 0.0000 | 155s
+  Step   6500 | loss 1.9200 | aux 0.0000 | acc 0.0000 | 168s
+  Step   7000 | loss 1.9140 | aux 0.0000 | acc 0.0000 | 181s
+  Step   7500 | loss 1.6407 | aux 0.0002 | acc 0.0000 | 194s
+  Step   8000 | loss 1.5706 | aux 0.0000 | acc 0.0000 | 207s
+  Step   8500 | loss 1.5917 | aux 0.0000 | acc 0.0000 | 220s
+  Step   9000 | loss 1.5438 | aux 0.0003 | acc 0.0002 | 233s
+  Step   9500 | loss 1.5365 | aux 0.0001 | acc 0.0002 | 246s
+  Step  10000 | loss 1.5360 | aux 0.0001 | acc 0.0000 | 259s
+  Step  10500 | loss 1.5355 | aux 0.0000 | acc 0.0002 | 272s
+  Step  11000 | loss 1.5355 | aux 0.0001 | acc 0.0002 | 285s
+  Step  11500 | loss 1.5349 | aux 0.0000 | acc 0.0000 | 298s
+  Step  12000 | loss 1.5358 | aux 0.0000 | acc 0.0000 | 310s
+  Step  12500 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 323s
+  Step  13000 | loss 1.5350 | aux 0.0000 | acc 0.0002 | 336s
+  Step  13500 | loss 1.5367 | aux 0.0000 | acc 0.0000 | 349s
+  Step  14000 | loss 1.5357 | aux 0.0000 | acc 0.0002 | 362s
+  Step  14500 | loss 1.5350 | aux 0.0000 | acc 0.0004 | 375s
+  Step  15000 | loss 1.5353 | aux 0.0000 | acc 0.0000 | 388s
+  Step  15500 | loss 1.5349 | aux 0.0000 | acc 0.0000 | 401s
+  Step  16000 | loss 1.9214 | aux 0.0000 | acc 0.0000 | 414s
+  Step  16500 | loss 1.5375 | aux 0.0004 | acc 0.0002 | 427s
+  Step  17000 | loss 1.5358 | aux 0.0003 | acc 0.0000 | 441s
+  Step  17500 | loss 1.5361 | aux 0.0001 | acc 0.0000 | 454s
+  Step  18000 | loss 1.5349 | aux 0.0000 | acc 0.0002 | 466s
+  Step  18500 | loss 1.5384 | aux 0.0001 | acc 0.0000 | 479s
+  Step  19000 | loss 1.5356 | aux 0.0000 | acc 0.0000 | 492s
+  Step  19500 | loss 1.5351 | aux 0.0000 | acc 0.0002 | 505s
+  Step  20000 | loss 1.5356 | aux 0.0000 | acc 0.0002 | 518s
+  Step  20500 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 531s
+  Step  21000 | loss 1.5349 | aux 0.0000 | acc 0.0000 | 544s
+  Step  21500 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 557s
+  Step  22000 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 570s
+  Step  22500 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 583s
+  Step  23000 | loss 1.5361 | aux 0.0000 | acc 0.0000 | 596s
+  Step  23500 | loss 1.5353 | aux 0.0000 | acc 0.0000 | 609s
+  Step  24000 | loss 1.5360 | aux 0.0001 | acc 0.0000 | 621s
+  Step  24500 | loss 1.5363 | aux 0.0000 | acc 0.0000 | 634s
+  Step  25000 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 647s
+  Step  25500 | loss 1.5349 | aux 0.0000 | acc 0.0000 | 660s
+  Step  26000 | loss 1.5351 | aux 0.0000 | acc 0.0002 | 673s
+  Step  26500 | loss 1.5354 | aux 0.0000 | acc 0.0002 | 686s
+  Step  27000 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 699s
+  Step  27500 | loss 1.5348 | aux 0.0000 | acc 0.0002 | 712s
+  Step  28000 | loss 1.5348 | aux 0.0000 | acc 0.0002 | 725s
+  Step  28500 | loss 1.5355 | aux 0.0000 | acc 0.0000 | 738s
+  Step  29000 | loss 1.5357 | aux 0.0000 | acc 0.0002 | 751s
+  Step  29500 | loss 1.5350 | aux 0.0000 | acc 0.0002 | 764s
+  Step  30000 | loss 1.5353 | aux 0.0000 | acc 0.0000 | 777s
+  Step  30500 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 790s
+  Step  31000 | loss 1.5348 | aux 0.0000 | acc 0.0002 | 803s
+  Step  31500 | loss 1.5355 | aux 0.0000 | acc 0.0000 | 816s
+  Step  32000 | loss 1.5599 | aux 0.0004 | acc 0.0000 | 829s
+  Step  32500 | loss 1.5355 | aux 0.0000 | acc 0.0000 | 842s
+  Step  33000 | loss 1.5350 | aux 0.0000 | acc 0.0000 | 855s
+  Step  33500 | loss 1.5357 | aux 0.0000 | acc 0.0002 | 868s
+  Step  34000 | loss 1.5347 | aux 0.0001 | acc 0.0000 | 881s
+  Step  34500 | loss 1.5350 | aux 0.0000 | acc 0.0000 | 894s
+  Step  35000 | loss 1.5349 | aux 0.0000 | acc 0.0000 | 907s
+  Step  35500 | loss 1.5349 | aux 0.0000 | acc 0.0002 | 920s
+  Step  36000 | loss 1.5354 | aux 0.0000 | acc 0.0002 | 932s
+  Step  36500 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 945s
+  Step  37000 | loss 1.5355 | aux 0.0000 | acc 0.0000 | 958s
+  Step  37500 | loss 1.7260 | aux 0.0001 | acc 0.0000 | 971s
+  Step  38000 | loss 1.5353 | aux 0.0000 | acc 0.0000 | 984s
+  Step  38500 | loss 1.5354 | aux 0.0001 | acc 0.0002 | 997s
+  Step  39000 | loss 1.5351 | aux 0.0000 | acc 0.0002 | 1010s
+  Step  39500 | loss 1.5349 | aux 0.0000 | acc 0.0002 | 1023s
+  Step  40000 | loss 1.5348 | aux 0.0000 | acc 0.0002 | 1036s
+  Step  40500 | loss 1.5357 | aux 0.0000 | acc 0.0000 | 1049s
+  Step  41000 | loss 1.5349 | aux 0.0000 | acc 0.0002 | 1062s
+  Step  41500 | loss 1.5349 | aux 0.0000 | acc 0.0000 | 1075s
+  Step  42000 | loss 1.5350 | aux 0.0000 | acc 0.0002 | 1088s
+  Step  42500 | loss 1.5351 | aux 0.0000 | acc 0.0002 | 1101s
+  Step  43000 | loss 1.5351 | aux 0.0000 | acc 0.0002 | 1114s
+  Step  43500 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 1127s
+  Step  44000 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 1140s
+  Step  44500 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 1153s
+  Step  45000 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 1166s
+  Step  45500 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 1178s
+  Step  46000 | loss 1.5350 | aux 0.0000 | acc 0.0002 | 1191s
+  Step  46500 | loss 1.5352 | aux 0.0000 | acc 0.0002 | 1204s
+  Step  47000 | loss 1.5351 | aux 0.0000 | acc 0.0002 | 1217s
+  Step  47500 | loss 1.5354 | aux 0.0000 | acc 0.0002 | 1230s
+  Step  48000 | loss 1.5349 | aux 0.0000 | acc 0.0000 | 1243s
+  Step  48500 | loss 1.5353 | aux 0.0000 | acc 0.0002 | 1256s
+  Step  49000 | loss 1.5350 | aux 0.0000 | acc 0.0002 | 1269s
+  Step  49500 | loss 1.5348 | aux 0.0000 | acc 0.0000 | 1282s
+  Step  50000 | loss 1.5353 | aux 0.0000 | acc 0.0002 | 1295s
+
+  Training D_prime_alpha0.01_seed0...
+  Step    500 | loss 1.9208 | aux 0.0005 | acc 0.0000 | 13s
+  Step   1000 | loss 1.9210 | aux 0.0002 | acc 0.0000 | 26s
+  Step   1500 | loss 1.9193 | aux 0.0001 | acc 0.0000 | 38s
+  Step   2000 | loss 1.9205 | aux 0.0001 | acc 0.0000 | 51s
+  Step   2500 | loss 1.9188 | aux 0.0003 | acc 0.0000 | 65s
+  Step   3000 | loss 1.4986 | aux 0.0014 | acc 0.0002 | 77s
+  Step   3500 | loss 1.2719 | aux 0.0034 | acc 0.0008 | 90s
+  Step   4000 | loss 1.1625 | aux 0.0038 | acc 0.0006 | 103s
+  Step   4500 | loss 1.1538 | aux 0.0038 | acc 0.0004 | 116s
+  Step   5000 | loss 1.1531 | aux 0.0022 | acc 0.0006 | 129s
+  Step   5500 | loss 1.1585 | aux 0.0046 | acc 0.0018 | 142s
+  Step   6000 | loss 1.1670 | aux 0.0106 | acc 0.0006 | 155s
+  Step   6500 | loss 1.1593 | aux 0.0015 | acc 0.0012 | 168s
+  Step   7000 | loss 1.1520 | aux 0.0010 | acc 0.0004 | 181s
+  Step   7500 | loss 1.1506 | aux 0.0017 | acc 0.0010 | 194s
+  Step   8000 | loss 1.1518 | aux 0.0005 | acc 0.0004 | 207s
+  Step   8500 | loss 1.1508 | aux 0.0002 | acc 0.0014 | 220s
+  Step   9000 | loss 1.1526 | aux 0.0002 | acc 0.0016 | 233s
+  Step   9500 | loss 1.1518 | aux 0.0016 | acc 0.0006 | 246s
+  Step  10000 | loss 1.1523 | aux 0.0004 | acc 0.0006 | 259s
+  Step  10500 | loss 1.1519 | aux 0.0011 | acc 0.0010 | 272s
+  Step  11000 | loss 1.1518 | aux 0.0005 | acc 0.0006 | 285s
+  Step  11500 | loss 1.1506 | aux 0.0005 | acc 0.0016 | 298s
+  Step  12000 | loss 1.1507 | aux 0.0004 | acc 0.0006 | 311s
+  Step  12500 | loss 1.1517 | aux 0.0003 | acc 0.0010 | 324s
+  Step  13000 | loss 1.1508 | aux 0.0005 | acc 0.0014 | 337s
+  Step  13500 | loss 1.1565 | aux 0.0002 | acc 0.0020 | 350s
+  Step  14000 | loss 1.1515 | aux 0.0002 | acc 0.0006 | 363s
+  Step  14500 | loss 1.1517 | aux 0.0002 | acc 0.0006 | 376s
+  Step  15000 | loss 1.1519 | aux 0.0001 | acc 0.0016 | 389s
+  Step  15500 | loss 1.1513 | aux 0.0001 | acc 0.0006 | 401s
+  Step  16000 | loss 1.1517 | aux 0.0000 | acc 0.0010 | 414s
+  Step  16500 | loss 1.1509 | aux 0.0000 | acc 0.0014 | 427s
+  Step  17000 | loss 1.2571 | aux 0.0076 | acc 0.0016 | 441s
+  Step  17500 | loss 1.1512 | aux 0.0000 | acc 0.0006 | 453s
+  Step  18000 | loss 1.1512 | aux 0.0000 | acc 0.0014 | 466s
+  Step  18500 | loss 1.1512 | aux 0.0001 | acc 0.0010 | 479s
+  Step  19000 | loss 1.1515 | aux 0.0001 | acc 0.0016 | 492s
+  Step  19500 | loss 1.1510 | aux 0.0000 | acc 0.0006 | 505s
+  Step  20000 | loss 1.1511 | aux 0.0000 | acc 0.0014 | 518s
+  Step  20500 | loss 1.1512 | aux 0.0000 | acc 0.0006 | 531s
+  Step  21000 | loss 1.1462 | aux 0.0000 | acc 0.0016 | 544s
+  Step  21500 | loss 0.9422 | aux 0.0060 | acc 0.0056 | 557s
+  Step  22000 | loss 0.7808 | aux 0.0033 | acc 0.0084 | 570s
+  Step  22500 | loss 0.7694 | aux 0.0058 | acc 0.0108 | 583s
+  Step  23000 | loss 0.7676 | aux 0.0016 | acc 0.0134 | 597s
+  Step  23500 | loss 0.7675 | aux 0.0006 | acc 0.0108 | 609s
+  Step  24000 | loss 0.8132 | aux 0.0087 | acc 0.0104 | 622s
+  Step  24500 | loss 0.7672 | aux 0.0010 | acc 0.0084 | 635s
+  Step  25000 | loss 0.7672 | aux 0.0002 | acc 0.0108 | 648s
+  Step  25500 | loss 0.7676 | aux 0.0008 | acc 0.0106 | 661s
+  Step  26000 | loss 0.7681 | aux 0.0040 | acc 0.0122 | 674s
+  Step  26500 | loss 0.9872 | aux 0.0015 | acc 0.0104 | 687s
+  Step  27000 | loss 0.6258 | aux 0.0017 | acc 0.0424 | 700s
+  Step  27500 | loss 0.3836 | aux 0.0007 | acc 0.1038 | 713s
+  Step  28000 | loss 0.3841 | aux 0.0003 | acc 0.1050 | 726s
+  Step  28500 | loss 0.3832 | aux 0.0001 | acc 0.0980 | 739s
+  Step  29000 | loss 0.3845 | aux 0.0012 | acc 0.1008 | 751s
+  Step  29500 | loss 0.3841 | aux 0.0002 | acc 0.0988 | 764s
+  Step  30000 | loss 0.3838 | aux 0.0002 | acc 0.0988 | 777s
+  Step  30500 | loss 0.3853 | aux 0.0009 | acc 0.1008 | 790s
+  Step  31000 | loss 0.3837 | aux 0.0002 | acc 0.1008 | 803s
+  Step  31500 | loss 0.3840 | aux 0.0004 | acc 0.0980 | 816s
+  Step  32000 | loss 0.3839 | aux 0.0001 | acc 0.0974 | 829s
+  Step  32500 | loss 0.3837 | aux 0.0001 | acc 0.1008 | 842s
+  Step  33000 | loss 0.3839 | aux 0.0004 | acc 0.1008 | 855s
+  Step  33500 | loss 0.3841 | aux 0.0002 | acc 0.0980 | 868s
+  Step  34000 | loss 0.3837 | aux 0.0003 | acc 0.0980 | 881s
+  Step  34500 | loss 0.3838 | aux 0.0001 | acc 0.1008 | 894s
+  Step  35000 | loss 0.3837 | aux 0.0001 | acc 0.1038 | 907s
+  Step  35500 | loss 0.3847 | aux 0.0002 | acc 0.0986 | 920s
+  Step  36000 | loss 0.3835 | aux 0.0050 | acc 0.0986 | 933s
+  Step  36500 | loss 0.3837 | aux 0.0001 | acc 0.0986 | 946s
+  Step  37000 | loss 0.3851 | aux 0.0038 | acc 0.0988 | 959s
+  Step  37500 | loss 0.3838 | aux 0.0010 | acc 0.0978 | 972s
+  Step  38000 | loss 0.4417 | aux 0.0036 | acc 0.0720 | 985s
+  Step  38500 | loss 0.3837 | aux 0.0002 | acc 0.0990 | 998s
+  Step  39000 | loss 0.3838 | aux 0.0003 | acc 0.0980 | 1011s
+  Step  39500 | loss 0.5096 | aux 0.0018 | acc 0.0812 | 1024s
+  Step  40000 | loss 0.3838 | aux 0.0007 | acc 0.1008 | 1037s
+  Step  40500 | loss 0.3837 | aux 0.0002 | acc 0.0974 | 1050s
+  Step  41000 | loss 0.3842 | aux 0.0001 | acc 0.0978 | 1063s
+  Step  41500 | loss 0.3839 | aux 0.0002 | acc 0.0980 | 1075s
+  Step  42000 | loss 0.3834 | aux 0.0002 | acc 0.0990 | 1088s
+  Step  42500 | loss 0.3841 | aux 0.0004 | acc 0.1050 | 1101s
+  Step  43000 | loss 0.3838 | aux 0.0001 | acc 0.1050 | 1114s
+  Step  43500 | loss 0.3835 | aux 0.0000 | acc 0.0986 | 1127s
+  Step  44000 | loss 0.3840 | aux 0.0001 | acc 0.0986 | 1140s
+  Step  44500 | loss 0.3841 | aux 0.0002 | acc 0.0986 | 1153s
+  Step  45000 | loss 0.3841 | aux 0.0001 | acc 0.1038 | 1166s
+  Step  45500 | loss 0.3838 | aux 0.0000 | acc 0.0974 | 1179s
+  Step  46000 | loss 0.3839 | aux 0.0001 | acc 0.1038 | 1192s
+  Step  46500 | loss 0.3838 | aux 0.0000 | acc 0.0988 | 1205s
+  Step  47000 | loss 0.3838 | aux 0.0007 | acc 0.0988 | 1218s
+  Step  47500 | loss 0.3837 | aux 0.0002 | acc 0.0990 | 1231s
+  Step  48000 | loss 0.3839 | aux 0.0002 | acc 0.1038 | 1244s
+  Step  48500 | loss 0.3838 | aux 0.0002 | acc 0.1050 | 1257s
+  Step  49000 | loss 0.3839 | aux 0.0001 | acc 0.1008 | 1270s
+  Step  49500 | loss 0.3836 | aux 0.0002 | acc 0.0990 | 1283s
+  Step  50000 | loss 0.4019 | aux 0.0015 | acc 0.0980 | 1296s
+
+  Training D_prime_alpha0.01_seed1...
+  Step    500 | loss 1.9197 | aux 0.0002 | acc 0.0000 | 13s
+  Step   1000 | loss 1.5462 | aux 0.0030 | acc 0.0000 | 26s
+  Step   1500 | loss 1.5360 | aux 0.0004 | acc 0.0004 | 39s
+  Step   2000 | loss 1.5355 | aux 0.0003 | acc 0.0000 | 52s
+  Step   2500 | loss 1.5380 | aux 0.0021 | acc 0.0004 | 64s
+  Step   3000 | loss 1.5346 | aux 0.0006 | acc 0.0000 | 78s
+  Step   3500 | loss 1.5355 | aux 0.0003 | acc 0.0002 | 90s
+  Step   4000 | loss 1.5360 | aux 0.0002 | acc 0.0004 | 103s
+  Step   4500 | loss 1.5352 | aux 0.0001 | acc 0.0002 | 116s
+  Step   5000 | loss 1.5345 | aux 0.0002 | acc 0.0002 | 129s
+  Step   5500 | loss 1.5353 | aux 0.0002 | acc 0.0000 | 142s
+  Step   6000 | loss 1.5359 | aux 0.0001 | acc 0.0000 | 155s
+  Step   6500 | loss 1.5370 | aux 0.0001 | acc 0.0004 | 168s
+  Step   7000 | loss 1.5353 | aux 0.0000 | acc 0.0000 | 181s
+  Step   7500 | loss 1.5350 | aux 0.0001 | acc 0.0000 | 194s
+  Step   8000 | loss 1.5345 | aux 0.0000 | acc 0.0000 | 207s
+  Step   8500 | loss 1.5359 | aux 0.0000 | acc 0.0002 | 220s
+  Step   9000 | loss 1.9152 | aux 0.0003 | acc 0.0000 | 233s
+  Step   9500 | loss 1.6363 | aux 0.0023 | acc 0.0000 | 246s
+  Step  10000 | loss 1.5370 | aux 0.0213 | acc 0.0000 | 259s
+  Step  10500 | loss 1.5356 | aux 0.0190 | acc 0.0002 | 272s
+  Step  11000 | loss 1.5353 | aux 0.0115 | acc 0.0004 | 285s
+  Step  11500 | loss 1.5356 | aux 0.0112 | acc 0.0000 | 297s
+  Step  12000 | loss 1.5357 | aux 0.0036 | acc 0.0004 | 310s
+  Step  12500 | loss 1.5354 | aux 0.0219 | acc 0.0002 | 323s
+  Step  13000 | loss 1.4671 | aux 0.0254 | acc 0.0000 | 336s
+  Step  13500 | loss 1.1842 | aux 0.0218 | acc 0.0012 | 349s
+  Step  14000 | loss 1.1548 | aux 0.0453 | acc 0.0012 | 362s
+  Step  14500 | loss 1.1518 | aux 0.0224 | acc 0.0012 | 375s
+  Step  15000 | loss 1.1516 | aux 0.0088 | acc 0.0006 | 388s
+  Step  15500 | loss 1.1513 | aux 0.0044 | acc 0.0006 | 401s
+  Step  16000 | loss 1.1512 | aux 0.0037 | acc 0.0012 | 414s
+  Step  16500 | loss 1.1516 | aux 0.0026 | acc 0.0014 | 427s
+  Step  17000 | loss 1.1510 | aux 0.0048 | acc 0.0014 | 440s
+  Step  17500 | loss 1.1520 | aux 0.0075 | acc 0.0014 | 453s
+  Step  18000 | loss 1.1512 | aux 0.0028 | acc 0.0014 | 466s
+  Step  18500 | loss 1.1512 | aux 0.0046 | acc 0.0006 | 479s
+  Step  19000 | loss 1.1514 | aux 0.0014 | acc 0.0006 | 492s
+  Step  19500 | loss 1.1514 | aux 0.0013 | acc 0.0002 | 505s
+  Step  20000 | loss 1.1516 | aux 0.0013 | acc 0.0012 | 517s
+  Step  20500 | loss 1.1513 | aux 0.0015 | acc 0.0006 | 530s
+  Step  21000 | loss 1.1514 | aux 0.0015 | acc 0.0018 | 543s
+  Step  21500 | loss 1.1532 | aux 0.0049 | acc 0.0008 | 556s
+  Step  22000 | loss 1.1515 | aux 0.0186 | acc 0.0012 | 569s
+  Step  22500 | loss 1.1514 | aux 0.0013 | acc 0.0014 | 582s
+  Step  23000 | loss 1.1511 | aux 0.0049 | acc 0.0006 | 595s
+  Step  23500 | loss 1.1515 | aux 0.0011 | acc 0.0004 | 608s
+  Step  24000 | loss 1.1517 | aux 0.0020 | acc 0.0002 | 621s
+  Step  24500 | loss 1.1515 | aux 0.0094 | acc 0.0012 | 634s
+  Step  25000 | loss 1.1514 | aux 0.0097 | acc 0.0004 | 647s
+  Step  25500 | loss 1.1515 | aux 0.0030 | acc 0.0012 | 660s
+  Step  26000 | loss 1.1510 | aux 0.0020 | acc 0.0006 | 672s
+  Step  26500 | loss 1.1512 | aux 0.0037 | acc 0.0014 | 685s
+  Step  27000 | loss 1.1515 | aux 0.0030 | acc 0.0006 | 698s
+  Step  27500 | loss 1.1511 | aux 0.0028 | acc 0.0004 | 712s
+  Step  28000 | loss 1.1513 | aux 0.0009 | acc 0.0010 | 725s
+  Step  28500 | loss 1.1513 | aux 0.0008 | acc 0.0012 | 738s
+  Step  29000 | loss 1.1518 | aux 0.0004 | acc 0.0006 | 751s
+  Step  29500 | loss 1.1513 | aux 0.0011 | acc 0.0006 | 763s
+  Step  30000 | loss 1.1515 | aux 0.0120 | acc 0.0002 | 776s
+  Step  30500 | loss 1.1518 | aux 0.0091 | acc 0.0004 | 789s
+  Step  31000 | loss 1.1511 | aux 0.0034 | acc 0.0014 | 802s
+  Step  31500 | loss 1.1516 | aux 0.0009 | acc 0.0016 | 815s
+  Step  32000 | loss 1.1514 | aux 0.0010 | acc 0.0012 | 828s
+  Step  32500 | loss 1.1515 | aux 0.0008 | acc 0.0014 | 841s
+  Step  33000 | loss 1.1512 | aux 0.0006 | acc 0.0014 | 854s
+  Step  33500 | loss 1.1516 | aux 0.0007 | acc 0.0006 | 867s
+  Step  34000 | loss 1.1512 | aux 0.0004 | acc 0.0018 | 880s
+  Step  34500 | loss 1.1516 | aux 0.0001 | acc 0.0006 | 893s
+  Step  35000 | loss 1.1512 | aux 0.0002 | acc 0.0014 | 905s
+  Step  35500 | loss 1.1514 | aux 0.0002 | acc 0.0008 | 918s
+  Step  36000 | loss 1.1519 | aux 0.0004 | acc 0.0002 | 931s
+  Step  36500 | loss 1.1513 | aux 0.0002 | acc 0.0004 | 944s
+  Step  37000 | loss 1.1517 | aux 0.0002 | acc 0.0012 | 957s
+  Step  37500 | loss 1.1513 | aux 0.0003 | acc 0.0006 | 970s
+  Step  38000 | loss 1.1512 | aux 0.0002 | acc 0.0004 | 983s
+  Step  38500 | loss 1.1512 | aux 0.0002 | acc 0.0014 | 996s
+  Step  39000 | loss 1.1517 | aux 0.0002 | acc 0.0014 | 1009s
+  Step  39500 | loss 1.1516 | aux 0.0021 | acc 0.0014 | 1022s
+  Step  40000 | loss 1.1513 | aux 0.0010 | acc 0.0014 | 1035s
+  Step  40500 | loss 1.1514 | aux 0.0012 | acc 0.0014 | 1048s
+  Step  41000 | loss 1.1515 | aux 0.0007 | acc 0.0014 | 1061s
+  Step  41500 | loss 1.1513 | aux 0.0003 | acc 0.0016 | 1074s
+  Step  42000 | loss 1.1511 | aux 0.0003 | acc 0.0010 | 1087s
+  Step  42500 | loss 1.1518 | aux 0.0009 | acc 0.0014 | 1100s
+  Step  43000 | loss 1.1514 | aux 0.0029 | acc 0.0012 | 1113s
+  Step  43500 | loss 1.1512 | aux 0.0033 | acc 0.0000 | 1126s
+  Step  44000 | loss 1.1515 | aux 0.0007 | acc 0.0006 | 1139s
+  Step  44500 | loss 1.1514 | aux 0.0006 | acc 0.0014 | 1152s
+  Step  45000 | loss 1.1514 | aux 0.0011 | acc 0.0004 | 1165s
+  Step  45500 | loss 1.1509 | aux 0.0002 | acc 0.0012 | 1178s
+  Step  46000 | loss 1.1514 | aux 0.0006 | acc 0.0014 | 1191s
+  Step  46500 | loss 1.1514 | aux 0.0002 | acc 0.0014 | 1204s
+  Step  47000 | loss 1.3467 | aux 0.0011 | acc 0.0002 | 1216s
+  Step  47500 | loss 1.1512 | aux 0.0037 | acc 0.0016 | 1229s
+  Step  48000 | loss 1.1515 | aux 0.0007 | acc 0.0012 | 1242s
+  Step  48500 | loss 1.1514 | aux 0.0011 | acc 0.0014 | 1255s
+  Step  49000 | loss 1.1514 | aux 0.0008 | acc 0.0014 | 1268s
+  Step  49500 | loss 1.1513 | aux 0.0042 | acc 0.0006 | 1281s
+  Step  50000 | loss 1.1515 | aux 0.0015 | acc 0.0002 | 1294s
+
+  Training D_prime_alpha0.001_seed0...
+  Step    500 | loss 1.9208 | aux 0.0076 | acc 0.0000 | 13s
+  Step   1000 | loss 1.9216 | aux 0.0009 | acc 0.0000 | 26s
+  Step   1500 | loss 1.5395 | aux 0.0138 | acc 0.0000 | 39s
+  Step   2000 | loss 1.5373 | aux 0.0155 | acc 0.0000 | 52s
+  Step   2500 | loss 1.5371 | aux 0.0034 | acc 0.0000 | 65s
+  Step   3000 | loss 0.8451 | aux 0.0145 | acc 0.0080 | 78s
+  Step   3500 | loss 0.7679 | aux 0.0016 | acc 0.0108 | 91s
+  Step   4000 | loss 0.7691 | aux 0.0018 | acc 0.0122 | 104s
+  Step   4500 | loss 0.7682 | aux 0.0009 | acc 0.0078 | 117s
+  Step   5000 | loss 0.7681 | aux 0.0013 | acc 0.0108 | 130s
+  Step   5500 | loss 0.7676 | aux 0.0005 | acc 0.0106 | 143s
+  Step   6000 | loss 0.7673 | aux 0.0012 | acc 0.0078 | 156s
+  Step   6500 | loss 0.7679 | aux 0.0071 | acc 0.0092 | 169s
+  Step   7000 | loss 0.5196 | aux 0.0003 | acc 0.0922 | 182s
+  Step   7500 | loss 0.3882 | aux 0.0008 | acc 0.1036 | 194s
+  Step   8000 | loss 0.3863 | aux 0.0059 | acc 0.0986 | 207s
+  Step   8500 | loss 0.3839 | aux 0.0007 | acc 0.0986 | 220s
+  Step   9000 | loss 0.3843 | aux 0.0002 | acc 0.1008 | 233s
+  Step   9500 | loss 0.3835 | aux 0.0002 | acc 0.1038 | 246s
+  Step  10000 | loss 0.3835 | aux 0.0002 | acc 0.0986 | 259s
+  Step  10500 | loss 0.3841 | aux 0.0003 | acc 0.1008 | 272s
+  Step  11000 | loss 0.3840 | aux 0.0002 | acc 0.1008 | 285s
+  Step  11500 | loss 0.3842 | aux 0.0000 | acc 0.0988 | 298s
+  Step  12000 | loss 0.3835 | aux 0.0001 | acc 0.1008 | 311s
+  Step  12500 | loss 0.3838 | aux 0.0000 | acc 0.0980 | 324s
+  Step  13000 | loss 0.3835 | aux 0.0000 | acc 0.1008 | 337s
+  Step  13500 | loss 0.3839 | aux 0.0001 | acc 0.0990 | 350s
+  Step  14000 | loss 0.3838 | aux 0.0001 | acc 0.1038 | 363s
+  Step  14500 | loss 0.3839 | aux 0.0009 | acc 0.0988 | 376s
+  Step  15000 | loss 0.3840 | aux 0.0007 | acc 0.1038 | 389s
+  Step  15500 | loss 0.3839 | aux 0.0010 | acc 0.1050 | 402s
+  Step  16000 | loss 0.3845 | aux 0.0004 | acc 0.0986 | 415s
+  Step  16500 | loss 0.3836 | aux 0.0002 | acc 0.1038 | 428s
+  Step  17000 | loss 0.3842 | aux 0.0001 | acc 0.1008 | 441s
+  Step  17500 | loss 0.3839 | aux 0.0007 | acc 0.0988 | 453s
+  Step  18000 | loss 0.3835 | aux 0.0002 | acc 0.1050 | 466s
+  Step  18500 | loss 0.3837 | aux 0.0001 | acc 0.1008 | 479s
+  Step  19000 | loss 0.3834 | aux 0.0000 | acc 0.0986 | 492s
+  Step  19500 | loss 0.3835 | aux 0.0000 | acc 0.1050 | 505s
+  Step  20000 | loss 0.3840 | aux 0.0000 | acc 0.0974 | 518s
+  Step  20500 | loss 0.3837 | aux 0.0000 | acc 0.1008 | 531s
+  Step  21000 | loss 0.3836 | aux 0.0000 | acc 0.0986 | 544s
+  Step  21500 | loss 0.3837 | aux 0.0000 | acc 0.1038 | 557s
+  Step  22000 | loss 0.3837 | aux 0.0000 | acc 0.0978 | 570s
+  Step  22500 | loss 0.3837 | aux 0.0000 | acc 0.1050 | 583s
+  Step  23000 | loss 0.3840 | aux 0.0006 | acc 0.1050 | 596s
+  Step  23500 | loss 0.3841 | aux 0.0002 | acc 0.0988 | 609s
+  Step  24000 | loss 0.3842 | aux 0.0002 | acc 0.1038 | 622s
+  Step  24500 | loss 0.3838 | aux 0.0003 | acc 0.1038 | 635s
+  Step  25000 | loss 0.3836 | aux 0.0008 | acc 0.0986 | 648s
+  Step  25500 | loss 0.3837 | aux 0.0005 | acc 0.1008 | 661s
+  Step  26000 | loss 0.3838 | aux 0.0002 | acc 0.1050 | 674s
+  Step  26500 | loss 0.3842 | aux 0.0002 | acc 0.0988 | 686s
+  Step  27000 | loss 0.3840 | aux 0.0001 | acc 0.0974 | 699s
+  Step  27500 | loss 0.3840 | aux 0.0002 | acc 0.0974 | 712s
+  Step  28000 | loss 0.3839 | aux 0.0003 | acc 0.0988 | 725s
+  Step  28500 | loss 0.3866 | aux 0.0078 | acc 0.0972 | 738s
+  Step  29000 | loss 0.3840 | aux 0.0007 | acc 0.0978 | 751s
+  Step  29500 | loss 0.3839 | aux 0.0029 | acc 0.1050 | 764s
+  Step  30000 | loss 0.3836 | aux 0.0008 | acc 0.1008 | 777s
+  Step  30500 | loss 0.3841 | aux 0.0003 | acc 0.1008 | 790s
+  Step  31000 | loss 0.3836 | aux 0.0005 | acc 0.0988 | 803s
+  Step  31500 | loss 0.3837 | aux 0.0005 | acc 0.1036 | 816s
+  Step  32000 | loss 0.3838 | aux 0.0002 | acc 0.0974 | 829s
+  Step  32500 | loss 0.3836 | aux 0.0008 | acc 0.1008 | 842s
+  Step  33000 | loss 0.3839 | aux 0.0002 | acc 0.1038 | 855s
+  Step  33500 | loss 0.3840 | aux 0.0001 | acc 0.1050 | 868s
+  Step  34000 | loss 0.3838 | aux 0.0001 | acc 0.0986 | 881s
+  Step  34500 | loss 0.3836 | aux 0.0001 | acc 0.1008 | 894s
+  Step  35000 | loss 0.3838 | aux 0.0001 | acc 0.0988 | 907s
+  Step  35500 | loss 0.3841 | aux 0.0000 | acc 0.0986 | 920s
+  Step  36000 | loss 0.3836 | aux 0.0000 | acc 0.0990 | 933s
+  Step  36500 | loss 0.3837 | aux 0.0000 | acc 0.0986 | 946s
+  Step  37000 | loss 0.3837 | aux 0.0000 | acc 0.1038 | 959s
+  Step  37500 | loss 0.3837 | aux 0.0000 | acc 0.0988 | 972s
+  Step  38000 | loss 0.3838 | aux 0.0000 | acc 0.0986 | 984s
+  Step  38500 | loss 0.3837 | aux 0.0000 | acc 0.0978 | 997s
+  Step  39000 | loss 0.3839 | aux 0.0000 | acc 0.0978 | 1010s
+  Step  39500 | loss 0.3836 | aux 0.0000 | acc 0.1038 | 1023s
+  Step  40000 | loss 0.3838 | aux 0.0000 | acc 0.1008 | 1036s
+  Step  40500 | loss 0.7580 | aux 0.0000 | acc 0.0368 | 1049s
+  Step  41000 | loss 0.3842 | aux 0.0006 | acc 0.0978 | 1062s
+  Step  41500 | loss 0.3838 | aux 0.0001 | acc 0.1038 | 1075s
+  Step  42000 | loss 0.3837 | aux 0.0000 | acc 0.0990 | 1088s
+  Step  42500 | loss 0.3836 | aux 0.0002 | acc 0.0986 | 1101s
+  Step  43000 | loss 0.3839 | aux 0.0002 | acc 0.0986 | 1113s
+  Step  43500 | loss 0.3837 | aux 0.0001 | acc 0.0980 | 1126s
+  Step  44000 | loss 0.3839 | aux 0.0001 | acc 0.0986 | 1139s
+  Step  44500 | loss 0.3840 | aux 0.0003 | acc 0.0986 | 1152s
+  Step  45000 | loss 0.3840 | aux 0.0002 | acc 0.1050 | 1165s
+  Step  45500 | loss 0.3837 | aux 0.0002 | acc 0.0988 | 1178s
+  Step  46000 | loss 0.3838 | aux 0.0001 | acc 0.1038 | 1191s
+  Step  46500 | loss 0.3837 | aux 0.0002 | acc 0.0988 | 1204s
+  Step  47000 | loss 0.3837 | aux 0.0002 | acc 0.0988 | 1217s
+  Step  47500 | loss 0.3837 | aux 0.0000 | acc 0.1050 | 1230s
+  Step  48000 | loss 0.3838 | aux 0.0001 | acc 0.0978 | 1243s
+  Step  48500 | loss 0.3838 | aux 0.0001 | acc 0.1008 | 1256s
+  Step  49000 | loss 0.3838 | aux 0.0001 | acc 0.0990 | 1268s
+  Step  49500 | loss 0.3836 | aux 0.0001 | acc 0.0986 | 1281s
+  Step  50000 | loss 0.3838 | aux 0.0001 | acc 0.1008 | 1294s
+
+  Training D_prime_alpha0.001_seed1...
+  Step    500 | loss 1.9197 | aux 0.0023 | acc 0.0000 | 13s
+  Step   1000 | loss 1.1543 | aux 0.0389 | acc 0.0004 | 26s
+  Step   1500 | loss 0.7833 | aux 0.0379 | acc 0.0068 | 39s
+  Step   2000 | loss 0.3946 | aux 0.1151 | acc 0.0964 | 52s
+  Step   2500 | loss 0.3850 | aux 0.0156 | acc 0.0988 | 65s
+  Step   3000 | loss 0.3837 | aux 0.0052 | acc 0.0986 | 77s
+  Step   3500 | loss 0.3845 | aux 0.0015 | acc 0.0978 | 90s
+  Step   4000 | loss 0.3847 | aux 0.0022 | acc 0.1008 | 103s
+  Step   4500 | loss 0.3829 | aux 0.0014 | acc 0.0988 | 116s
+  Step   5000 | loss 0.3841 | aux 0.0006 | acc 0.0978 | 129s
+  Step   5500 | loss 0.3851 | aux 0.0013 | acc 0.1050 | 142s
+  Step   6000 | loss 0.3834 | aux 0.0007 | acc 0.1008 | 155s
+  Step   6500 | loss 0.3841 | aux 0.0006 | acc 0.1050 | 168s
+  Step   7000 | loss 0.3835 | aux 0.0006 | acc 0.0986 | 180s
+  Step   7500 | loss 0.8648 | aux 0.0124 | acc 0.0096 | 193s
+  Step   8000 | loss 0.7649 | aux 0.2095 | acc 0.0180 | 206s
+  Step   8500 | loss 0.3859 | aux 0.0029 | acc 0.1008 | 219s
+  Step   9000 | loss 0.3838 | aux 0.0027 | acc 0.0974 | 232s
+  Step   9500 | loss 0.3834 | aux 0.0007 | acc 0.1038 | 245s
+  Step  10000 | loss 0.3846 | aux 0.0011 | acc 0.0948 | 258s
+  Step  10500 | loss 0.3845 | aux 0.0004 | acc 0.1008 | 271s
+  Step  11000 | loss 0.3838 | aux 0.0006 | acc 0.0974 | 284s
+  Step  11500 | loss 0.3840 | aux 0.0006 | acc 0.1008 | 297s
+  Step  12000 | loss 0.3846 | aux 0.0007 | acc 0.0974 | 310s
+  Step  12500 | loss 0.3839 | aux 0.0004 | acc 0.1038 | 323s
+  Step  13000 | loss 0.3842 | aux 0.0003 | acc 0.0988 | 336s
+  Step  13500 | loss 0.3843 | aux 0.0004 | acc 0.1008 | 348s
+  Step  14000 | loss 0.3843 | aux 0.0001 | acc 0.0988 | 361s
+  Step  14500 | loss 0.3836 | aux 0.0001 | acc 0.0978 | 374s
+  Step  15000 | loss 0.3835 | aux 0.0001 | acc 0.0974 | 387s
+  Step  15500 | loss 0.3838 | aux 0.0001 | acc 0.0974 | 400s
+  Step  16000 | loss 0.3840 | aux 0.0000 | acc 0.1008 | 413s
+  Step  16500 | loss 0.3835 | aux 0.0001 | acc 0.0978 | 426s
+  Step  17000 | loss 0.3839 | aux 0.0000 | acc 0.1050 | 439s
+  Step  17500 | loss 0.3838 | aux 0.0000 | acc 0.1038 | 451s
+  Step  18000 | loss 0.3841 | aux 0.0000 | acc 0.1008 | 464s
+  Step  18500 | loss 0.7680 | aux 0.0124 | acc 0.0090 | 477s
+  Step  19000 | loss 0.7682 | aux 0.0145 | acc 0.0120 | 490s
+  Step  19500 | loss 0.7678 | aux 0.0046 | acc 0.0112 | 503s
+  Step  20000 | loss 0.7683 | aux 0.0004 | acc 0.0112 | 516s
+  Step  20500 | loss 0.7674 | aux 0.0192 | acc 0.0076 | 529s
+  Step  21000 | loss 0.7678 | aux 0.0082 | acc 0.0090 | 542s
+  Step  21500 | loss 0.8130 | aux 0.0000 | acc 0.0064 | 555s
+  Step  22000 | loss 0.7677 | aux 0.0003 | acc 0.0076 | 568s
+  Step  22500 | loss 0.7676 | aux 0.0001 | acc 0.0088 | 581s
+  Step  23000 | loss 0.7673 | aux 0.0000 | acc 0.0092 | 593s
+  Step  23500 | loss 0.7673 | aux 0.0000 | acc 0.0088 | 606s
+  Step  24000 | loss 0.7679 | aux 0.0001 | acc 0.0120 | 619s
+  Step  24500 | loss 0.7681 | aux 0.0001 | acc 0.0100 | 632s
+  Step  25000 | loss 0.7677 | aux 0.0001 | acc 0.0090 | 645s
+  Step  25500 | loss 0.7679 | aux 0.0000 | acc 0.0088 | 658s
+  Step  26000 | loss 0.7676 | aux 0.0000 | acc 0.0120 | 671s
+  Step  26500 | loss 0.7675 | aux 0.0000 | acc 0.0098 | 684s
+  Step  27000 | loss 0.7676 | aux 0.0000 | acc 0.0120 | 697s
+  Step  27500 | loss 0.7673 | aux 0.0000 | acc 0.0088 | 710s
+  Step  28000 | loss 0.7677 | aux 0.0001 | acc 0.0098 | 723s
+  Step  28500 | loss 0.7675 | aux 0.0000 | acc 0.0090 | 736s
+  Step  29000 | loss 0.7680 | aux 0.0000 | acc 0.0120 | 748s
+  Step  29500 | loss 0.7674 | aux 0.0000 | acc 0.0120 | 761s
+  Step  30000 | loss 0.7677 | aux 0.0001 | acc 0.0100 | 774s
+  Step  30500 | loss 0.7678 | aux 0.0000 | acc 0.0088 | 787s
+  Step  31000 | loss 0.7674 | aux 0.0001 | acc 0.0120 | 800s
+  Step  31500 | loss 0.7676 | aux 0.0000 | acc 0.0120 | 813s
+  Step  32000 | loss 0.7673 | aux 0.0000 | acc 0.0120 | 825s
+  Step  32500 | loss 0.7679 | aux 0.0000 | acc 0.0112 | 838s
+  Step  33000 | loss 0.7678 | aux 0.0000 | acc 0.0120 | 851s
+  Step  33500 | loss 0.7677 | aux 0.0000 | acc 0.0120 | 864s
+  Step  34000 | loss 0.7675 | aux 0.0000 | acc 0.0112 | 877s
+  Step  34500 | loss 0.7702 | aux 0.0048 | acc 0.0120 | 890s
+  Step  35000 | loss 0.7675 | aux 0.0009 | acc 0.0100 | 903s
+  Step  35500 | loss 0.7671 | aux 0.0005 | acc 0.0090 | 916s
+  Step  36000 | loss 0.7678 | aux 0.0008 | acc 0.0066 | 929s
+  Step  36500 | loss 0.7676 | aux 0.0006 | acc 0.0090 | 942s
+  Step  37000 | loss 0.7677 | aux 0.0003 | acc 0.0076 | 954s
+  Step  37500 | loss 0.7676 | aux 0.0003 | acc 0.0120 | 967s
+  Step  38000 | loss 0.7677 | aux 0.0002 | acc 0.0092 | 980s
+  Step  38500 | loss 0.7677 | aux 0.0001 | acc 0.0112 | 993s
+  Step  39000 | loss 0.7681 | aux 0.0001 | acc 0.0098 | 1006s
+  Step  39500 | loss 0.7677 | aux 0.0001 | acc 0.0066 | 1019s
+  Step  40000 | loss 0.7676 | aux 0.0001 | acc 0.0120 | 1032s
+  Step  40500 | loss 0.7676 | aux 0.0001 | acc 0.0120 | 1045s
+  Step  41000 | loss 0.7675 | aux 0.0000 | acc 0.0066 | 1058s
+  Step  41500 | loss 0.7676 | aux 0.0000 | acc 0.0112 | 1071s
+  Step  42000 | loss 0.7674 | aux 0.0000 | acc 0.0066 | 1083s
+  Step  42500 | loss 0.7674 | aux 0.0000 | acc 0.0090 | 1096s
+  Step  43000 | loss 0.7677 | aux 0.0000 | acc 0.0076 | 1109s
+  Step  43500 | loss 0.7674 | aux 0.0000 | acc 0.0090 | 1122s
+  Step  44000 | loss 0.7699 | aux 0.0001 | acc 0.0120 | 1135s
+  Step  44500 | loss 0.7673 | aux 0.0001 | acc 0.0092 | 1148s
+  Step  45000 | loss 0.7678 | aux 0.0000 | acc 0.0120 | 1161s
+  Step  45500 | loss 0.7675 | aux 0.0001 | acc 0.0076 | 1174s
+  Step  46000 | loss 0.7676 | aux 0.0001 | acc 0.0066 | 1186s
+  Step  46500 | loss 0.7675 | aux 0.0000 | acc 0.0110 | 1199s
+  Step  47000 | loss 0.7676 | aux 0.0001 | acc 0.0066 | 1212s
+  Step  47500 | loss 0.7675 | aux 0.0002 | acc 0.0092 | 1225s
+  Step  48000 | loss 0.7676 | aux 0.0000 | acc 0.0090 | 1238s
+  Step  48500 | loss 0.7674 | aux 0.0000 | acc 0.0066 | 1251s
+  Step  49000 | loss 0.7674 | aux 0.0000 | acc 0.0090 | 1264s
+  Step  49500 | loss 0.7675 | aux 0.0000 | acc 0.0076 | 1277s
+  Step  50000 | loss 0.7677 | aux 0.0000 | acc 0.0120 | 1290s
+  Best alpha for C1: 0.1
+  Best alpha for C2: 0.001
+  Best alpha for D: 0.1
+  Best alpha for D_prime: 0.01
+
+============================================================
+PHASE 2: Full Evaluation
+============================================================
+
+  Training A_eval_seed0 (alpha=0.1)...
+  Step    500 | loss 0.1795 | aux 0.0000 | acc 0.8132 | 13s
+  Step   1000 | loss 0.0072 | aux 0.0000 | acc 0.9906 | 25s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 50s
+
+  Training A_eval_seed1 (alpha=0.1)...
+  Step    500 | loss 0.8744 | aux 0.0000 | acc 0.0090 | 13s
+  Step   1000 | loss 0.0134 | aux 0.0000 | acc 0.9840 | 25s
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 50s
+  Step   2500 | loss 0.0001 | aux 0.0000 | acc 0.9900 | 63s
+
+  Training A_eval_seed2 (alpha=0.1)...
+  Step    500 | loss 0.3878 | aux 0.0000 | acc 0.0968 | 13s
+  Step   1000 | loss 0.0002 | aux 0.0000 | acc 1.0000 | 25s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 50s
+
+  Training A_eval_seed3 (alpha=0.1)...
+  Step    500 | loss 0.1588 | aux 0.0000 | acc 0.5920 | 13s
+  Step   1000 | loss 0.0002 | aux 0.0000 | acc 1.0000 | 25s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  Step   2000 | loss 0.0010 | aux 0.0000 | acc 0.9988 | 50s
+
+  Training A_eval_seed4 (alpha=0.1)...
+  Step    500 | loss 0.1199 | aux 0.0000 | acc 0.7712 | 13s
+  Step   1000 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 25s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 50s
+
+  Training B_eval_seed0 (alpha=0.1)...
+  Step    500 | loss 0.0459 | aux 0.0052 | acc 0.8394 | 13s
+  Step   1000 | loss 0.0001 | aux 0.0001 | acc 1.0000 | 26s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 39s
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 51s
+
+  Training B_eval_seed1 (alpha=0.1)...
+  Step    500 | loss 0.9466 | aux 0.0949 | acc 0.0116 | 13s
+  Step   1000 | loss 0.0252 | aux 0.0018 | acc 0.9858 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0001 | acc 1.0000 | 39s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 51s
+  Step   2500 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 64s
+
+  Training B_eval_seed2 (alpha=0.1)...
+  Step    500 | loss 0.3978 | aux 0.0082 | acc 0.1092 | 13s
+  Step   1000 | loss 0.3856 | aux 0.0003 | acc 0.1034 | 26s
+  Step   1500 | loss 0.3851 | aux 0.0002 | acc 0.0872 | 39s
+  Step   2000 | loss 0.3842 | aux 0.0001 | acc 0.0998 | 51s
+  Step   2500 | loss 0.3848 | aux 0.0001 | acc 0.0984 | 64s
+  Step   3000 | loss 0.3836 | aux 0.0000 | acc 0.1060 | 77s
+  Step   3500 | loss 0.3997 | aux 0.0053 | acc 0.1086 | 90s
+  Step   4000 | loss 0.3843 | aux 0.0001 | acc 0.0956 | 103s
+  Step   4500 | loss 0.3844 | aux 0.0000 | acc 0.0970 | 115s
+  Step   5000 | loss 0.3837 | aux 0.0000 | acc 0.0980 | 128s
+  Step   5500 | loss 0.3841 | aux 0.0000 | acc 0.0976 | 141s
+  Step   6000 | loss 0.3847 | aux 0.0000 | acc 0.1048 | 154s
+  Step   6500 | loss 0.3910 | aux 0.0001 | acc 0.0884 | 167s
+  Step   7000 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 179s
+  >>> Converged at step 7000
+  Step   7500 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 192s
+  Step   8000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 205s
+
+  Training B_eval_seed3 (alpha=0.1)...
+  Step    500 | loss 0.5422 | aux 0.0883 | acc 0.0524 | 13s
+  Step   1000 | loss 0.0463 | aux 0.0217 | acc 0.9536 | 26s
+  Step   1500 | loss 0.0092 | aux 0.0066 | acc 0.9904 | 38s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 51s
+  Step   2500 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 64s
+
+  Training B_eval_seed4 (alpha=0.1)...
+  Step    500 | loss 0.8251 | aux 0.0280 | acc 0.0108 | 13s
+  Step   1000 | loss 0.4472 | aux 0.0400 | acc 0.0908 | 26s
+  Step   1500 | loss 0.3849 | aux 0.0002 | acc 0.1036 | 38s
+  Step   2000 | loss 0.3843 | aux 0.0001 | acc 0.1006 | 51s
+  Step   2500 | loss 0.4322 | aux 0.0002 | acc 0.0882 | 64s
+  Step   3000 | loss 0.3838 | aux 0.0001 | acc 0.0978 | 77s
+  Step   3500 | loss 0.0000 | aux 0.0001 | acc 1.0000 | 90s
+  >>> Converged at step 3500
+  Step   4000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 103s
+  Step   4500 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 116s
+
+  Training C1_eval_seed0 (alpha=0.1)...
+  Step    500 | loss 0.1795 | aux 0.0000 | acc 0.8132 | 13s
+  Step   1000 | loss 0.0072 | aux 0.0000 | acc 0.9906 | 25s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 50s
+
+  Training C1_eval_seed1 (alpha=0.1)...
+  Step    500 | loss 0.8744 | aux 0.0000 | acc 0.0090 | 13s
+  Step   1000 | loss 0.0134 | aux 0.0000 | acc 0.9840 | 25s
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 50s
+  Step   2500 | loss 0.0001 | aux 0.0000 | acc 0.9900 | 63s
+
+  Training C1_eval_seed2 (alpha=0.1)...
+  Step    500 | loss 0.3878 | aux 0.0000 | acc 0.0968 | 13s
+  Step   1000 | loss 0.0002 | aux 0.0000 | acc 1.0000 | 25s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 50s
+
+  Training C1_eval_seed3 (alpha=0.1)...
+  Step    500 | loss 0.1588 | aux 0.0000 | acc 0.5920 | 13s
+  Step   1000 | loss 0.0002 | aux 0.0000 | acc 1.0000 | 25s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  Step   2000 | loss 0.0010 | aux 0.0000 | acc 0.9988 | 50s
+
+  Training C1_eval_seed4 (alpha=0.1)...
+  Step    500 | loss 0.1199 | aux 0.0000 | acc 0.7712 | 13s
+  Step   1000 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 25s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0000 | acc 1.0000 | 38s
+  Step   2000 | loss 0.0000 | aux 0.0000 | acc 1.0000 | 50s
+
+  Training C2_eval_seed0 (alpha=0.001)...
+  Step    500 | loss 0.8307 | aux 2.4080 | acc 0.0054 | 13s
+  Step   1000 | loss 0.7728 | aux 1.9384 | acc 0.0080 | 26s
+  Step   1500 | loss 0.0997 | aux 2.1636 | acc 0.8452 | 39s
+  Step   2000 | loss 0.0013 | aux 4.5517 | acc 0.9802 | 52s
+  Step   2500 | loss 0.0107 | aux 1.7113 | acc 0.9950 | 64s
+  >>> Converged at step 2500
+  Step   3000 | loss 0.0008 | aux 2.6123 | acc 0.9950 | 77s
+  Step   3500 | loss 0.0000 | aux 1.2014 | acc 1.0000 | 90s
+
+  Training C2_eval_seed1 (alpha=0.001)...
+  Step    500 | loss 0.8210 | aux 3.5327 | acc 0.0088 | 13s
+  Step   1000 | loss 0.0060 | aux 4.4249 | acc 0.9956 | 26s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.7436 | acc 1.0000 | 39s
+  Step   2000 | loss 0.0000 | aux 0.1263 | acc 1.0000 | 52s
+
+  Training C2_eval_seed2 (alpha=0.001)...
+  Step    500 | loss 0.0091 | aux 2.7127 | acc 0.9898 | 13s
+  Step   1000 | loss 0.0002 | aux 0.3822 | acc 1.0000 | 26s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.1550 | acc 1.0000 | 39s
+  Step   2000 | loss 0.0000 | aux 0.0778 | acc 1.0000 | 51s
+
+  Training C2_eval_seed3 (alpha=0.001)...
+  Step    500 | loss 0.0087 | aux 2.2648 | acc 0.9816 | 13s
+  Step   1000 | loss 0.0048 | aux 1.9383 | acc 0.9624 | 26s
+  Step   1500 | loss 0.0001 | aux 0.5088 | acc 1.0000 | 39s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0000 | aux 0.2347 | acc 1.0000 | 52s
+  Step   2500 | loss 0.0000 | aux 0.0838 | acc 1.0000 | 64s
+
+  Training C2_eval_seed4 (alpha=0.001)...
+  Step    500 | loss 0.7816 | aux 5.1499 | acc 0.0094 | 13s
+  Step   1000 | loss 0.0661 | aux 2.6247 | acc 0.8814 | 26s
+  Step   1500 | loss 0.0009 | aux 1.6165 | acc 0.9998 | 39s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0001 | aux 0.3734 | acc 1.0000 | 51s
+  Step   2500 | loss 0.0000 | aux 0.0920 | acc 1.0000 | 64s
+
+  Training D_eval_seed0 (alpha=0.1)...
+  Step    500 | loss 1.5283 | aux 0.2565 | acc 0.0008 | 13s
+  Step   1000 | loss 0.0002 | aux 0.0014 | acc 1.0000 | 26s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0003 | acc 1.0000 | 39s
+  Step   2000 | loss 0.0000 | aux 0.0002 | acc 1.0000 | 52s
+
+  Training D_eval_seed1 (alpha=0.1)...
+  Step    500 | loss 1.9206 | aux 0.0010 | acc 0.0000 | 13s
+  Step   1000 | loss 0.0413 | aux 0.0770 | acc 0.9250 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0008 | acc 1.0000 | 39s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0000 | aux 0.0003 | acc 1.0000 | 52s
+  Step   2500 | loss 0.0000 | aux 0.0002 | acc 1.0000 | 64s
+
+  Training D_eval_seed2 (alpha=0.1)...
+  Step    500 | loss 1.9166 | aux 0.0034 | acc 0.0000 | 13s
+  Step   1000 | loss 0.0003 | aux 0.0016 | acc 1.0000 | 26s
+  >>> Converged at step 1000
+  Step   1500 | loss 0.0001 | aux 0.0004 | acc 1.0000 | 39s
+  Step   2000 | loss 0.0197 | aux 0.0779 | acc 0.9574 | 52s
+
+  Training D_eval_seed3 (alpha=0.1)...
+  Step    500 | loss 1.5000 | aux 0.0028 | acc 0.0004 | 13s
+  Step   1000 | loss 0.0450 | aux 0.0427 | acc 0.8974 | 26s
+  Step   1500 | loss 0.0001 | aux 0.0012 | acc 1.0000 | 39s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0001 | aux 0.0004 | acc 1.0000 | 51s
+  Step   2500 | loss 0.0000 | aux 0.0002 | acc 1.0000 | 64s
+
+  Training D_eval_seed4 (alpha=0.1)...
+  Step    500 | loss 1.9202 | aux 0.0001 | acc 0.0000 | 13s
+  Step   1000 | loss 0.2657 | aux 0.0364 | acc 0.3900 | 26s
+  Step   1500 | loss 0.0050 | aux 0.0278 | acc 0.9966 | 39s
+  >>> Converged at step 1500
+  Step   2000 | loss 0.0000 | aux 0.0009 | acc 1.0000 | 52s
+  Step   2500 | loss 0.0107 | aux 0.0726 | acc 0.9614 | 64s
+
+  Training D_prime_eval_seed0 (alpha=0.01)...
+  Step    500 | loss 1.9201 | aux 0.0005 | acc 0.0000 | 13s
+  Step   1000 | loss 1.9269 | aux 0.0006 | acc 0.0000 | 26s
+  Step   1500 | loss 1.9193 | aux 0.0001 | acc 0.0000 | 38s
+  Step   2000 | loss 1.9200 | aux 0.0002 | acc 0.0000 | 51s
+  Step   2500 | loss 1.6780 | aux 0.0021 | acc 0.0002 | 64s
+  Step   3000 | loss 1.5360 | aux 0.0026 | acc 0.0000 | 77s
+  Step   3500 | loss 1.5612 | aux 0.0016 | acc 0.0000 | 90s
+  Step   4000 | loss 1.5378 | aux 0.0065 | acc 0.0000 | 103s
+  Step   4500 | loss 1.5346 | aux 0.0052 | acc 0.0006 | 116s
+  Step   5000 | loss 1.5347 | aux 0.0212 | acc 0.0000 | 129s
+  Step   5500 | loss 1.3315 | aux 0.0007 | acc 0.0012 | 142s
+  Step   6000 | loss 1.1911 | aux 0.0005 | acc 0.0008 | 155s
+  Step   6500 | loss 1.1735 | aux 0.0024 | acc 0.0008 | 167s
+  Step   7000 | loss 1.1682 | aux 0.0020 | acc 0.0010 | 180s
+  Step   7500 | loss 1.1511 | aux 0.0001 | acc 0.0008 | 193s
+  Step   8000 | loss 1.1514 | aux 0.0000 | acc 0.0008 | 206s
+  Step   8500 | loss 1.1529 | aux 0.0002 | acc 0.0010 | 219s
+  Step   9000 | loss 1.1525 | aux 0.0005 | acc 0.0008 | 232s
+  Step   9500 | loss 1.1509 | aux 0.0001 | acc 0.0010 | 245s
+  Step  10000 | loss 1.1511 | aux 0.0000 | acc 0.0010 | 258s
+  Step  10500 | loss 1.1520 | aux 0.0000 | acc 0.0010 | 271s
+  Step  11000 | loss 1.1517 | aux 0.0000 | acc 0.0008 | 284s
+  Step  11500 | loss 1.1588 | aux 0.0005 | acc 0.0008 | 296s
+  Step  12000 | loss 0.8492 | aux 0.0072 | acc 0.0070 | 309s
+  Step  12500 | loss 0.7675 | aux 0.0013 | acc 0.0102 | 322s
+  Step  13000 | loss 0.7682 | aux 0.0002 | acc 0.0096 | 335s
+  Step  13500 | loss 0.7674 | aux 0.0001 | acc 0.0088 | 348s
+  Step  14000 | loss 0.7678 | aux 0.0001 | acc 0.0084 | 361s
+  Step  14500 | loss 0.7679 | aux 0.0001 | acc 0.0084 | 374s
+  Step  15000 | loss 0.7678 | aux 0.0005 | acc 0.0106 | 387s
+  Step  15500 | loss 0.7682 | aux 0.0003 | acc 0.0080 | 400s
+  Step  16000 | loss 0.7678 | aux 0.0002 | acc 0.0112 | 413s
+  Step  16500 | loss 0.7678 | aux 0.0001 | acc 0.0090 | 426s
+  Step  17000 | loss 0.7678 | aux 0.0001 | acc 0.0094 | 439s
+  Step  17500 | loss 0.7677 | aux 0.0000 | acc 0.0094 | 452s
+  Step  18000 | loss 0.7675 | aux 0.0001 | acc 0.0088 | 464s
+  Step  18500 | loss 0.8081 | aux 0.0004 | acc 0.0082 | 477s
+  Step  19000 | loss 0.7678 | aux 0.0001 | acc 0.0082 | 490s
+  Step  19500 | loss 0.7675 | aux 0.0001 | acc 0.0084 | 503s
+  Step  20000 | loss 0.7676 | aux 0.0000 | acc 0.0094 | 516s
+  Step  20500 | loss 0.7675 | aux 0.0000 | acc 0.0112 | 529s
+  Step  21000 | loss 0.7673 | aux 0.0000 | acc 0.0068 | 542s
+  Step  21500 | loss 0.7669 | aux 0.0001 | acc 0.0108 | 555s
+  Step  22000 | loss 0.7679 | aux 0.0000 | acc 0.0094 | 568s
+  Step  22500 | loss 0.7681 | aux 0.0001 | acc 0.0094 | 581s
+  Step  23000 | loss 0.7676 | aux 0.0001 | acc 0.0108 | 593s
+  Step  23500 | loss 0.7679 | aux 0.0001 | acc 0.0082 | 606s
+  Step  24000 | loss 0.7677 | aux 0.0000 | acc 0.0112 | 619s
+  Step  24500 | loss 0.7677 | aux 0.0000 | acc 0.0094 | 632s
+  Step  25000 | loss 0.7678 | aux 0.0000 | acc 0.0088 | 645s
+  Step  25500 | loss 0.7676 | aux 0.0001 | acc 0.0088 | 658s
+  Step  26000 | loss 0.7671 | aux 0.0001 | acc 0.0118 | 671s
+  Step  26500 | loss 0.7680 | aux 0.0000 | acc 0.0068 | 684s
+  Step  27000 | loss 0.7677 | aux 0.0000 | acc 0.0092 | 697s
+  Step  27500 | loss 0.7674 | aux 0.0000 | acc 0.0088 | 709s
+  Step  28000 | loss 0.7676 | aux 0.0000 | acc 0.0110 | 722s
+  Step  28500 | loss 0.7681 | aux 0.0001 | acc 0.0116 | 735s
+  Step  29000 | loss 0.7676 | aux 0.0000 | acc 0.0094 | 748s
+  Step  29500 | loss 0.7676 | aux 0.0000 | acc 0.0108 | 761s
+  Step  30000 | loss 0.7674 | aux 0.0000 | acc 0.0092 | 774s
+  Step  30500 | loss 0.7676 | aux 0.0000 | acc 0.0088 | 787s
+  Step  31000 | loss 0.7676 | aux 0.0000 | acc 0.0094 | 799s
+  Step  31500 | loss 0.7677 | aux 0.0000 | acc 0.0100 | 812s
+  Step  32000 | loss 0.7680 | aux 0.0001 | acc 0.0104 | 825s
+  Step  32500 | loss 0.7679 | aux 0.0001 | acc 0.0092 | 838s
+  Step  33000 | loss 0.7677 | aux 0.0000 | acc 0.0094 | 851s
+  Step  33500 | loss 0.7678 | aux 0.0000 | acc 0.0112 | 864s
+  Step  34000 | loss 0.7676 | aux 0.0000 | acc 0.0084 | 877s
+  Step  34500 | loss 0.7671 | aux 0.0000 | acc 0.0084 | 890s
+  Step  35000 | loss 0.7681 | aux 0.0000 | acc 0.0094 | 903s
+  Step  35500 | loss 0.8384 | aux 0.0004 | acc 0.0092 | 915s
+  Step  36000 | loss 0.7676 | aux 0.0001 | acc 0.0092 | 928s
+  Step  36500 | loss 0.7676 | aux 0.0000 | acc 0.0098 | 941s
+  Step  37000 | loss 0.7679 | aux 0.0000 | acc 0.0094 | 954s
+  Step  37500 | loss 0.7677 | aux 0.0000 | acc 0.0068 | 967s
+  Step  38000 | loss 0.7679 | aux 0.0000 | acc 0.0068 | 980s
+  Step  38500 | loss 0.7679 | aux 0.0000 | acc 0.0094 | 993s
+  Step  39000 | loss 0.7678 | aux 0.0000 | acc 0.0112 | 1006s
+  Step  39500 | loss 0.7676 | aux 0.0000 | acc 0.0092 | 1018s
+  Step  40000 | loss 0.7681 | aux 0.0000 | acc 0.0094 | 1031s
+  Step  40500 | loss 0.7679 | aux 0.0000 | acc 0.0068 | 1044s
+  Step  41000 | loss 0.7672 | aux 0.0000 | acc 0.0092 | 1057s
+  Step  41500 | loss 0.7679 | aux 0.0000 | acc 0.0108 | 1070s
+  Step  42000 | loss 0.7673 | aux 0.0003 | acc 0.0088 | 1083s
+  Step  42500 | loss 0.7675 | aux 0.0000 | acc 0.0094 | 1096s
+  Step  43000 | loss 0.7675 | aux 0.0001 | acc 0.0108 | 1109s
+  Step  43500 | loss 0.7677 | aux 0.0000 | acc 0.0092 | 1121s
+  Step  44000 | loss 0.7674 | aux 0.0000 | acc 0.0092 | 1134s
+  Step  44500 | loss 0.7676 | aux 0.0000 | acc 0.0068 | 1147s
+  Step  45000 | loss 0.7676 | aux 0.0000 | acc 0.0084 | 1160s
+  Step  45500 | loss 0.7674 | aux 0.0000 | acc 0.0112 | 1173s
+  Step  46000 | loss 0.7676 | aux 0.0006 | acc 0.0084 | 1187s
+  Step  46500 | loss 0.7676 | aux 0.0000 | acc 0.0078 | 1200s
+  Step  47000 | loss 0.7669 | aux 0.0000 | acc 0.0108 | 1214s
+  Step  47500 | loss 0.7676 | aux 0.0000 | acc 0.0112 | 1227s
+  Step  48000 | loss 0.7677 | aux 0.0000 | acc 0.0084 | 1240s
+  Step  48500 | loss 0.7676 | aux 0.0000 | acc 0.0118 | 1254s
+  Step  49000 | loss 0.7675 | aux 0.0000 | acc 0.0108 | 1267s
+  Step  49500 | loss 0.7678 | aux 0.0000 | acc 0.0108 | 1280s
+  Step  50000 | loss 0.7676 | aux 0.0000 | acc 0.0084 | 1293s
+
+  Training D_prime_eval_seed1 (alpha=0.01)...
+  Step    500 | loss 1.5323 | aux 0.0012 | acc 0.0010 | 13s
+  Step   1000 | loss 0.7697 | aux 0.0001 | acc 0.0120 | 26s
+  Step   1500 | loss 0.7680 | aux 0.0001 | acc 0.0112 | 39s
+  Step   2000 | loss 0.7680 | aux 0.0001 | acc 0.0120 | 52s
+  Step   2500 | loss 0.7683 | aux 0.0001 | acc 0.0100 | 65s
+  Step   3000 | loss 0.7681 | aux 0.0001 | acc 0.0120 | 78s
+  Step   3500 | loss 0.7678 | aux 0.0001 | acc 0.0120 | 91s
+  Step   4000 | loss 0.7676 | aux 0.0001 | acc 0.0076 | 104s
+  Step   4500 | loss 0.7677 | aux 0.0001 | acc 0.0120 | 117s
+  Step   5000 | loss 0.7677 | aux 0.0001 | acc 0.0098 | 130s
+  Step   5500 | loss 0.7705 | aux 0.0002 | acc 0.0098 | 142s
+  Step   6000 | loss 0.7675 | aux 0.0001 | acc 0.0120 | 155s
+  Step   6500 | loss 0.7695 | aux 0.0001 | acc 0.0092 | 168s
+  Step   7000 | loss 0.7682 | aux 0.0001 | acc 0.0100 | 181s
+  Step   7500 | loss 0.7695 | aux 0.0002 | acc 0.0090 | 194s
+  Step   8000 | loss 0.7675 | aux 0.0001 | acc 0.0100 | 207s
+  Step   8500 | loss 0.7685 | aux 0.0001 | acc 0.0120 | 220s
+  Step   9000 | loss 0.7677 | aux 0.0001 | acc 0.0090 | 233s
+  Step   9500 | loss 0.7684 | aux 0.0000 | acc 0.0088 | 246s
+  Step  10000 | loss 0.7670 | aux 0.0000 | acc 0.0100 | 259s
+  Step  10500 | loss 0.7680 | aux 0.0000 | acc 0.0120 | 272s
+  Step  11000 | loss 0.7674 | aux 0.0000 | acc 0.0098 | 285s
+  Step  11500 | loss 0.7678 | aux 0.0000 | acc 0.0098 | 298s
+  Step  12000 | loss 0.7674 | aux 0.0000 | acc 0.0120 | 311s
+  Step  12500 | loss 0.7706 | aux 0.0000 | acc 0.0088 | 324s
+  Step  13000 | loss 0.7676 | aux 0.0000 | acc 0.0120 | 337s
+  Step  13500 | loss 0.7683 | aux 0.0000 | acc 0.0098 | 350s
+  Step  14000 | loss 0.7685 | aux 0.0000 | acc 0.0090 | 363s
+  Step  14500 | loss 0.7686 | aux 0.0000 | acc 0.0088 | 376s
+  Step  15000 | loss 0.7680 | aux 0.0000 | acc 0.0098 | 389s
+  Step  15500 | loss 0.7674 | aux 0.0000 | acc 0.0088 | 402s
+  Step  16000 | loss 0.7674 | aux 0.0000 | acc 0.0088 | 415s
+  Step  16500 | loss 0.7686 | aux 0.0000 | acc 0.0098 | 428s
+  Step  17000 | loss 0.7683 | aux 0.0002 | acc 0.0066 | 441s
+  Step  17500 | loss 0.7674 | aux 0.0001 | acc 0.0098 | 454s
+  Step  18000 | loss 0.7682 | aux 0.0001 | acc 0.0098 | 467s
+  Step  18500 | loss 0.7678 | aux 0.0001 | acc 0.0088 | 480s
+  Step  19000 | loss 0.7675 | aux 0.0003 | acc 0.0076 | 493s
+  Step  19500 | loss 0.7678 | aux 0.0002 | acc 0.0076 | 506s
+  Step  20000 | loss 0.7674 | aux 0.0000 | acc 0.0076 | 518s
+  Step  20500 | loss 0.7671 | aux 0.0000 | acc 0.0098 | 531s
+  Step  21000 | loss 0.7676 | aux 0.0000 | acc 0.0112 | 544s
+  Step  21500 | loss 0.7675 | aux 0.0001 | acc 0.0090 | 557s
+  Step  22000 | loss 0.7676 | aux 0.0000 | acc 0.0098 | 570s
+  Step  22500 | loss 0.7674 | aux 0.0000 | acc 0.0076 | 583s
+  Step  23000 | loss 0.7673 | aux 0.0000 | acc 0.0076 | 596s
+  Step  23500 | loss 0.7673 | aux 0.0000 | acc 0.0066 | 609s
+  Step  24000 | loss 0.7675 | aux 0.0000 | acc 0.0066 | 622s
+  Step  24500 | loss 0.7678 | aux 0.0000 | acc 0.0076 | 635s
+  Step  25000 | loss 0.7676 | aux 0.0000 | acc 0.0088 | 648s
+  Step  25500 | loss 0.7676 | aux 0.0000 | acc 0.0120 | 661s
+  Step  26000 | loss 0.7678 | aux 0.0000 | acc 0.0120 | 674s
+  Step  26500 | loss 0.7678 | aux 0.0000 | acc 0.0100 | 686s
+  Step  27000 | loss 0.7677 | aux 0.0000 | acc 0.0088 | 699s
+  Step  27500 | loss 0.7674 | aux 0.0000 | acc 0.0120 | 712s
+  Step  28000 | loss 0.7678 | aux 0.0001 | acc 0.0088 | 725s
+  Step  28500 | loss 0.7677 | aux 0.0000 | acc 0.0090 | 738s
+  Step  29000 | loss 0.7675 | aux 0.0000 | acc 0.0100 | 751s
+  Step  29500 | loss 0.7673 | aux 0.0000 | acc 0.0120 | 764s
+  Step  30000 | loss 0.7677 | aux 0.0000 | acc 0.0076 | 777s
+  Step  30500 | loss 0.7675 | aux 0.0000 | acc 0.0112 | 789s
+  Step  31000 | loss 0.7677 | aux 0.0000 | acc 0.0090 | 802s
+  Step  31500 | loss 0.7675 | aux 0.0000 | acc 0.0100 | 815s
+  Step  32000 | loss 0.7675 | aux 0.0000 | acc 0.0092 | 828s
+  Step  32500 | loss 0.7679 | aux 0.0000 | acc 0.0092 | 842s
+  Step  33000 | loss 0.7676 | aux 0.0000 | acc 0.0092 | 855s
+  Step  33500 | loss 0.7675 | aux 0.0000 | acc 0.0120 | 868s
+  Step  34000 | loss 0.7682 | aux 0.0028 | acc 0.0116 | 881s
+  Step  34500 | loss 0.7675 | aux 0.0000 | acc 0.0088 | 894s
+  Step  35000 | loss 0.7679 | aux 0.0002 | acc 0.0120 | 907s
+  Step  35500 | loss 0.7679 | aux 0.0000 | acc 0.0076 | 920s
+  Step  36000 | loss 0.7675 | aux 0.0001 | acc 0.0092 | 933s
+  Step  36500 | loss 0.7676 | aux 0.0001 | acc 0.0088 | 946s
+  Step  37000 | loss 0.7673 | aux 0.0000 | acc 0.0076 | 959s
+  Step  37500 | loss 0.7679 | aux 0.0000 | acc 0.0088 | 972s
+  Step  38000 | loss 0.7673 | aux 0.0000 | acc 0.0088 | 985s
+  Step  38500 | loss 0.7676 | aux 0.0000 | acc 0.0090 | 999s
+  Step  39000 | loss 0.7674 | aux 0.0000 | acc 0.0112 | 1012s
+  Step  39500 | loss 0.7679 | aux 0.0000 | acc 0.0112 | 1026s
+  Step  40000 | loss 0.7675 | aux 0.0000 | acc 0.0090 | 1040s
+  Step  40500 | loss 0.7675 | aux 0.0000 | acc 0.0088 | 1053s
+  Step  41000 | loss 0.7676 | aux 0.0000 | acc 0.0088 | 1067s
+  Step  41500 | loss 0.7676 | aux 0.0000 | acc 0.0120 | 1081s
+  Step  42000 | loss 0.7678 | aux 0.0000 | acc 0.0120 | 1095s
+  Step  42500 | loss 0.7676 | aux 0.0000 | acc 0.0092 | 1108s
+  Step  43000 | loss 0.7674 | aux 0.0000 | acc 0.0066 | 1121s
+  Step  43500 | loss 0.7674 | aux 0.0000 | acc 0.0090 | 1134s
+  Step  44000 | loss 0.7674 | aux 0.0000 | acc 0.0098 | 1147s
+  Step  44500 | loss 0.7674 | aux 0.0000 | acc 0.0098 | 1160s
+  Step  45000 | loss 0.7676 | aux 0.0000 | acc 0.0088 | 1173s
+  Step  45500 | loss 0.7675 | aux 0.0000 | acc 0.0120 | 1186s
+  Step  46000 | loss 0.7675 | aux 0.0000 | acc 0.0100 | 1199s
+  Step  46500 | loss 0.7677 | aux 0.0000 | acc 0.0100 | 1213s
+  Step  47000 | loss 0.7678 | aux 0.0000 | acc 0.0120 | 1226s
+  Step  47500 | loss 0.7677 | aux 0.0000 | acc 0.0090 | 1240s
+  Step  48000 | loss 0.7676 | aux 0.0000 | acc 0.0076 | 1254s
+  Step  48500 | loss 0.7677 | aux 0.0000 | acc 0.0100 | 1268s
+  Step  49000 | loss 0.7677 | aux 0.0000 | acc 0.0120 | 1282s
+  Step  49500 | loss 0.7674 | aux 0.0000 | acc 0.0066 | 1296s
+  Step  50000 | loss 0.7676 | aux 0.0000 | acc 0.0098 | 1310s
+
+  Training D_prime_eval_seed2 (alpha=0.01)...
+  Step    500 | loss 1.9218 | aux 0.0005 | acc 0.0000 | 14s
+  Step   1000 | loss 1.1589 | aux 0.0147 | acc 0.0006 | 28s
+  Step   1500 | loss 1.1610 | aux 0.0167 | acc 0.0012 | 41s
+  Step   2000 | loss 0.5990 | aux 0.0001 | acc 0.0482 | 55s
+  Step   2500 | loss 0.3910 | aux 0.0002 | acc 0.0896 | 69s
+  Step   3000 | loss 0.4260 | aux 0.0011 | acc 0.0904 | 83s
+  Step   3500 | loss 0.4313 | aux 0.0008 | acc 0.0966 | 97s
+  Step   4000 | loss 0.3850 | aux 0.0001 | acc 0.0980 | 111s
+  Step   4500 | loss 0.3834 | aux 0.0003 | acc 0.0978 | 125s
+  Step   5000 | loss 0.3839 | aux 0.0000 | acc 0.1008 | 139s
+  Step   5500 | loss 0.3833 | aux 0.0001 | acc 0.0986 | 153s
+  Step   6000 | loss 0.3845 | aux 0.0001 | acc 0.0990 | 167s
+  Step   6500 | loss 0.3837 | aux 0.0000 | acc 0.0986 | 181s
+  Step   7000 | loss 0.3847 | aux 0.0000 | acc 0.1008 | 195s
+  Step   7500 | loss 0.3837 | aux 0.0001 | acc 0.1038 | 207s
+  Step   8000 | loss 0.3835 | aux 0.0000 | acc 0.0978 | 220s
+  Step   8500 | loss 0.3838 | aux 0.0000 | acc 0.0978 | 234s
+  Step   9000 | loss 0.3836 | aux 0.0000 | acc 0.1050 | 247s
+  Step   9500 | loss 0.4217 | aux 0.0002 | acc 0.0986 | 260s
+  Step  10000 | loss 0.3847 | aux 0.0007 | acc 0.1008 | 273s
+  Step  10500 | loss 0.3839 | aux 0.0001 | acc 0.0980 | 287s
+  Step  11000 | loss 0.3833 | aux 0.0000 | acc 0.1038 | 300s
+  Step  11500 | loss 0.3838 | aux 0.0001 | acc 0.1008 | 313s
+  Step  12000 | loss 0.3839 | aux 0.0001 | acc 0.0988 | 327s
+  Step  12500 | loss 0.4183 | aux 0.0001 | acc 0.0952 | 340s
+  Step  13000 | loss 0.3850 | aux 0.0001 | acc 0.0990 | 353s
+  Step  13500 | loss 0.3838 | aux 0.0000 | acc 0.0974 | 366s
+  Step  14000 | loss 0.3844 | aux 0.0000 | acc 0.0990 | 379s
+  Step  14500 | loss 0.3837 | aux 0.0000 | acc 0.1038 | 392s
+  Step  15000 | loss 0.3844 | aux 0.0000 | acc 0.1050 | 405s
+  Step  15500 | loss 0.3834 | aux 0.0000 | acc 0.1050 | 418s
+  Step  16000 | loss 0.3839 | aux 0.0000 | acc 0.1050 | 431s
+  Step  16500 | loss 0.3893 | aux 0.0001 | acc 0.0978 | 444s
+  Step  17000 | loss 0.3841 | aux 0.0001 | acc 0.0978 | 457s
+  Step  17500 | loss 0.3839 | aux 0.0001 | acc 0.0980 | 470s
+  Step  18000 | loss 0.3845 | aux 0.0001 | acc 0.1050 | 484s
+  Step  18500 | loss 0.3837 | aux 0.0001 | acc 0.0986 | 497s
+  Step  19000 | loss 0.3838 | aux 0.0000 | acc 0.0990 | 510s
+  Step  19500 | loss 0.3840 | aux 0.0000 | acc 0.0978 | 523s
+  Step  20000 | loss 0.3837 | aux 0.0000 | acc 0.0974 | 536s
+  Step  20500 | loss 0.3867 | aux 0.0003 | acc 0.0986 | 549s
+  Step  21000 | loss 0.3840 | aux 0.0000 | acc 0.1050 | 562s
+  Step  21500 | loss 0.3841 | aux 0.0000 | acc 0.1008 | 575s
+  Step  22000 | loss 0.3844 | aux 0.0000 | acc 0.1038 | 589s
+  Step  22500 | loss 0.3837 | aux 0.0000 | acc 0.1008 | 602s
+  Step  23000 | loss 0.3845 | aux 0.0000 | acc 0.1008 | 615s
+  Step  23500 | loss 0.3837 | aux 0.0000 | acc 0.0988 | 629s
+  Step  24000 | loss 0.3840 | aux 0.0001 | acc 0.0986 | 642s
+  Step  24500 | loss 0.3833 | aux 0.0000 | acc 0.0980 | 655s
+  Step  25000 | loss 0.3837 | aux 0.0001 | acc 0.1008 | 668s
+  Step  25500 | loss 0.3838 | aux 0.0000 | acc 0.0988 | 681s
+  Step  26000 | loss 0.3841 | aux 0.0001 | acc 0.0990 | 694s
+  Step  26500 | loss 0.3838 | aux 0.0000 | acc 0.1038 | 708s
+  Step  27000 | loss 0.3842 | aux 0.0000 | acc 0.0988 | 721s
+  Step  27500 | loss 0.3838 | aux 0.0000 | acc 0.0978 | 734s
+  Step  28000 | loss 0.3836 | aux 0.0000 | acc 0.1008 | 747s
+  Step  28500 | loss 0.3839 | aux 0.0000 | acc 0.0988 | 760s
+  Step  29000 | loss 0.3839 | aux 0.0000 | acc 0.0988 | 774s
+  Step  29500 | loss 0.3880 | aux 0.0000 | acc 0.0980 | 787s
+  Step  30000 | loss 0.3840 | aux 0.0000 | acc 0.1008 | 800s
+  Step  30500 | loss 0.3839 | aux 0.0000 | acc 0.0974 | 813s
+  Step  31000 | loss 0.3836 | aux 0.0000 | acc 0.0978 | 826s
+  Step  31500 | loss 0.3839 | aux 0.0000 | acc 0.0990 | 839s
+  Step  32000 | loss 0.3840 | aux 0.0000 | acc 0.1008 | 853s
+  Step  32500 | loss 0.3840 | aux 0.0000 | acc 0.1008 | 866s
+  Step  33000 | loss 0.3838 | aux 0.0000 | acc 0.0990 | 880s
+  Step  33500 | loss 0.3840 | aux 0.0000 | acc 0.1050 | 893s
+  Step  34000 | loss 0.3898 | aux 0.0044 | acc 0.1004 | 906s
+  Step  34500 | loss 0.3841 | aux 0.0000 | acc 0.0978 | 919s
+  Step  35000 | loss 0.3842 | aux 0.0000 | acc 0.0974 | 932s
+  Step  35500 | loss 0.3837 | aux 0.0000 | acc 0.0974 | 946s
+  Step  36000 | loss 0.3839 | aux 0.0000 | acc 0.1008 | 959s
+  Step  36500 | loss 0.3841 | aux 0.0000 | acc 0.1038 | 972s
+  Step  37000 | loss 0.3836 | aux 0.0000 | acc 0.1050 | 986s
+  Step  37500 | loss 0.3835 | aux 0.0000 | acc 0.1050 | 999s
+  Step  38000 | loss 0.3837 | aux 0.0000 | acc 0.0980 | 1012s
+  Step  38500 | loss 0.3840 | aux 0.0000 | acc 0.0980 | 1025s
+  Step  39000 | loss 0.3837 | aux 0.0000 | acc 0.1050 | 1038s
+  Step  39500 | loss 0.3836 | aux 0.0000 | acc 0.1050 | 1051s
+  Step  40000 | loss 0.3836 | aux 0.0000 | acc 0.1038 | 1066s
+  Step  40500 | loss 0.3838 | aux 0.0000 | acc 0.0978 | 1080s
+  Step  41000 | loss 0.3840 | aux 0.0000 | acc 0.0974 | 1094s
+  Step  41500 | loss 0.3836 | aux 0.0000 | acc 0.1008 | 1107s
+  Step  42000 | loss 0.3838 | aux 0.0000 | acc 0.0986 | 1120s
+  Step  42500 | loss 0.3839 | aux 0.0000 | acc 0.1008 | 1133s
+  Step  43000 | loss 0.3840 | aux 0.0000 | acc 0.0974 | 1146s
+  Step  43500 | loss 0.3834 | aux 0.0000 | acc 0.0978 | 1160s
+  Step  44000 | loss 0.3842 | aux 0.0001 | acc 0.1050 | 1172s
+  Step  44500 | loss 0.3836 | aux 0.0000 | acc 0.1050 | 1185s
+  Step  45000 | loss 0.3835 | aux 0.0001 | acc 0.1008 | 1199s
+  Step  45500 | loss 0.3837 | aux 0.0000 | acc 0.1038 | 1212s
+  Step  46000 | loss 0.3841 | aux 0.0000 | acc 0.0986 | 1225s
+  Step  46500 | loss 0.3833 | aux 0.0000 | acc 0.0980 | 1238s
+  Step  47000 | loss 0.3840 | aux 0.0000 | acc 0.0986 | 1251s
+  Step  47500 | loss 0.3841 | aux 0.0000 | acc 0.0974 | 1264s
+  Step  48000 | loss 0.3839 | aux 0.0000 | acc 0.1050 | 1277s
+  Step  48500 | loss 0.3836 | aux 0.0000 | acc 0.0986 | 1290s
+  Step  49000 | loss 0.3837 | aux 0.0001 | acc 0.0978 | 1303s
+  Step  49500 | loss 0.3841 | aux 0.0000 | acc 0.0980 | 1316s
+  Step  50000 | loss 0.3835 | aux 0.0000 | acc 0.0988 | 1329s
+
+  Training D_prime_eval_seed3 (alpha=0.01)...
+  Step    500 | loss 1.9199 | aux 0.0010 | acc 0.0000 | 13s
+  Step   1000 | loss 1.9192 | aux 0.0004 | acc 0.0000 | 26s
+  Step   1500 | loss 1.9194 | aux 0.0002 | acc 0.0000 | 39s
+  Step   2000 | loss 1.9193 | aux 0.0002 | acc 0.0000 | 52s
+  Step   2500 | loss 1.9193 | aux 0.0002 | acc 0.0000 | 65s
+  Step   3000 | loss 1.9173 | aux 0.0001 | acc 0.0000 | 78s
+  Step   3500 | loss 1.6010 | aux 0.0006 | acc 0.0000 | 91s
+  Step   4000 | loss 1.5364 | aux 0.0012 | acc 0.0002 | 105s
+  Step   4500 | loss 1.5366 | aux 0.0010 | acc 0.0002 | 118s
+  Step   5000 | loss 1.5355 | aux 0.0002 | acc 0.0000 | 131s
+  Step   5500 | loss 1.5352 | aux 0.0002 | acc 0.0002 | 144s
+  Step   6000 | loss 1.5367 | aux 0.0001 | acc 0.0000 | 158s
+  Step   6500 | loss 1.5358 | aux 0.0002 | acc 0.0002 | 172s
+  Step   7000 | loss 1.5349 | aux 0.0012 | acc 0.0002 | 185s
+  Step   7500 | loss 1.5451 | aux 0.0001 | acc 0.0000 | 198s
+  Step   8000 | loss 1.5364 | aux 0.0002 | acc 0.0000 | 211s
+  Step   8500 | loss 1.5472 | aux 0.0001 | acc 0.0000 | 224s
+  Step   9000 | loss 1.5354 | aux 0.0002 | acc 0.0000 | 238s
+  Step   9500 | loss 1.5353 | aux 0.0001 | acc 0.0000 | 252s
+  Step  10000 | loss 1.5358 | aux 0.0001 | acc 0.0000 | 265s
+  Step  10500 | loss 1.5355 | aux 0.0002 | acc 0.0000 | 278s
+  Step  11000 | loss 1.5354 | aux 0.0001 | acc 0.0000 | 291s
+  Step  11500 | loss 1.5361 | aux 0.0001 | acc 0.0000 | 304s
+  Step  12000 | loss 1.5351 | aux 0.0001 | acc 0.0000 | 318s
+  Step  12500 | loss 1.5344 | aux 0.0001 | acc 0.0000 | 331s
+  Step  13000 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 345s
+  Step  13500 | loss 1.5360 | aux 0.0003 | acc 0.0000 | 358s
+  Step  14000 | loss 1.5354 | aux 0.0006 | acc 0.0002 | 372s
+  Step  14500 | loss 1.5354 | aux 0.0001 | acc 0.0000 | 386s
+  Step  15000 | loss 1.5355 | aux 0.0001 | acc 0.0000 | 399s
+  Step  15500 | loss 1.5353 | aux 0.0001 | acc 0.0002 | 413s
+  Step  16000 | loss 1.5353 | aux 0.0000 | acc 0.0002 | 426s
+  Step  16500 | loss 1.5352 | aux 0.0001 | acc 0.0002 | 439s
+  Step  17000 | loss 1.5356 | aux 0.0000 | acc 0.0000 | 452s
+  Step  17500 | loss 1.5351 | aux 0.0001 | acc 0.0000 | 466s
+  Step  18000 | loss 1.5354 | aux 0.0000 | acc 0.0002 | 479s
+  Step  18500 | loss 1.5351 | aux 0.0001 | acc 0.0000 | 493s
+  Step  19000 | loss 1.5353 | aux 0.0001 | acc 0.0002 | 507s
+  Step  19500 | loss 1.5352 | aux 0.0000 | acc 0.0002 | 520s
+  Step  20000 | loss 1.5350 | aux 0.0000 | acc 0.0000 | 534s
+  Step  20500 | loss 1.5351 | aux 0.0001 | acc 0.0000 | 548s
+  Step  21000 | loss 1.5350 | aux 0.0001 | acc 0.0000 | 561s
+  Step  21500 | loss 1.5353 | aux 0.0001 | acc 0.0000 | 574s
+  Step  22000 | loss 1.5354 | aux 0.0001 | acc 0.0000 | 588s
+  Step  22500 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 601s
+  Step  23000 | loss 1.5352 | aux 0.0000 | acc 0.0002 | 615s
+  Step  23500 | loss 1.5352 | aux 0.0000 | acc 0.0002 | 628s
+  Step  24000 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 641s
+  Step  24500 | loss 4.7013 | aux 3.7792 | acc 0.0000 | 655s
+  Step  25000 | loss 1.9196 | aux 0.0029 | acc 0.0000 | 668s
+  Step  25500 | loss 1.9188 | aux 0.0047 | acc 0.0000 | 681s
+  Step  26000 | loss 1.9193 | aux 0.0040 | acc 0.0000 | 695s
+  Step  26500 | loss 1.9190 | aux 0.0020 | acc 0.0000 | 708s
+  Step  27000 | loss 1.9184 | aux 0.0014 | acc 0.0000 | 721s
+  Step  27500 | loss 1.9191 | aux 0.0012 | acc 0.0000 | 735s
+  Step  28000 | loss 1.9191 | aux 0.0012 | acc 0.0000 | 748s
+  Step  28500 | loss 1.9191 | aux 0.0009 | acc 0.0000 | 762s
+  Step  29000 | loss 1.9190 | aux 0.0002 | acc 0.0000 | 775s
+  Step  29500 | loss 1.9191 | aux 0.0002 | acc 0.0000 | 789s
+  Step  30000 | loss 1.9189 | aux 0.0007 | acc 0.0000 | 802s
+  Step  30500 | loss 1.9188 | aux 0.0003 | acc 0.0000 | 815s
+  Step  31000 | loss 1.9193 | aux 0.0002 | acc 0.0000 | 829s
+  Step  31500 | loss 1.9187 | aux 0.0001 | acc 0.0000 | 842s
+  Step  32000 | loss 1.9187 | aux 0.0001 | acc 0.0000 | 856s
+  Step  32500 | loss 1.9188 | aux 0.0002 | acc 0.0000 | 869s
+  Step  33000 | loss 1.9195 | aux 0.0001 | acc 0.0000 | 882s
+  Step  33500 | loss 1.9190 | aux 0.0001 | acc 0.0000 | 896s
+  Step  34000 | loss 1.9188 | aux 0.0000 | acc 0.0000 | 909s
+  Step  34500 | loss 1.9188 | aux 0.0001 | acc 0.0000 | 922s
+  Step  35000 | loss 1.9186 | aux 0.0000 | acc 0.0000 | 935s
+  Step  35500 | loss 1.9189 | aux 0.0001 | acc 0.0000 | 948s
+  Step  36000 | loss 1.9187 | aux 0.0000 | acc 0.0000 | 961s
+  Step  36500 | loss 1.9191 | aux 0.0000 | acc 0.0000 | 975s
+  Step  37000 | loss 1.9189 | aux 0.0000 | acc 0.0000 | 988s
+  Step  37500 | loss 1.9185 | aux 0.0000 | acc 0.0000 | 1001s
+  Step  38000 | loss 1.9188 | aux 0.0000 | acc 0.0000 | 1014s
+  Step  38500 | loss 1.8030 | aux 0.0002 | acc 0.0000 | 1027s
+  Step  39000 | loss 1.5357 | aux 0.0038 | acc 0.0002 | 1040s
+  Step  39500 | loss 1.4651 | aux 0.0016 | acc 0.0000 | 1054s
+  Step  40000 | loss 1.4102 | aux 0.0034 | acc 0.0008 | 1067s
+  Step  40500 | loss 1.3302 | aux 0.0230 | acc 0.0004 | 1080s
+  Step  41000 | loss 1.2078 | aux 0.0119 | acc 0.0006 | 1093s
+  Step  41500 | loss 1.1802 | aux 0.0270 | acc 0.0006 | 1106s
+  Step  42000 | loss 1.1716 | aux 0.0070 | acc 0.0010 | 1119s
+  Step  42500 | loss 1.1588 | aux 0.0240 | acc 0.0014 | 1132s
+  Step  43000 | loss 1.1527 | aux 0.0398 | acc 0.0006 | 1146s
+  Step  43500 | loss 1.1524 | aux 0.0135 | acc 0.0006 | 1159s
+  Step  44000 | loss 1.1518 | aux 0.0156 | acc 0.0006 | 1172s
+  Step  44500 | loss 1.1523 | aux 0.0132 | acc 0.0014 | 1186s
+  Step  45000 | loss 1.1695 | aux 0.0028 | acc 0.0008 | 1199s
+  Step  45500 | loss 1.1513 | aux 0.0166 | acc 0.0014 | 1212s
+  Step  46000 | loss 1.1516 | aux 0.0008 | acc 0.0008 | 1226s
+  Step  46500 | loss 1.1516 | aux 0.0008 | acc 0.0010 | 1239s
+  Step  47000 | loss 1.1517 | aux 0.0005 | acc 0.0008 | 1252s
+  Step  47500 | loss 1.1522 | aux 0.0043 | acc 0.0010 | 1265s
+  Step  48000 | loss 1.1515 | aux 0.0026 | acc 0.0014 | 1279s
+  Step  48500 | loss 1.1523 | aux 0.0073 | acc 0.0008 | 1292s
+  Step  49000 | loss 1.2242 | aux 0.0048 | acc 0.0008 | 1305s
+  Step  49500 | loss 1.1513 | aux 0.0013 | acc 0.0014 | 1318s
+  Step  50000 | loss 1.1515 | aux 0.0015 | acc 0.0014 | 1332s
+
+  Training D_prime_eval_seed4 (alpha=0.01)...
+  Step    500 | loss 1.9204 | aux 0.0003 | acc 0.0000 | 13s
+  Step   1000 | loss 1.7995 | aux 0.0011 | acc 0.0002 | 26s
+  Step   1500 | loss 1.5373 | aux 0.0035 | acc 0.0000 | 40s
+  Step   2000 | loss 0.7958 | aux 0.0035 | acc 0.0070 | 53s
+  Step   2500 | loss 0.7681 | aux 0.0014 | acc 0.0088 | 66s
+  Step   3000 | loss 0.7684 | aux 0.0006 | acc 0.0120 | 79s
+  Step   3500 | loss 0.7680 | aux 0.0006 | acc 0.0066 | 93s
+  Step   4000 | loss 0.7685 | aux 0.0004 | acc 0.0076 | 106s
+  Step   4500 | loss 0.7683 | aux 0.0005 | acc 0.0112 | 119s
+  Step   5000 | loss 0.7686 | aux 0.0004 | acc 0.0098 | 132s
+  Step   5500 | loss 0.7678 | aux 0.0010 | acc 0.0076 | 145s
+  Step   6000 | loss 0.7677 | aux 0.0002 | acc 0.0066 | 159s
+  Step   6500 | loss 0.7684 | aux 0.0004 | acc 0.0112 | 172s
+  Step   7000 | loss 0.7677 | aux 0.0003 | acc 0.0090 | 185s
+  Step   7500 | loss 0.7678 | aux 0.0001 | acc 0.0066 | 199s
+  Step   8000 | loss 0.7678 | aux 0.0001 | acc 0.0090 | 212s
+  Step   8500 | loss 0.7680 | aux 0.0001 | acc 0.0076 | 225s
+  Step   9000 | loss 0.7680 | aux 0.0001 | acc 0.0120 | 239s
+  Step   9500 | loss 0.7676 | aux 0.0001 | acc 0.0066 | 252s
+  Step  10000 | loss 0.7680 | aux 0.0000 | acc 0.0120 | 265s
+  Step  10500 | loss 0.7678 | aux 0.0000 | acc 0.0066 | 278s
+  Step  11000 | loss 1.9195 | aux 0.0005 | acc 0.0000 | 292s
+  Step  11500 | loss 1.9198 | aux 0.0000 | acc 0.0000 | 305s
+  Step  12000 | loss 1.9042 | aux 0.0000 | acc 0.0000 | 318s
+  Step  12500 | loss 1.8675 | aux 0.0000 | acc 0.0000 | 332s
+  Step  13000 | loss 1.8250 | aux 0.0000 | acc 0.0002 | 345s
+  Step  13500 | loss 1.8007 | aux 0.0000 | acc 0.0000 | 359s
+  Step  14000 | loss 1.7980 | aux 0.0000 | acc 0.0000 | 372s
+  Step  14500 | loss 1.7725 | aux 0.0001 | acc 0.0000 | 386s
+  Step  15000 | loss 1.7609 | aux 0.0000 | acc 0.0000 | 399s
+  Step  15500 | loss 1.7617 | aux 0.0002 | acc 0.0002 | 412s
+  Step  16000 | loss 1.6664 | aux 0.0000 | acc 0.0000 | 426s
+  Step  16500 | loss 1.5375 | aux 0.0000 | acc 0.0000 | 439s
+  Step  17000 | loss 1.5363 | aux 0.0000 | acc 0.0000 | 452s
+  Step  17500 | loss 1.5352 | aux 0.0000 | acc 0.0002 | 466s
+  Step  18000 | loss 1.5371 | aux 0.0000 | acc 0.0000 | 479s
+  Step  18500 | loss 1.5362 | aux 0.0000 | acc 0.0000 | 492s
+  Step  19000 | loss 1.5360 | aux 0.0000 | acc 0.0002 | 506s
+  Step  19500 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 519s
+  Step  20000 | loss 1.5356 | aux 0.0000 | acc 0.0002 | 532s
+  Step  20500 | loss 1.5355 | aux 0.0000 | acc 0.0000 | 545s
+  Step  21000 | loss 1.5351 | aux 0.0000 | acc 0.0002 | 559s
+  Step  21500 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 572s
+  Step  22000 | loss 1.5351 | aux 0.0002 | acc 0.0000 | 586s
+  Step  22500 | loss 1.5353 | aux 0.0000 | acc 0.0002 | 599s
+  Step  23000 | loss 1.7012 | aux 0.0002 | acc 0.0000 | 612s
+  Step  23500 | loss 1.5361 | aux 0.0000 | acc 0.0002 | 626s
+  Step  24000 | loss 1.5357 | aux 0.0000 | acc 0.0004 | 639s
+  Step  24500 | loss 1.5355 | aux 0.0000 | acc 0.0000 | 653s
+  Step  25000 | loss 1.5846 | aux 0.0000 | acc 0.0002 | 666s
+  Step  25500 | loss 1.5349 | aux 0.0000 | acc 0.0002 | 680s
+  Step  26000 | loss 1.5345 | aux 0.0000 | acc 0.0002 | 693s
+  Step  26500 | loss 1.5354 | aux 0.0000 | acc 0.0000 | 706s
+  Step  27000 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 719s
+  Step  27500 | loss 1.5353 | aux 0.0000 | acc 0.0000 | 733s
+  Step  28000 | loss 1.5351 | aux 0.0000 | acc 0.0004 | 746s
+  Step  28500 | loss 1.5353 | aux 0.0000 | acc 0.0000 | 759s
+  Step  29000 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 772s
+  Step  29500 | loss 1.5373 | aux 0.0000 | acc 0.0000 | 786s
+  Step  30000 | loss 1.5350 | aux 0.0000 | acc 0.0000 | 799s
+  Step  30500 | loss 1.5351 | aux 0.0000 | acc 0.0000 | 812s
+  Step  31000 | loss 1.5355 | aux 0.0000 | acc 0.0000 | 825s
+  Step  31500 | loss 1.5355 | aux 0.0000 | acc 0.0000 | 838s
+  Step  32000 | loss 1.5332 | aux 0.0000 | acc 0.0000 | 851s
+  Step  32500 | loss 1.5348 | aux 0.0001 | acc 0.0000 | 865s
+  Step  33000 | loss 1.5351 | aux 0.0001 | acc 0.0004 | 878s
+  Step  33500 | loss 1.5356 | aux 0.0000 | acc 0.0000 | 891s
+  Step  34000 | loss 1.5352 | aux 0.0000 | acc 0.0000 | 904s
+  Step  34500 | loss 1.5357 | aux 0.0000 | acc 0.0000 | 918s
+  Step  35000 | loss 1.5351 | aux 0.0000 | acc 0.0002 | 931s
+  Step  35500 | loss 1.5359 | aux 0.0000 | acc 0.0002 | 945s
+  Step  36000 | loss 1.4738 | aux 0.0001 | acc 0.0004 | 958s
+  Step  36500 | loss 1.4123 | aux 0.0008 | acc 0.0008 | 971s
+  Step  37000 | loss 1.3835 | aux 0.0001 | acc 0.0008 | 984s
+  Step  37500 | loss 1.3803 | aux 0.0005 | acc 0.0004 | 998s
+  Step  38000 | loss 1.3798 | aux 0.0002 | acc 0.0004 | 1011s
+  Step  38500 | loss 1.3818 | aux 0.0001 | acc 0.0002 | 1024s
+  Step  39000 | loss 1.3641 | aux 0.0004 | acc 0.0006 | 1038s
+  Step  39500 | loss 1.4456 | aux 0.0000 | acc 0.0006 | 1051s
+  Step  40000 | loss 1.3963 | aux 0.0002 | acc 0.0002 | 1064s
+  Step  40500 | loss 1.5314 | aux 0.0001 | acc 0.0002 | 1077s
+  Step  41000 | loss 1.1523 | aux 0.0003 | acc 0.0014 | 1091s
+  Step  41500 | loss 1.1516 | aux 0.0000 | acc 0.0010 | 1104s
+  Step  42000 | loss 1.1516 | aux 0.0001 | acc 0.0014 | 1117s
+  Step  42500 | loss 1.2466 | aux 0.0001 | acc 0.0008 | 1130s
+  Step  43000 | loss 1.1513 | aux 0.0008 | acc 0.0008 | 1143s
+  Step  43500 | loss 1.1522 | aux 0.0000 | acc 0.0022 | 1156s
+  Step  44000 | loss 1.1519 | aux 0.0000 | acc 0.0014 | 1169s
+  Step  44500 | loss 1.1511 | aux 0.0000 | acc 0.0022 | 1183s
+  Step  45000 | loss 1.1514 | aux 0.0000 | acc 0.0012 | 1196s
+  Step  45500 | loss 1.1515 | aux 0.0000 | acc 0.0008 | 1209s
+  Step  46000 | loss 1.1511 | aux 0.0000 | acc 0.0008 | 1222s
+  Step  46500 | loss 1.1508 | aux 0.0000 | acc 0.0014 | 1235s
+  Step  47000 | loss 1.1510 | aux 0.0000 | acc 0.0006 | 1248s
+  Step  47500 | loss 1.1841 | aux 0.0046 | acc 0.0014 | 1261s
+  Step  48000 | loss 1.1520 | aux 0.0012 | acc 0.0012 | 1274s
+  Step  48500 | loss 1.1521 | aux 0.0007 | acc 0.0006 | 1287s
+  Step  49000 | loss 1.1514 | aux 0.0020 | acc 0.0006 | 1300s
+  Step  49500 | loss 1.0840 | aux 0.0055 | acc 0.0032 | 1314s
+  Step  50000 | loss 1.0480 | aux 0.0044 | acc 0.0026 | 1327s
+
+============================================================
+STEP 8 RESULTS
+============================================================
+  A: steps_to_99=1100±200 (5/5 converged)
+  B: steps_to_99=2900±2223 (5/5 converged)
+  C1: steps_to_99=1100±200 (5/5 converged)
+  C2: steps_to_99=1500±548 (5/5 converged)
+  D: steps_to_99=1300±245 (5/5 converged)
+  D_prime: did not converge
+
+  Decision:
+  C2 (1500) > D (1300): Shared directions may hurt vs random

@@ -1,0 +1,13 @@
+{
+  "seed": 0,
+  "frozen_component": "layer1.attn",
+  "converged": true,
+  "converge_step": 3000,
+  "final_accuracy": 0.999,
+  "best_accuracy": 0.999,
+  "total_steps": 5000,
+  "total_time_seconds": 168.82653522491455,
+  "n_params_total": 402688,
+  "n_params_trainable": 385920,
+  "use_carry_head": false
+}
