@@ -144,6 +144,36 @@ activation-level interchange, with no learned adapter, on a non-group
 task (integer addition); further strengthened by the mean-only
 alignment control that removes any rotational fit.
 
+**Algorithmic cores and conserved depth (closest prior art on
+invariance).** Schiffman 2026 "Transformers Converge to Invariant
+Algorithmic Cores" (arXiv:2602.22600) extracts low-dimensional
+necessary-and-sufficient subspaces ("cores") from small zoos of
+Markov, modular-addition, and GPT-2 transformers via SVD of the
+activation–Jacobian interaction `H·J⊤`, and shows these cores align
+across independently trained models. §11 ("A one-dimensional
+agreement core at conserved depth") and §12 ("Universality across
+GPT-2 scales") are direct prior art for our N−1 invariance finding
+across four depths (4/6/8-layer zoos, §6.6c/d). Schiffman uses
+sufficiency (`h̃ = Ph`) and necessity (`h̃ = h − Ph`) projection
+ablations but **not** cross-model activation swap and **not** a joint-
+ablation hidden-load scalar; the extraction method is SVD of `H·J⊤`
+rather than the generalized eigenproblem `C_shared v = λ C_total v`.
+**Gaps we fill**: the specific value-level swap protocol at zero
+learned alignment, and the subspace-level "hidden load" quantification
+(joint − shared − complement) as a scalar exposing redundancy
+invisible to single-subspace sufficiency/necessity tests.
+
+**Residual-stream redundancy in multi-stream architectures.** Ablate
+and Rescue (arXiv:2603.14833) studies joint-and-isolated stream
+ablation in Manifold-Constrained Hyper-Connections (mHC)
+architectures to distinguish functional redundancy from asymmetric
+stream utilization. The ablation-rescue framing is analogous to our
+joint-ablation hidden-load metric, but operates on independent
+residual streams in a non-standard architecture rather than on
+orthogonal subspaces of a single residual stream. **Gap we fill**:
+the subspace-decomposition analog on standard decoder-only
+transformers via the generalized eigenproblem.
+
 **Model stitching.** Bansal, Nakkiran & Barak 2021, and Lenc & Vedaldi
 2015 before them, demonstrate that representations from independently
 trained models can be swapped through a *learned* stitching layer
