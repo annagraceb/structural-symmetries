@@ -1270,6 +1270,115 @@ The claim is architecture- and hyperparameter-specific (33-model zoo,
 4 layers, d=64, 5-digit addition, 99%+ accuracy); we do not claim it
 generalizes to larger scales without further testing.
 
+### 6.6f Measurement-protocol sensitivity controls
+
+A late-stage adversarial review raised three concerns that could in
+principle weaken the findings without being addressable by a simple scale
+sweep: (i) accuracy at a near-saturated readout could mask sub-flip
+perturbations, (ii) Procrustes alignment might have "laundered" cross-model
+disagreement into the fitted rotation so that the step-19 near-zero swap
+drop is artifactual, and (iii) the K_pca=32 PCA-restriction in A1 was
+chosen from a spectral-cliff heuristic on the same C_total that feeds the
+ratio eigenproblem, and so is self-referential. We ran three targeted
+controls on the main zoo at the primary layer-3 site to test each.
+
+**(i) Logit-margin reporting (step 21, logit_margin.json).**
+We re-ran the key interventions at (layer 3, position 12) for
+`baseline_seed0` and reported the average logit margin (correct-answer
+logit minus runner-up logit) in addition to accuracy. Baseline margin is
+11.42 over six result positions. Summary (Δ is positive for degradation):
+
+| Intervention | Δacc | Δmargin | Δmargin / baseline |
+|---|---|---|---|
+| Shared ablate (k=10) | +0.033 | +0.42 | 3.6% |
+| Complement ablate (k=10) | +0.269 | +1.33 | 11.6% |
+| Joint ablate (k=20) | +0.901 | +2.82 | 24.7% |
+| Shared swap A←B (step 19) | −0.004 | −0.16 | (neutral) |
+| Complement swap A←B (step 19) | −0.004 | −0.19 | (neutral) |
+| Self-input-shuffle (step 20) | +0.896 | +4.09 | 35.8% |
+| Zero-out | +0.899 | +1.76 | 15.4% |
+
+All qualitative findings survive. Shared single-subspace ablation really
+does move the margin less than complement (0.42 vs. 1.33, 3.2× gap),
+joint ablation moves the margin more than either alone (2.82 vs 0.42 +
+1.33 = 1.75, a 60% super-additive boost on margin), and the cross-model
+swap drop is neutral-to-slightly-positive in the margin space too
+(−0.16, within the noise of the neutral interventions). The self-input-
+shuffle positive control moves the margin more than any subspace
+intervention, confirming the metric has the dynamic range to detect
+accuracy-indistinguishable perturbations. The saturation-masking worry
+is refuted.
+
+**(ii) Weaker-alignment swap controls (step 22, alignment_strength.json).**
+We re-ran the step-19 swap at (layer 3, position 12) under four
+alignment schemes while keeping the shared / complement subspaces
+defined in the canonical Procrustes-aligned reference frame:
+
+| Scheme | shared Δacc | shared Δmargin | complement Δacc | complement Δmargin | full-activation Δacc |
+|---|---|---|---|---|---|
+| Procrustes (paper) | −0.004 | −0.16 | −0.004 | −0.19 | −0.004 |
+| **Mean-only (no rotation)** | **+0.008** | **+0.56** | **+0.801** | **+2.13** | **+0.991** |
+| Random-orth same (both rotated) | +0.006 | +0.44 | +0.008 | +0.36 | +0.991 |
+| Random-orth different | +0.012 | +0.36 | +0.006 | +0.31 | +0.996 |
+
+The mean-only row is the decisive test: without any rotational fit, just
+subtracting each model's mean and doing the swap, the shared-subspace
+swap still costs only 0.8% accuracy and 0.56 margin (~5% of baseline),
+while the complement swap destroys accuracy (80% drop) and the full-
+activation swap is catastrophic (99%). The native bases of these
+independently-trained models already approximately coincide on shared
+directions before any Procrustes fit is performed; Procrustes refines
+an already-strong agreement. Under random rotations the subspace
+labels lose meaning (V_S_ref defined in Procrustes frame no longer
+picks out shared content in a randomly rotated frame), so all three
+subspace swaps look similar — but full-activation swaps still
+catastrophically fail, confirming the rotation schemes were non-trivial
+interventions. The Procrustes-laundering critique is refuted: the
+"universal values" claim holds under the weakest possible alignment.
+
+**(iii) K_pca external criterion (step 23, kpca_external.json).**
+We replaced the heuristic K_pca=32 with an externally-defined criterion:
+"smallest K such that 99% of the unembed matrix W_U variance lies in the
+top-K PCs of C_total at the site." This criterion depends on what the
+readout actually reads, not on the eigenvalue curve that drives the
+ratio eigenproblem. Across the 33 main-zoo models at layer 3 position
+12, K_pca_ext ranges 39–64 (median 48, mean 47.4). The paper's
+K_pca=32 is *smaller* than every model's external K_pca, so if
+anything we were being conservative.
+
+Re-running extraction + single-subspace ablation at K_pca_ext = 64
+(the maximum, i.e. no PCA restriction at all), averaged across all
+33 models at k=10:
+
+| Subspace | mean drop | median drop | min / max |
+|---|---|---|---|
+| Shared | +0.000 | +0.000 | −0.001 / +0.003 |
+| Complement | +0.506 | +0.466 | +0.322 / +0.903 |
+| Joint (shared ∪ complement, 20-d) | +0.896 | +0.900 | +0.861 / +0.917 |
+| Whitened random (k=10) | ~0 | 0 | 0 / 0 |
+
+The shared-complement gap grows under the external criterion
+(0.47-median-drop on complement vs ~0 on shared, joint destroying 90%).
+Subspace projection-trace variance in the stacked C_total (ref frame)
+reads 12.5 (shared) vs 154.2 (complement) vs 0.125 (random); complement
+carries 12× more activation variance than shared yet the joint-ablation
+hidden load is 0.40 at the median (joint-drop minus complement-drop,
+which isolates the load that shared can cover once complement is gone).
+Principal-angle cosines between the K_pca=64 and K_pca=32 shared
+subspaces are [0.96, 0.91, 0.89, 0.86, 0.81, 0.78, 0.77, 0.65, 0.59,
+0.47]: the top directions are shared across the two choices but lower
+modes rotate. The self-reference critique is refuted — removing the
+PCA restriction strengthens rather than weakens the gap.
+
+**Summary of the three controls.** All three findings survive
+margin-level measurement, weaker alignment schemes, and external K_pca
+definition. The paper's choices were protective (near-saturated
+accuracy, Procrustes alignment, K_pca=32) but not load-bearing; the
+same qualitative picture emerges from a stricter protocol on all three
+axes.
+
+---
+
 ### 6.7 Consolidated picture after all corrections
 
 With the joint-ablation disambiguation (§6.4), the redundancy

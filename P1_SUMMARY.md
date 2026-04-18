@@ -37,6 +37,9 @@ Written and executed in order:
 | `step18_unembed_geometry.py` | Is "shared dead" geometric? Tests subspace-vs-unembed-nullspace | Done |
 | `step19_cross_model_swap.py` | Universal values: swap subspace components across models | Done |
 | `step20_swap_sensitivity.py` | Sensitivity controls for step19 (positive + Procrustes-artifact) | Done |
+| `step21_logit_margin.py` | Logit-margin reporting for ablation + swap (ceiling-masking control) | Done |
+| `step22_alignment_strength.py` | Swap under mean-only + random-orth alignment (Procrustes-laundering control) | Done |
+| `step23_kpca_external.py` | Re-run with K_pca defined via 99% W_U reconstruction (self-reference control) | Done |
 | `make_figures.py` / `make_fig5.py` / `make_fig6.py` | Paper figures fig1-6 | Done |
 | `build_pdf.py` | Markdown → PDF | Done |
 
@@ -55,6 +58,9 @@ All under `results/p1/`:
 | `layer3_probing.json` | Probing layer-3 shared against arithmetic features |
 | `layer3_expanded.json` | 6 additional layer-3 positions |
 | `joint_ablation.json` | Shared ∪ complement joint ablation (step 15) |
+| `logit_margin.json` | Step 21 logit-margin metric (ceiling-masking control) |
+| `alignment_strength.json` | Step 22 swap under 4 alignment schemes (Procrustes-laundering control) |
+| `kpca_external.json` | Step 23 P1 re-run with externally-defined K_pca (self-reference control) |
 
 ## Pre-registration commits
 
