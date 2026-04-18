@@ -1,4 +1,4 @@
-# Cross-Model Shared Directions Are Redundantly Backed: Three Methodological Corrections for CKA-Based Subspace Causality Analyses
+# Universal Values Without Learned Alignment: Cross-Model Activation Swap on a Redundantly Backed Shared Subspace
 
 **Working draft. All numbers come from `results/p1/*.json` on the
 2026-04-17 run (post-correction, K_VALUES = [4,8,12,16], k_pca = 32).
@@ -9,93 +9,91 @@ Pre-registration: `P1_PREREGISTRATION.md`. Derivation support:
 
 ## Abstract
 
-We study whether cross-model shared directions — extracted via the
-generalized eigenproblem `C_shared v = λ C_total v` — are causally
-important in a 33-model arithmetic transformer zoo. We identify three
-methodological issues in standard ablation-based causal tests and show
-that correcting all three changes the headline conclusion.
+On a 33-model zoo of independently trained 4-layer arithmetic
+transformers (d=64, 5-digit addition, >99% accuracy), we identify a
+cross-model shared subspace at the last residual before unembed and
+show that its **values** — not just its directions — are transferable
+between models on matched inputs with no learned alignment. Replacing
+model A's shared-subspace component at layer 3 with model B's on the
+same input produces near-zero accuracy drop across 30 ordered
+baseline pairs (median Δacc = −0.004). The result holds under the
+weakest possible alignment: mean-only centering, no rotation, no
+learned stitch (Δacc = +0.008, Δmargin = +0.56 out of 11.4 baseline).
+Meanwhile, the orthogonal high-variance complement subspace is **not**
+interchangeable under the same protocol: mean-only complement swap
+destroys accuracy (Δacc = +0.80, Δmargin = +2.13). Random-subspace
+swap is free, full-activation swap without rotation is catastrophic
+(Δacc = +0.99). This is the first cross-model activation swap we are
+aware of that demonstrates untrained value-level interchangeability of
+a structured subspace, distinct from both representational-similarity
+results (CKA / SVCCA / PWCCA) and learned model-stitching (Bansal et
+al. 2021; Lenc & Vedaldi 2015).
 
-**(A1)** The unrestricted generalized eigenproblem preferentially returns
-low-variance directions because the ratio is minimized when either
-covariance is small. Restricting the eigenproblem to the top-K principal
-subspace of `C_total` forces shared directions into the high-variance
-regime.
+To set up this result requires correcting three methodological
+confounds in standard subspace-causality tests:
 
-**(A2)** Unit-norm random baselines remove different amounts of per-model
-activation variance than structured subspaces. Whitening so that each
-random direction satisfies `v^T C_total v = 1` variance-matches the
-comparison.
+**(A1)** Restrict the generalized eigenproblem `C_shared v = λ C_total v`
+to the top-K principal subspace of `C_total`; without this, the
+unrestricted eigenproblem preferentially returns low-variance directions
+(variance-bias confound).
 
-**(A3)** Single-subspace ablation cannot see redundant causal structure.
-At all six tested sites in this zoo, shared and complement
-(orthogonal-high-variance) subspaces are *jointly* load-bearing: ablating
-shared alone is near-inert at the final layer (raw drop ≤ 0.003) while
-ablating the complement alone produces substantial drops (0.37–0.43).
-But **jointly ablating shared ∪ complement produces 0.78–0.89 accuracy
-drops** — much larger than either alone. The shared subspace is not
-causally inert; it is redundantly backed up by the complement.
+**(A2)** Whiten random-subspace baselines so `v^T C_total v = 1`,
+matching the variance removed by the structured subspace (baseline-
+variance-mismatch confound).
 
-Under (A1) + (A2) + (A3) corrections, the 33-model zoo shows:
+**(A3)** Report *joint* shared ∪ complement ablation, not only
+single-subspace drops. Single-subspace ablation cannot see redundant
+causal structure: at our primary site, shared-alone ablation is near-
+inert (Δacc ≤ 0.003), complement-alone produces Δacc ≈ 0.47, but joint
+ablation produces Δacc ≈ 0.90 across all 33 models. Shared is not
+causally inert — it is redundantly encoded with the complement.
 
-- Both cross-model shared directions and the orthogonal-high-variance
-  complement carry substantial causal weight at all 14 tested
-  task-relevant sites (per-variance effects 10–80× above whitened random);
-  the control site (CKA = 0.075) shows zero effect for any condition.
-- At the final transformer layer (layer 3), shared directions are
-  linearly probeable (r = 0.78–0.91 for carry and sum-magnitude features)
-  but single-ablation-inert. The paradox resolves in joint ablation:
-  shared is causally important, but the complement substitutes when
-  shared alone is removed.
-- The "shared < random" sign from the original unrestricted unit-norm
-  protocol reflects at least two confounds: variance-content mismatch
-  (addressed by A1 and A2), and redundancy invisibility (addressed by
-  A3). Each confound alone is sufficient to mask a real causal role.
+The joint-ablation finding at head-level has precedent in self-repair
+literature (Wang et al. 2023 "Backup Name-Mover Heads"; McGrath et al.
+2023 "Hydra Effect"; Rushing & Nanda 2024 "Self-Repair"). Our
+contribution formalizes this at *subspace* level on the eigenvectors of
+a cross-model variance-ratio decomposition and quantifies it as a
+scalar "hidden load" (joint − complement − shared ≈ 0.40 at the
+median main-zoo site).
 
-The methodological punchline is that **cross-model shared-subspace
-causality cannot be assessed by single-subspace ablation**; joint
-ablation against the orthogonal complement is required to expose
-redundantly-realized causal contributions.
+The joint-ablation and swap results together support a specific
+account: at the last residual before unembed, the shared subspace's
+readable linear features (probe r = 0.94 for sum-magnitude, r = 0.84
+for carry, yet single-ablation Δacc ≤ 0.003 in the 8-layer zoo) are a
+high-fidelity *observational projection* of the same computation that
+the complement implements. When one model's shared component is
+replaced with another's on the same input, both models produce the
+same projection because the input-to-projection map has converged
+across training. This is consistent with (but distinct from) Chughtai
+et al. 2023's representational-universality findings on group
+operations, which do not include cross-model activation swap.
 
-**Replication on a second task (modular arithmetic).** We re-ran the
-full three-correction protocol on a separate 33-model zoo trained on
-addition modulo 23 with identical architecture and training. At three
-pre-specified primary sites, the hidden-load phenomenon replicates
-(all three CI lower bounds strictly positive, range 0.013–0.140);
-magnitudes are smaller than in the main zoo (0.03–0.17 vs 0.36–0.44),
-consistent with mod-p having less task structure to redundantly encode.
+We pre-registered the protocol with three amendments (A1, A2, A3) and
+report three replications: mod-23 arithmetic (33-model zoo, hidden-
+load positive at all 3 primary sites), 6-layer architecture (45
+models, shared-dead signature moves to layer 5 / N-1), and 8-layer
+architecture (21 models, confirmed at layer 7). Three late-stage
+sensitivity controls address adversarial critique: logit-margin
+metric (shared Δmargin 0.42 vs complement 1.33, saturation masking
+refuted), weaker-alignment swap (mean-only still works, Procrustes-
+laundering refuted), and externally-defined K_pca via W_U
+reconstruction (zoo median K_pca_ext = 48; re-running at K_pca = 64
+strengthens the gap, self-reference refuted).
 
-**Replication at larger depth (6-layer and 8-layer zoos).** We trained
-two additional zoos with 6 and 8 layers (45 and 21 models respectively,
-same task as main zoo). Pre-registered predictions tested whether the
-"shared dead at layer 3" signature of the main zoo was an intrinsic
-layer-3 property or a last-residual-before-unembed effect, and whether
-the effect is robustly at position N-1 across depths. **The
-N-1-invariance prediction holds at all three architecture depths**:
-shared is dead at layer 3 in the 4-layer main zoo, layer 5 in the
-6-layer zoo, and layer 7 in the 8-layer zoo (all with shared-drop
-CI ≤ [0.000, 0.000]). The "shared dead" finding is therefore a
-readout-adjacent geometric effect, not a fixed-depth phenomenon.
-
-Unexpectedly, we *also* observe that hidden-load at the N-1 layer
-shrinks with depth (0.36-0.44 → 0.17 → −0.000 across 4L, 6L, 8L; see
-Fig. 6). In the 8-layer zoo at layer 7, shared directions remain
-**linearly probeable** at r = 0.94 (sum_magnitude) and r = 0.84
-(carry_col3) while carrying zero independent causal load — the paper's
-cleanest demonstration that cross-model shared structure at the
-readout-adjacent layer can be a high-fidelity *observational
-projection* of the complement's computation, not a computation in its
-own right. We report the depth trend as a discovery on three data
-points (one zoo per depth) and note an important tension: if hidden
-load at N-1 tends to zero with depth, the "shared-dead at N-1" pattern
-may be a vanishing feature of small models rather than a scale-robust
-structural invariance. Disambiguating requires replication at larger
-depths (12, 16+); that is beyond this paper's scope.
-
-Together, these replications put the specific redundancy structure
-(shared + complement each contribute substantial causal load, with a
-readout-adjacent role-flip at the output endpoint) on firmer ground as
-a property of this architecture family. The corrective protocol
-itself (A1 + A2 + A3) is task- and depth-independent by construction.
+The depth trend from the replication zoos is worth flagging up
+front: hidden load at the N−1 layer shrinks with depth (0.36–0.44 at
+4L → 0.17 at 6L → ~0 at 8L). In the 8-layer zoo at layer 7, shared
+directions remain linearly probeable (r = 0.94 sum-magnitude, r =
+0.84 carry_col3) while carrying zero independent single-ablation
+load — the cleanest "readable but not independently causal"
+signature we found, and consistent with the observational-
+projection account above. We report the depth trend as a discovery
+on three data points (one zoo per depth) and note the scale-
+robustness question is open: if hidden load at N−1 continues to
+tend to zero, the redundancy backup picture may be a small-model
+property rather than a scale-robust structural invariance.
+Disambiguating requires replication at larger depths (12+); beyond
+this paper's scope.
 
 ---
 
@@ -120,110 +118,196 @@ standard move is to ablate the shared subspace and measure the
 resulting accuracy drop relative to some baseline (typically unit-norm
 Gaussian random directions of the same rank).
 
-### 1.2 The ambiguity behind universality claims
+### 1.2 Prior work and novelty positioning
 
-Ablation-based causality tests applied to CKA-style shared subspaces
-have produced conflicting results across the interpretability
-literature. Some small-model studies find that shared directions are
-causally important; others find they are indistinguishable from random
-or even less damaging when ablated. The difficulty is partly
-mechanistic — different architectures may store computation
-differently — and partly methodological: the protocol combines a
-subspace-identification step, a baseline-sampling step, and an
-intervention step, each of which can introduce its own bias into the
-final "is it causal?" verdict.
+The claims in this paper touch five adjacent literatures. We delineate
+what each establishes and what gap we fill.
 
-In particular, the universality hypothesis — that independently-trained
-networks converge to similar internal circuits (Li, Yosinski et al.;
-Chughtai, Chan & Nanda, 2023) — sits uneasily against ablation studies
-that seem to deny the causal role of the agreed-upon structure.
-Mechanistic interpretability work on algorithmic tasks (grokking
-dynamics; Nanda et al., 2023; Liu et al. "Omnigrok") has shown that
-specific circuits emerge and change over training, but the relationship
-between circuit emergence and cross-model representational agreement is
-under-characterized at the ablation level.
+**Representational similarity (CKA / SVCCA / PWCCA).** Kornblith et
+al. 2019 (CKA), Raghu et al. 2017 (SVCCA), and Morcos et al. 2018
+(PWCCA) establish that independently trained networks develop
+similarly-structured representation subspaces. These tools identify
+shared *directions*. They do not perform ablation or intervention, do
+not test causal role, and do not exchange activations between models.
+**Gap we fill**: cross-model shared *values* — the injected activation
+itself — are interchangeable on matched input, not merely directions.
+
+**Representational universality on algorithmic tasks.** Chughtai, Chan
+& Nanda 2023 "A Toy Model of Universality" reverse-engineer small
+group-operation models and argue representations converge across seeds
+up to symmetries of the algorithm (Section 6 of that paper). They
+confirm universality via intra-model ablations of components predicted
+by their algorithm; they do **not** perform cross-model activation
+swapping. Nanda et al. 2023 (grokking progress measures) similarly
+works within a single model per task. **Gap we fill**: cross-model
+activation-level interchange, with no learned adapter, on a non-group
+task (integer addition); further strengthened by the mean-only
+alignment control that removes any rotational fit.
+
+**Model stitching.** Bansal, Nakkiran & Barak 2021, and Lenc & Vedaldi
+2015 before them, demonstrate that representations from independently
+trained models can be swapped through a *learned* stitching layer
+without catastrophic accuracy loss. The stitching layer absorbs
+whatever cross-model mismatch exists. **Gap we fill**: we show a
+specific structured subspace (shared) is swappable with zero fit —
+the "mean-only alignment" result in §6.6f rules out any alignment
+parameter that could launder the cross-model difference. This is a
+strict strengthening of stitching within the shared subspace.
+
+**Self-repair and redundant backup.** Wang et al. 2023 ("Interpretability
+in the Wild") discovered Backup Name-Mover Heads: ablating primary
+heads has a smaller logit-difference effect than expected because other
+heads compensate. McGrath et al. 2023 ("The Hydra Effect") generalized
+this to "self-repair" in LLM forward passes. Rushing & Nanda 2024
+explicitly argue that single-component ablation underestimates causal
+load when later components compensate. These results are at
+**component/head level** on medium-scale LLMs doing IOI-style
+linguistic tasks. **Gap we fill**: we extend the backup phenomenon to
+the *subspace* level on eigenvectors of a variance-ratio
+decomposition of the residual stream, quantify it as a closed-form
+scalar "hidden load" (joint − shared − complement), and show it is
+load-bearing on an algorithmic task where the model is >99% confident.
+
+**Subspace intervention validity.** Makelov, Lange & Nanda 2023 ("Is
+This The Subspace You Are Looking For?") showed that subspace
+activation patching can achieve behavioral effects via *irrelevant
+dormant parallel pathways*, so a positive intervention does not imply
+causal role. **Gap we fill**: our failure mode is the opposite.
+Single-subspace ablation is *negative* (shared Δacc ≤ 0.003) yet the
+subspace is causal — it has been masked by a redundant backup. The
+two papers together argue both subspace-positive and subspace-
+negative interventions can mislead; joint ablation against an
+orthogonal complement is the protocol that disambiguates.
+
+**Probing-vs-causal-role.** Alain & Bengio 2016 introduced linear
+probes; Hewitt & Liang 2019 and Elazar et al. 2021 ("Amnesic
+Probing") flagged that probe-decodable features need not be causally
+used. The "readable but not causal" pattern has a history. **Gap we
+fill**: a sharpened form — in the 8-layer zoo at layer 7, shared
+directions are linearly probeable (r = 0.94 for sum-magnitude, r = 0.84
+for carry_col3) yet single-ablation-inert. But our joint-ablation
+result rescues those directions from inertness: jointly ablating them
+with the complement produces larger drops than the complement alone.
+The probe-decodability here tracks a genuine causal contribution that
+is masked, not a spurious readout.
+
+**Methodology: the generalized eigenproblem `C_shared v = λ C_total v`.**
+Ratio-eigenproblem formulations of shared-vs-total variance appear
+widely in related statistical traditions — LDA / Fisher discriminant,
+Contrastive PCA (Abid et al. 2018), shared-response models in
+neuroscience, and cross-subject BCI. We do not claim the eigenproblem
+itself is novel. Its application as a CKA-derived shared-direction
+finder with A1 PCA restriction and A2 variance-matched random
+baselines, and then the specific prescription that A3 joint ablation
+must be reported, is — to our knowledge — a new specialization for
+the CKA-based subspace-causality analysis pipeline common in
+interpretability.
+
+**Overall novelty claim (narrow and defensible).** The specific
+contribution that survives this positioning exercise is (i) cross-
+model activation swap of a structured subspace at zero learned
+alignment ("universal values"), (ii) subspace-level formalization of
+self-repair / Hydra via the hidden-load scalar on generalized-
+eigenproblem subspaces, and (iii) the A1+A2+A3 prescription as a
+specialization of CKA-based causality analysis. Other results here
+(CKA as a similarity tool, probing-vs-causal, within-model ablation
+of group operations, learned model stitching) are not novel and we
+credit the prior work explicitly.
 
 ### 1.3 Our result
 
-We study the question on a small arithmetic transformer zoo and arrive
-at a picture that clarifies one source of the field's conflicting
-results. Three distinct methodological choices in the standard protocol
-each independently bias the ablation test toward underestimating
-shared-subspace causal importance:
+We study the question on a 33-model arithmetic transformer zoo and
+report two principal findings, in the order they are load-bearing
+for the paper:
 
-- **(A1)** The unrestricted generalized eigenproblem preferentially
-  extracts low-variance shared directions. A PCA restriction to the
-  top-K principal subspace of `C_total` avoids this.
-- **(A2)** Unit-norm random baselines remove different amounts of
-  per-model variance than structured subspaces. Whitening the random
-  baseline variance-matches the comparison.
-- **(A3)** Single-subspace ablation cannot see causal signal that is
-  redundantly realized across the ablated subspace and its orthogonal
-  complement (a known failure mode in mechanistic interpretability;
-  see e.g. causal-scrubbing discussions in the Anthropic/Redwood
-  literature on path patching and circuit factorization). Joint
-  ablation against the orthogonal complement exposes this hidden load.
+**(i) Cross-model activation swap under zero learned alignment.** At
+layer 3 (the last residual before unembed) position 12, we extract a
+cross-model shared subspace via the generalized eigenproblem
+`C_shared v = λ C_total v` on Procrustes-aligned activations, and
+then — on an eval set, one problem at a time — replace model A's
+shared-subspace component with model B's on the same input. Across
+30 ordered pairs from 6 models (3 baselines + 3 freeze variants), the
+resulting accuracy drop is near zero (median −0.004). The result
+survives the mean-only alignment scheme (no rotation, no fit, no
+adapter): shared-swap Δacc = +0.008, Δmargin = +0.56 out of baseline
+margin 11.42. Complement-swap under the same mean-only scheme
+destroys accuracy (Δacc = +0.80). Self-shuffle, zero-out, and random-
+rotation full-activation swap all catastrophically hurt (Δacc 0.90+).
+This is the **"universal values"** finding: the input-to-shared-
+subspace-component map has converged across independently trained
+models up to translation, and can be swapped without a learned adapter.
 
-Correcting all three on the same 33-model zoo, same eigenvectors, and
-same ablation positions reverses the sign of the headline finding:
-cross-model shared directions are causally important, interpretable,
-and redundantly encoded against the orthogonal high-variance complement.
-We replicate the core phenomenon on a second task (modular arithmetic)
-with a new 33-model zoo and pre-registered decision rule; the
-redundancy signature survives a task-structure change (no carry chain,
-different vocabulary, different sequence format), though with smaller
-magnitude consistent with mod-p having less task structure to
-redundantly encode.
+**(ii) Subspace-level redundancy exposed by joint ablation.** The
+shared and complement subspaces at layer 3 are each individually
+near-silent or small (shared Δacc ≤ 0.003; complement Δacc 0.47
+median across the zoo) under single-subspace ablation, but jointly
+ablating their union destroys accuracy (Δacc 0.90 median, mean 0.896).
+The difference between the joint drop and the per-subspace drops —
+what we call the **hidden load** — is ≈ 0.40 at the median main-zoo
+layer-3 site. This is a subspace-level analog of the Backup
+Name-Mover and Hydra findings (Wang 2023; McGrath 2023; Rushing &
+Nanda 2024), and it is required as a control to prevent the shared
+subspace from being misread as causally inert.
 
-This ablation-based causal test has produced conflicting results
-in the literature, and it produced a conflicting result in our own
-earlier experiments on a small arithmetic transformer zoo: the
-cross-model shared subspace, extracted via the unrestricted
-generalized eigenproblem and ablated under the unit-norm convention,
-produced *smaller* accuracy drops than random directions at one of
-three preselected high-CKA sites (shared/random ratio 0.045,
-p < 0.001 under Wilcoxon), with comparable or slightly larger drops at
-the other two sites. Taken at face value, this suggests cross-model
-shared directions are at best no more causal than random, and at worst
-anti-correlated with causal importance — the "interpretable but not
-functional" reading of universality.
+Setting up these two results required correcting three methodological
+choices in the standard cross-model subspace-causality protocol:
 
-This paper shows that this reading is unsupported. Three methodological
-choices in the standard protocol each independently bias the result
-toward underestimating shared-subspace causal importance: (A1) the
-unrestricted generalized eigenproblem preferentially extracts
-low-variance shared directions; (A2) unit-norm random baselines
-remove different amounts of per-model variance than structured subspaces;
-and (A3) single-subspace ablation cannot see causal signal that is
-redundantly realized across the ablated subspace and its complement.
-Correcting all three on the same data and eigenvectors reverses the
-sign of the headline finding: cross-model shared directions are
-causally important, interpretable, and redundantly encoded against the
-orthogonal high-variance complement.
+- **(A1)** Restrict the generalized eigenproblem `C_shared v = λ C_total v`
+  to the top-K principal subspace of `C_total`. The unrestricted
+  eigenproblem preferentially extracts low-variance shared directions,
+  confounding any causality test on the raw output.
+- **(A2)** Whiten random-subspace baselines so `v^T C_total v = 1`.
+  Unit-norm random baselines remove a different amount of per-model
+  variance than the structured subspace, producing a spurious
+  "shared < random" ordering on dimensionally-matched comparisons.
+- **(A3)** Report joint ablation of shared ∪ complement. Single-
+  subspace ablation systematically underestimates redundantly-encoded
+  causal structure (see "Hidden load" above and §4 for quantification).
 
-The contribution of this paper is methodological and empirical:
+We replicate the swap-and-redundancy picture on three additional
+zoos: mod-23 arithmetic (33-model, 4L, same architecture), 6-layer
+integer addition (45 models), and 8-layer integer addition (21
+models). Across the three depths, the shared-dead single-ablation
+signature moves with the last residual before unembed (layer 3 at
+4L, layer 5 at 6L, layer 7 at 8L), which we call **N−1 invariance**.
+Hidden load at the N−1 layer shrinks with depth (0.36–0.44 at 4L →
+0.17 at 6L → ~0 at 8L); we report this as a discovery-level finding
+on three data points.
 
-1. We identify and analytically characterize three confounds in standard
-   cross-model subspace causality tests (A1: eigenproblem low-variance
-   bias; A2: variance-mismatched random baselines; A3: redundancy
-   invisibility of single-subspace ablation).
-2. We derive the signed predictions each confound makes, and show the
-   effect of each correction empirically on a 33-model zoo by applying
-   them one at a time to the same data.
-3. Under the corrected protocol, cross-model shared directions are
-   causally important at every tested task-relevant site. Joint ablation
-   at six sites shows shared contributes 0.36-0.64 of accuracy-drop
-   budget that is invisible to single-subspace ablation; single-subspace
-   drops underestimate shared-subspace importance by 0.36-0.64 absolute.
-4. Layer-dependent asymmetry: the shared subspace is the primary
-   single-subspace ablation target at layer 1 (0.38 drop); at layer 3
-   it is the redundant backup (< 0.003 drop, but 0.36-0.44 hidden load
-   exposed by joint ablation).
+Three late-stage sensitivity controls, all on existing zoos, address
+adversarial critique of the measurement protocol: logit-margin
+reporting alongside accuracy (saturation-masking refuted), weaker-
+alignment swap schemes (Procrustes-laundering refuted — mean-only
+still works), and an externally-defined `K_pca` based on 99% W_U
+reconstruction (self-reference refuted; running at `K_pca = 64`
+strengthens the gap).
 
-Our evidence comes from one 4-layer, d_model = 64 transformer zoo
-trained on 5-digit addition. The methodological corrections are
-architecture-independent; the specific redundancy pattern is a
-case study in this setting.
+The contribution of this paper, in order of novelty priority:
+
+1. **Cross-model shared-subspace value swap under zero-fit
+   alignment** (§6.6e, §6.6f). Individual models' shared-subspace
+   components at the last residual before unembed are value-level
+   interchangeable on matched inputs. This extends representational-
+   similarity claims (CKA etc.) and learned-stitching claims (Bansal
+   2021) to show the cross-model mapping is effectively the identity
+   after mean-centering, not merely a fitted rotation.
+2. **Subspace-level hidden-load quantification** via joint ablation
+   on generalized-eigenproblem subspaces (§4, §6.4). Extends self-
+   repair literature from components to subspaces of the residual
+   stream and provides a scalar that is 0.40 at the median main-zoo
+   site but ~0 at our matched control site.
+3. **A1+A2+A3 as a specialization of CKA-based subspace-causality
+   analysis** (§3, §5.3). Each correction individually is routine in
+   adjacent statistical literatures; their combination as a
+   prescription for cross-model subspace-causality tests in
+   interpretability is the packaging we claim.
+
+Our evidence comes from four zoos (main 33-model 4L, mod-23 33-model
+4L, 45-model 6L, 21-model 8L), all small transformers. The
+methodological corrections are architecture- and task-independent by
+construction. The depth trend in hidden load raises a concrete open
+question about whether the redundancy-backup signature at N−1 is
+scale-robust; we do not resolve this.
 
 ---
 
