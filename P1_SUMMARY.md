@@ -36,6 +36,7 @@ Written and executed in order:
 | `step17_deep8_probing.py` | Probe 8-layer zoo shared at L3/L5/L7 | Done |
 | `step18_unembed_geometry.py` | Is "shared dead" geometric? Tests subspace-vs-unembed-nullspace | Done |
 | `step19_cross_model_swap.py` | Universal values: swap subspace components across models | Done |
+| `step20_swap_sensitivity.py` | Sensitivity controls for step19 (positive + Procrustes-artifact) | Done |
 | `make_figures.py` / `make_fig5.py` / `make_fig6.py` | Paper figures fig1-6 | Done |
 | `build_pdf.py` | Markdown → PDF | Done |
 
@@ -133,3 +134,8 @@ Response records live in `/tmp/octo-*/` (ephemeral, not committed).
     drop across 30 ordered pairs (baselines and freeze variants). Universal
     values, not just universal directions: the input→activation mapping at
     layer 3 converges across independently trained models after alignment.
+11. **Swap sensitivity controls (step20)**: positive controls confirm dynamic
+    range. Self-input-shuffle: drop 0.896. Cross-model input-shuffle: 0.896.
+    Raw native swap (no alignment): 0.996. Full aligned swap (same input):
+    −0.004. Procrustes alignment is a 5000× effect size; after alignment,
+    the entire layer-3 pos-12 activation is cross-model interchangeable.

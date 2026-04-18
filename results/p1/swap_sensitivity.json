@@ -1,0 +1,32 @@
+{
+  "config": {
+    "A": "baseline_seed0",
+    "B": "baseline_seed1",
+    "N_eval": 5000,
+    "site": "layer3_result_0",
+    "layer": 3,
+    "pos": 12
+  },
+  "conditions": {
+    "self_input_shuffle": {
+      "acc": 0.1004,
+      "drop": 0.8956
+    },
+    "full_aligned_swap": {
+      "acc": 0.9996,
+      "drop": -0.0036000000000000476
+    },
+    "raw_native_swap": {
+      "acc": 0.0002,
+      "drop": 0.9958
+    },
+    "cross_model_input_shuffle": {
+      "acc": 0.1,
+      "drop": 0.896
+    },
+    "zero_out": {
+      "acc": 0.0972,
+      "drop": 0.8988
+    }
+  }
+}
