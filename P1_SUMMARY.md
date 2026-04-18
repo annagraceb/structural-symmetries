@@ -34,7 +34,10 @@ Written and executed in order:
 | `config_deep8.py` / `run_deep8_zoo.py` | 8-layer zoo variant (21 models) | Done |
 | `step9_p1_deep8.py` | P1 protocol on 8-layer zoo at L3/L5/L7 + control | Done |
 | `step17_deep8_probing.py` | Probe 8-layer zoo shared at L3/L5/L7 | Done |
+| `step18_unembed_geometry.py` | Is "shared dead" geometric? Tests subspace-vs-unembed-nullspace | Done |
+| `step19_cross_model_swap.py` | Universal values: swap subspace components across models | Done |
 | `make_figures.py` / `make_fig5.py` / `make_fig6.py` | Paper figures fig1-6 | Done |
+| `build_pdf.py` | Markdown → PDF | Done |
 
 ## Result files
 
@@ -119,3 +122,14 @@ Response records live in `/tmp/octo-*/` (ephemeral, not committed).
    shared directions are still linearly probeable (r=0.94 sum_magnitude,
    r=0.84 carry_col3) despite zero independent causal load — cleanest
    "readable but not causal" data point in the paper.
+9. **Unembed-geometry test (step18)**: shared is only −12σ from random
+   in nullspace residence; complement is −133σ (strongly in row space).
+   The dominant geometric effect is complement's row-space concentration.
+   "Shared dead" is not primarily explained by unembed-nullspace
+   residence; the redundancy story (A3) is required for the remaining ~10×
+   gap between shared and random single-subspace ablation.
+10. **Cross-model subspace swap (step19)**: replacing A's layer-3 shared
+    *or* complement component with B's on the same input produces near-zero
+    drop across 30 ordered pairs (baselines and freeze variants). Universal
+    values, not just universal directions: the input→activation mapping at
+    layer 3 converges across independently trained models after alignment.

@@ -1151,6 +1151,96 @@ information (r = 0.78–0.97 across sites) but are invisible to single-
 subspace ablation because the orthogonal complement redundantly encodes
 the same task content.
 
+### 6.6d.3 Unembed-geometry test: how much of "shared dead" is nullspace residence?
+
+A natural alternative explanation for "shared ablation doesn't hurt" is
+geometric: if the shared subspace at layer 3 sits mostly in the unembed
+matrix's nullspace, the unembed simply doesn't read those directions and
+ablation cannot affect logits — regardless of computation.
+
+We measured the fraction of each subspace's variance in the unembed
+nullspace across the 33 main-zoo models, using a random 10-d subspace
+baseline (analytic expectation = 52/64 ≈ 0.813 for a random subspace in
+d=64 with rank-12 unembed):
+
+| Subspace | Nullspace fraction | σ from random |
+|---|---|---|
+| Random 10-d | 0.813 | 0 (baseline) |
+| **Shared** | **0.767** | **−12σ** (slightly *less* in nullspace than random — i.e. slightly more readable) |
+| **Complement** | **0.310** | **−133σ** (dramatically concentrated in unembed row space) |
+| Bottom-of-ratio | 0.918 | +28σ (more in nullspace; dead axes, as expected) |
+
+**The "shared dead" phenomenon is *not* primarily geometric.** Shared
+directions are actually slightly *more* readable by the unembed than
+random directions, not less. The dominant geometric effect is on the
+complement side: complement is massively concentrated in the unembed's
+row space (a 133σ deviation from random). That explains why complement
+ablation hits hard — complement directions *are* the directions the
+unembed reads.
+
+The residual asymmetry between shared (drop 0.003 at layer 3) and
+random (drop 0.028) — shared hurts ~10× less than random despite similar
+row-space exposure — is NOT explained by geometry. This is the redundant
+encoding demonstrated by joint ablation (§6.4): the complement
+compensates when shared is removed in isolation, and the 10× gap between
+shared and random ablation is where the compensation shows up.
+
+### 6.6e Cross-model subspace swap: universal values, not just universal directions
+
+A referee-style review of the paper's redundancy claim raised the question
+whether cross-model shared structure is *only* direction-universal (the
+models agree on which subspaces are important) or also *value-universal*
+(the actual input-to-activation mapping within those subspaces is shared).
+Joint ablation (§6.4) tests only direction-universality — it measures
+causal load but not whether the load is encoded identically across models.
+
+We ran a cross-model swap experiment to probe this at layer 3 position 12
+(the main-zoo "shared dead" site). For each ordered pair of models (A, B)
+from a set of 6 (3 baselines + 3 freeze variants spanning embed, layer-0
+MLP, and layer-2 attn), we:
+
+1. Aligned both models' layer-3 activations to the common reference frame.
+2. Replaced, on A's forward pass, the shared-subspace component of A's
+   layer-3 activation at position 12 with B's shared-subspace component
+   (computed on the same input).
+3. Measured A's full-task accuracy drop vs A's baseline.
+
+We ran three parallel conditions per pair: shared swap, complement swap,
+random (whitened) swap. Summary across 30 ordered pairs:
+
+| Condition | Mean drop | 95% CI | Interpretation |
+|---|---|---|---|
+| shared swap | −0.0007 | [−0.001, 0.000] | No effect (within numerical noise) |
+| complement swap | −0.0005 | [−0.001, 0.000] | No effect |
+| random swap | 0.0000 | [0.000, 0.000] | No effect |
+
+Post-hoc this is striking. The raw activation differences between aligned
+baselines are not small (relative-magnitude difference ≈ 0.54; per-dim
+correlation ≈ 0.85 — far from identical). Yet no choice of subspace to
+swap produces a detectable accuracy drop. The pattern holds for
+baseline↔baseline, baseline↔freeze, and freeze↔freeze pairs alike.
+
+**Universal values reconciliation with §6.4 ablation.** The swap result
+is consistent with the joint-ablation finding under a refined reading:
+
+- Complement ablation destroys per-input variation (replacing with the
+  batch mean) and hurts 0.37–0.43 because the variation encodes
+  task-relevant state the readout needs.
+- Complement *swap* replaces A's per-input variation with B's per-input
+  variation — which, crucially, encodes the same task-relevant state
+  (both A and B computed the same answer on this input). Accuracy
+  doesn't drop because the readout receives a correct, if
+  differently-encoded, input.
+
+This is a sharper universality claim than "shared subspaces agree": the
+specific input-to-activation mapping at layer 3 converges across
+independently trained models (after Procrustes alignment), to a degree
+that makes their complement-subspace values mutually substitutable. The
+substitutability holds even when one model has ≥1 component frozen at
+random init for the entire training run. That is a meaningful cross-model
+functional-equivalence signal that complements the causal-redundancy
+signal of §6.4.
+
 ### 6.7 Consolidated picture after all corrections
 
 With the joint-ablation disambiguation (§6.4), the redundancy
