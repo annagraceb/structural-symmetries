@@ -1,0 +1,25 @@
+{
+  "seed": 1,
+  "permutation": [
+    1,
+    5,
+    8,
+    9,
+    6,
+    4,
+    2,
+    0,
+    7,
+    3
+  ],
+  "best_accuracy": 1.0,
+  "final_accuracy": 0.9996,
+  "converged": true,
+  "total_steps": 20000,
+  "total_time_seconds": 1664.456164598465,
+  "n_params_total": 402688,
+  "n_params_trainable": 402688,
+  "frozen_component": null,
+  "use_carry_head": false,
+  "converge_step": null
+}

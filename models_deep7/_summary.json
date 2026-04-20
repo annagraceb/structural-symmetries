@@ -1,0 +1,46 @@
+{
+  "models": [
+    {
+      "seed": 0,
+      "frozen_component": null,
+      "converged": true,
+      "converge_step": 6000,
+      "final_accuracy": 1.0,
+      "best_accuracy": 1.0,
+      "total_steps": 8000,
+      "total_time_seconds": 236.11436104774475,
+      "n_params_total": 352704,
+      "n_params_trainable": 352704,
+      "use_carry_head": false,
+      "model_name": "baseline_seed0"
+    },
+    {
+      "seed": 1,
+      "frozen_component": null,
+      "converged": true,
+      "converge_step": 4000,
+      "final_accuracy": 1.0,
+      "best_accuracy": 1.0,
+      "total_steps": 6000,
+      "total_time_seconds": 186.10160112380981,
+      "n_params_total": 352704,
+      "n_params_trainable": 352704,
+      "use_carry_head": false,
+      "model_name": "baseline_seed1"
+    },
+    {
+      "seed": 2,
+      "frozen_component": null,
+      "converged": true,
+      "converge_step": 4000,
+      "final_accuracy": 0.9928,
+      "best_accuracy": 0.9994,
+      "total_steps": 6000,
+      "total_time_seconds": 478.02911257743835,
+      "n_params_total": 352704,
+      "n_params_trainable": 352704,
+      "use_carry_head": false,
+      "model_name": "baseline_seed2"
+    }
+  ]
+}

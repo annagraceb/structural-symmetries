@@ -1,0 +1,37 @@
+{
+  "config": {
+    "K": 8,
+    "ridge_eps": 1e-08,
+    "K_PCA": 32,
+    "main_site": "layer3_result_0",
+    "modp_site": "layer3_equals"
+  },
+  "n_main_models": 3,
+  "n_modp_models": 3,
+  "d_main": 64,
+  "d_modp": 64,
+  "within_main": {
+    "n_pairs": 6,
+    "mean": 0.7805699899147079,
+    "ci95_lo": 0.7359736469391631,
+    "ci95_hi": 0.8251663328902524
+  },
+  "within_modp": {
+    "n_pairs": 6,
+    "mean": 0.5538057424689969,
+    "ci95_lo": 0.5335661138671218,
+    "ci95_hi": 0.5740453710708718
+  },
+  "cross_main_modp": {
+    "n_pairs": 6,
+    "mean": 0.006133204576185999,
+    "ci95_lo": 0.005274464613042676,
+    "ci95_hi": 0.006978805185394371
+  },
+  "gap_within_main_minus_cross": {
+    "mean": 0.7750057231820131,
+    "ci95_lo": 0.729805654368595,
+    "ci95_hi": 0.819025735202345
+  },
+  "verdict_H_A6": "CONFIRMED"
+}

@@ -41,3 +41,6 @@ results/modp/aligned_*/
 run1_reversed/
 models_auxiliary/
 models_step8_rerun/
+
+# Phase 4 permuted-zoo activations (regenerable via step19_a4_ksweep.py)
+activations_deep8_permuted/
